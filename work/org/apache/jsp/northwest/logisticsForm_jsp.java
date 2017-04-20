@@ -181,6 +181,9 @@ if (false) {
         return;
       out.write(" \r\n");
       out.write("\r\n");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.recipientAddress}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("        <form id=\"ff\" method=\"post\">\r\n");
       out.write("            <table cellpadding=\"5\">\r\n");
       out.write("            \t\r\n");
@@ -217,6 +220,13 @@ if (false) {
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.otherBills}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" style=\"width:400px\"></input>\r\n");
       out.write("                    </td>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("                \r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <td>備註:</td>\r\n");
+      out.write("                    <td><input class=\"easyui-textbox\" type=\"text\" id=\"memo\"  data-options=\"multiline:true\" value=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.memo}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\" style=\"width:400px;height:60px\"></input></td>\r\n");
       out.write("                </tr>\r\n");
       out.write("                \r\n");
       out.write("                <tr>\r\n");
@@ -264,9 +274,9 @@ if (false) {
       out.write("                </tr>    \r\n");
       out.write("                <tr>\r\n");
       out.write("                    <td>收件人地址:</td>\r\n");
-      out.write("                    <td><input class=\"easyui-textbox\" type=\"text\" id=\"recipientAddress\"  data-options=\"required:true\" value=\"");
+      out.write("                    <td><input class=\"easyui-textbox\" type=\"text\" id=\"recipientAddress\"  data-options=\"required:true,multiline:true\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.recipientAddress}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("\" style=\"width:400px\"></input></td>\r\n");
+      out.write("\" style=\"width:400px;height:60px\"></input></td>\r\n");
       out.write("                </tr>       \r\n");
       out.write("                \r\n");
       out.write("                <tr>\r\n");
@@ -291,6 +301,16 @@ if (false) {
       out.write("                    <td>最後修改日:</td>\r\n");
       out.write("                    <td><span id='lastModifiedDate'/></td>\r\n");
       out.write("                </tr>\r\n");
+      out.write("                \r\n");
+      out.write("                 <tr>\r\n");
+      out.write("                    <td>建檔日:</td>\r\n");
+      out.write("                    <td><span id='createdDate'/></td>\r\n");
+      out.write("                 </tr>\r\n");
+      out.write("                 \r\n");
+      out.write("                 <tr>\r\n");
+      out.write("                    <td>建檔人:</td>\r\n");
+      out.write("                    <td><span id='member'/></td>\r\n");
+      out.write("                 </tr>\r\n");
       out.write("                    \r\n");
       out.write("            </table>\r\n");
       out.write("        </form>        \r\n");
@@ -300,7 +320,9 @@ if (false) {
       out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("<script>\r\n");
-      out.write("\t\r\n");
+      out.write("$('#member').html('");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.member.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("');\t\r\n");
       out.write("$('#customer').html('");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.bill.customer.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("');\r\n");
@@ -309,6 +331,10 @@ if (false) {
       out.write("');\t\r\n");
       out.write("$('#lastModifiedDate').html('");
       if (_jspx_meth_fmt_005fformatDate_005f0(_jspx_page_context))
+        return;
+      out.write("');\t\r\n");
+      out.write("$('#createdDate').html('");
+      if (_jspx_meth_fmt_005fformatDate_005f1(_jspx_page_context))
         return;
       out.write("');\t\r\n");
       out.write("\r\n");
@@ -363,6 +389,8 @@ if (false) {
       out.write("\r\n");
       out.write("\r\n");
       out.write("function submitForm(){\r\n");
+      out.write("\t var memo=$('#memo').textbox('getValue');\r\n");
+      out.write(" \t var freight=$('#freight').textbox('getValue');\r\n");
       out.write("\t var otherBills=$('#otherBills').textbox('getValue');\r\n");
       out.write("\t var code=$('#code').textbox('getValue');\r\n");
       out.write("\t var billId=$('#billId').combobox('getValue');\r\n");
@@ -439,7 +467,7 @@ if (false) {
       out.write("',\"logistics.code\":code,\"logistics.billId\":billId,\"logistics.sender\":sender,\"logistics.senderPhone\":senderPhone,\r\n");
       out.write("             \t\"logistics.senderAddress\":senderAddress,\"logistics.recipient\":recipient,\"logistics.recipientPhone\":recipientPhone,\r\n");
       out.write("             \t\"logistics.recipientAddress\":recipientAddress,\"serviceDate\":serviceDate,\"logistics.timeId\":timeId,\r\n");
-      out.write("             \t\"logistics.otherBills\":otherBills\r\n");
+      out.write("             \t\"logistics.otherBills\":otherBills,\"logistics.freight\":freight,\"logistics.memo\":memo\r\n");
       out.write("             \t}, \r\n");
       out.write("             success: function(data) { \r\n");
       out.write("             \tdoSearch();    \r\n");
@@ -464,15 +492,20 @@ if (false) {
       out.write("        delay:1500,    \r\n");
       out.write("        onChange:function(oldVal, newVal) {             \t\r\n");
       out.write("           var murl=\"billJSON.html?billNo=\"+oldVal;   \r\n");
-      out.write("           //alert(murl);        \r\n");
-      out.write("           $('#billId').combobox('reload', murl);                                 \r\n");
+      out.write("           $('#billId').combobox('reload', murl);    \r\n");
+      out.write("                    \r\n");
       out.write("        },\r\n");
-      out.write("        onSelect:function(item) {  \r\n");
-      out.write("        \t//alert(item.remark);       \r\n");
-      out.write("        \t$('#customer').html(item.customer);     \r\n");
-      out.write("        \t$('#saleman').html(item.saleman);    \r\n");
-      out.write("          $('#recipientAddress').textbox('setValue',item.remark);          \r\n");
-      out.write("        }           \r\n");
+      out.write("        onSelect:function(item) {          \t\r\n");
+      out.write("        \tvar billId='");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.billId}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("';\r\n");
+      out.write("        \tif(billId!==item.id){    \r\n");
+      out.write("        \t $('#customer').html(item.customer);     \r\n");
+      out.write("        \t $('#saleman').html(item.saleman);    \r\n");
+      out.write("           $('#recipientAddress').textbox('setValue',item.remark);    \r\n");
+      out.write("         }      \r\n");
+      out.write("        }  \r\n");
+      out.write("             \r\n");
       out.write("    });\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -606,17 +639,17 @@ if (false) {
     try {
       _jspx_th_ww_005fselect_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fselect_005f0.setParent(null);
-      // /northwest/logisticsForm.jsp(84,22) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setName("logistics.timeId");
-      // /northwest/logisticsForm.jsp(84,22) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setId("timeId");
-      // /northwest/logisticsForm.jsp(84,22) name = list type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = list type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setList("logisticsTimeList");
-      // /northwest/logisticsForm.jsp(84,22) name = listKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = listKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setListKey("id");
-      // /northwest/logisticsForm.jsp(84,22) name = listValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = listValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setListValue("valueTw");
-      // /northwest/logisticsForm.jsp(84,22) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(91,22) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f0.setCssClass("cInputListField");
       int _jspx_eval_ww_005fselect_005f0 = _jspx_th_ww_005fselect_005f0.doStartTag();
       if (_jspx_th_ww_005fselect_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -637,9 +670,9 @@ if (false) {
     try {
       _jspx_th_fmt_005fformatDate_005f0.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fformatDate_005f0.setParent(null);
-      // /northwest/logisticsForm.jsp(109,29) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fformatDate_005f0.setPattern("yyyy-MM-dd");
-      // /northwest/logisticsForm.jsp(109,29) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(126,29) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fformatDate_005f0.setPattern("yyyy-MM-dd HH:mm");
+      // /northwest/logisticsForm.jsp(126,29) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatDate_005f0.setValue((java.util.Date) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.lastModifiedDate}", java.util.Date.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_fmt_005fformatDate_005f0 = _jspx_th_fmt_005fformatDate_005f0.doStartTag();
       if (_jspx_th_fmt_005fformatDate_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -647,6 +680,29 @@ if (false) {
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.reuse(_jspx_th_fmt_005fformatDate_005f0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fformatDate_005f1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:formatDate
+    org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag _jspx_th_fmt_005fformatDate_005f1 = (org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag) _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.FormatDateTag.class);
+    try {
+      _jspx_th_fmt_005fformatDate_005f1.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fformatDate_005f1.setParent(null);
+      // /northwest/logisticsForm.jsp(127,24) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fformatDate_005f1.setPattern("yyyy-MM-dd HH:mm");
+      // /northwest/logisticsForm.jsp(127,24) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fformatDate_005f1.setValue((java.util.Date) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.createdDate}", java.util.Date.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_fmt_005fformatDate_005f1 = _jspx_th_fmt_005fformatDate_005f1.doStartTag();
+      if (_jspx_th_fmt_005fformatDate_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.reuse(_jspx_th_fmt_005fformatDate_005f1);
     }
     return false;
   }

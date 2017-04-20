@@ -177,6 +177,7 @@ if (false) {
       out.write("            <tr>\r\n");
       out.write("                <th data-options=\"field:'ck',checkbox:true,width:30\"></th>   \r\n");
       out.write("         \t      <th data-options=\"field:'code'\" sortable=\"true\">條碼</th>      \r\n");
+      out.write("         \t      <th data-options=\"field:'freight'\">貨運公司</th>\r\n");
       out.write("                <th data-options=\"field:'billno'\">訂單編號</th>     \r\n");
       out.write("                <th data-options=\"field:'otherBills'\">其他訂單</th>  \r\n");
       out.write("                <th data-options=\"field:'customer'\">客戶</th>   \r\n");
@@ -193,8 +194,10 @@ if (false) {
       out.write("          <th data-options=\"field:'recipientPhone'\">收件人電話</th>   \r\n");
       out.write("          <th data-options=\"field:'recipientAddress'\">收件人地址</th>   \r\n");
       out.write("          <th data-options=\"field:'serviceDate'\">送達日期</th>   \r\n");
-      out.write("          <th data-options=\"field:'time'\">送達時段</th>   \r\n");
-      out.write("          <th data-options=\"field:'member'\">建檔人</th> \r\n");
+      out.write("          <th data-options=\"field:'time'\">送達時段</th>     \r\n");
+      out.write("          <th data-options=\"field:'memo'\">備註</th>       \r\n");
+      out.write("          <th data-options=\"field:'createdUser'\">建檔人</th>   \r\n");
+      out.write("          <th data-options=\"field:'member'\">最後修改人</th> \r\n");
       out.write("          <th data-options=\"field:'lastModifiedDate'\">最後修改日</th> \r\n");
       out.write("        </tr>\r\n");
       out.write("       </thead> \r\n");
