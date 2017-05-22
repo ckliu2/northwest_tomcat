@@ -318,7 +318,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
       <a id="jttrigger-${i}" href="#"><img src="images/GridView.gif" border="0"></a>
 			  <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
-				   <fmt:message key='customer.saleman'/>:${row.bill.customer.saleman}<BR>
+				   <fmt:message key='customer.saleman'/>:${row.bill.customer.saleman.name}<BR>
 				   <fmt:message key='customer.customerservice'/>:${schedule.customerAddress.customerService} <BR>
 			     <fmt:message key='billdetail.fromRow'/>:${row.fromRow}<BR>
 					 <fmt:message key='billdetail.price'/>:${row.price}<BR>

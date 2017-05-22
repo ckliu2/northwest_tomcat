@@ -56,7 +56,7 @@
                headerValue="%{getText('common.pleaseSelect')}..."
                list="workerList"
                listKey="id"
-               listValue="caption_"
+               listValue="name"
                cssClass="cInputListField"
             />
         </td>
@@ -190,9 +190,9 @@
     
     <display:column titleKey="common.action" >
            <fmt:message key='billSchedule.step1'/>:${fn:substring(schedule.check1,0,16)}/
-           <fmt:message key='member.name'/>:${schedule.checker1}/
+           <fmt:message key='member.name'/>:${schedule.checker1.name}/
            <fmt:message key='billschedule.fileName'/>:${schedule.fileName}/
-           <fmt:message key='billSchedule.worker'/>:${schedule.worker}/
+           <fmt:message key='billSchedule.worker'/>:${schedule.worker.name}/
            <fmt:message key='billSchedule.costs'/>:${schedule.costs}                     
     </display:column> 
     

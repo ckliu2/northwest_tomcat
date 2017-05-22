@@ -25,6 +25,7 @@ public final class logisticsForm_jsp extends org.apache.jasper.runtime.HttpJspBa
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fww_005fselect_0026_005fonchange_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fww_005fselect_0026_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody;
   private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody;
+  private org.apache.jasper.runtime.TagHandlerPool _005fjspx_005ftagPool_005fww_005fif_0026_005ftest;
 
   private javax.el.ExpressionFactory _el_expressionfactory;
   private org.apache.AnnotationProcessor _jsp_annotationprocessor;
@@ -41,6 +42,7 @@ public final class logisticsForm_jsp extends org.apache.jasper.runtime.HttpJspBa
     _005fjspx_005ftagPool_005fww_005fselect_0026_005fonchange_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005fww_005fselect_0026_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _005fjspx_005ftagPool_005fww_005fif_0026_005ftest = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _el_expressionfactory = _jspxFactory.getJspApplicationContext(getServletConfig().getServletContext()).getExpressionFactory();
     _jsp_annotationprocessor = (org.apache.AnnotationProcessor) getServletConfig().getServletContext().getAttribute(org.apache.AnnotationProcessor.class.getName());
   }
@@ -53,6 +55,7 @@ public final class logisticsForm_jsp extends org.apache.jasper.runtime.HttpJspBa
     _005fjspx_005ftagPool_005fww_005fselect_0026_005fonchange_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody.release();
     _005fjspx_005ftagPool_005fww_005fselect_0026_005fname_005flistValue_005flistKey_005flist_005fid_005fcssClass_005fnobody.release();
     _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.release();
+    _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -364,6 +367,13 @@ if (false) {
       out.write("                }               \r\n");
       out.write("            });\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      if (_jspx_meth_ww_005fif_005f0(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("$('#sender').combogrid({      \r\n");
       out.write("                idField:'id',\r\n");
       out.write("                textField:'text',\r\n");
@@ -389,7 +399,7 @@ if (false) {
       out.write("            });\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("function getLastCode(){\r\n");
+      out.write("function getLastCode(){\t\r\n");
       out.write("\tvar freightCompanyId=$('#freightCompanyId').val();\r\n");
       out.write("\t $.ajax({\r\n");
       out.write("             url: 'logisticsLastCodeJSON.html',\r\n");
@@ -400,11 +410,11 @@ if (false) {
       out.write("             success: function(data) {            \r\n");
       out.write("             \t$('#code').textbox('setValue',$.trim(data));            \t     \t\r\n");
       out.write("            }\r\n");
-      out.write("    });\t\r\n");
-      out.write("\t\r\n");
+      out.write("    });\t\t\r\n");
       out.write("}\r\n");
       out.write("\r\n");
-      out.write("getLastCode();\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("function submitForm(){\r\n");
       out.write("\t var memo=$('#memo').textbox('getValue'); \t \r\n");
@@ -756,6 +766,44 @@ if (false) {
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fformatDate_0026_005fvalue_005fpattern_005fnobody.reuse(_jspx_th_fmt_005fformatDate_005f1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f0 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f0.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f0.setParent(null);
+      // /northwest/logisticsForm.jsp(159,0) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f0.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.code == null}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f0 = _jspx_th_ww_005fif_005f0.doStartTag();
+      if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f0.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("  getLastCode();\r\n");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f0);
     }
     return false;
   }
