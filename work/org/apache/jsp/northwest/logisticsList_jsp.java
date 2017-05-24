@@ -215,7 +215,7 @@ if (false) {
       out.write("\t  <a href=\"#\" class=\"easyui-linkbutton\" iconcls=\"icon-print\" plain=\"true\" onclick=\"printx()\">列印</a> \t         \r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
-      out.write("<div id=\"myevent2\" class=\"easyui-window\" data-options=\"resizable:false,modal:true,closed:true,shadow:false,iconCls:'icon-view',border:'thin',cls:'c6'\" style=\"width:60%;height:auto;padding:10px;top:1px\"></div>\r\n");
+      out.write("<div id=\"myevent2\" class=\"easyui-window\" data-options=\"resizable:false,modal:true,closed:true,shadow:false,iconCls:'icon-view',border:'thin',cls:'c6'\" style=\"width:50%;height:auto;padding:10px;top:1px\"></div>\r\n");
       out.write("<div class=\"progress\"></div>  \r\n");
       out.write("  \r\n");
       out.write("<script>  \r\n");
@@ -241,13 +241,13 @@ if (false) {
       out.write(" \t}\r\n");
       out.write(" \t\r\n");
       out.write(" \t\r\n");
-      out.write(" \tvar randomId=Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 25);\r\n");
-      out.write(" \tvar pdfUrl='http://192.168.1.222/workOrders/'+randomId+'.pdf'; \t\r\n");
+      out.write(" \tvar billno=getSelBillNo();\r\n");
+      out.write(" \tvar randomId=Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 30);\r\n");
+      out.write(" \tvar pdfUrl='http://192.168.1.222/workOrders/'+billno+'.pdf'; \t\r\n");
       out.write("  var id=getSel().toString();\r\n");
-      out.write("  var billno=getSelBillNo();\r\n");
+      out.write(" \r\n");
       out.write("  var purl='http://192.168.1.222/?'+freights[0].toString()+'&id='+id+'&randomId='+randomId+'&billno='+billno;\r\n");
       out.write("  console.log(purl);\r\n");
-      out.write("  //alert(purl);\r\n");
       out.write("  \r\n");
       out.write("  $.ajax({\r\n");
       out.write("        url: purl,\r\n");

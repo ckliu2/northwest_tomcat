@@ -283,16 +283,19 @@ if (false) {
       out.write("                    <td><input class=\"easyui-textbox\" type=\"text\" id=\"recipientAddress\"  data-options=\"required:true,multiline:true\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.recipientAddress}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("\" style=\"width:400px;height:60px\"></input></td>\r\n");
-      out.write("                </tr>       \r\n");
+      out.write("                </tr>     \r\n");
       out.write("                \r\n");
       out.write("                <tr>\r\n");
-      out.write("                    <td>指定送達日:</td>\r\n");
+      out.write("                    <td>工作單備註:\r\n");
+      out.write("                    \t<br>\r\n");
+      out.write("                      <a href=\"#\" class=\"easyui-linkbutton\" iconcls=\"icon-copy\" plain=\"true\" onclick=\"copy()\">複製到地址</a> \t\r\n");
+      out.write("                    </td>\r\n");
       out.write("                    <td>\r\n");
-      out.write("                     <input class=\"easyui-datebox\" name=\"serviceDate\" id=\"serviceDate\" value=\"");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.serviceDate}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("\"   style=\"width:100px\" editable=\"false\" data-options=\"formatter:myformatter,parser:myparser\" /> \r\n");
+      out.write("                     <input class=\"easyui-textbox\" type=\"text\" id=\"addressMemo\"  data-options=\"multiline:true\"  style=\"width:400px;height:60px\"></input>\r\n");
       out.write("    \t             </td>\r\n");
-      out.write("                </tr>   \r\n");
+      out.write("                </tr>  \r\n");
+      out.write("                \r\n");
+      out.write("                 \r\n");
       out.write("                <tr>\r\n");
       out.write("                    <td>指定送達時段:</td>\r\n");
       out.write("                    <td>\r\n");
@@ -363,7 +366,8 @@ if (false) {
       out.write("                     //alert(row.sender);\r\n");
       out.write("                     $('#recipient').textbox('setValue',row.recipient);\r\n");
       out.write("                     $('#recipientPhone').textbox('setValue',row.recipientPhone);\r\n");
-      out.write("                     $('#recipientAddress').textbox('setValue',row.recipientAddress);                   \r\n");
+      out.write("                     $('#recipientAddress').textbox('setValue',row.recipientAddress);          \r\n");
+      out.write("                           \r\n");
       out.write("                }               \r\n");
       out.write("            });\r\n");
       out.write("\r\n");
@@ -371,6 +375,7 @@ if (false) {
       out.write("\r\n");
       if (_jspx_meth_ww_005fif_005f0(_jspx_page_context))
         return;
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -412,6 +417,12 @@ if (false) {
       out.write("            }\r\n");
       out.write("    });\t\t\r\n");
       out.write("}\r\n");
+      out.write("\r\n");
+      out.write("function copy(){\t\r\n");
+      out.write("\tvar addressMemo=$('#addressMemo').textbox('getValue');\r\n");
+      out.write("\t$('#recipientAddress').textbox('setValue',addressMemo);       \r\n");
+      out.write("}\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -532,7 +543,8 @@ if (false) {
       out.write("        \tif(billId!==item.id){    \r\n");
       out.write("        \t $('#customer').html(item.customer);     \r\n");
       out.write("        \t $('#saleman').html(item.saleman);    \r\n");
-      out.write("           $('#recipientAddress').textbox('setValue',item.remark);    \r\n");
+      out.write("           //$('#recipientAddress').textbox('setValue',item.remark);  \r\n");
+      out.write("           $('#addressMemo').textbox('setValue',item.remark);         \r\n");
       out.write("         }      \r\n");
       out.write("        }  \r\n");
       out.write("             \r\n");
@@ -702,17 +714,17 @@ if (false) {
     try {
       _jspx_th_ww_005fselect_005f1.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fselect_005f1.setParent(null);
-      // /northwest/logisticsForm.jsp(96,22) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setName("logistics.timeId");
-      // /northwest/logisticsForm.jsp(96,22) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setId("timeId");
-      // /northwest/logisticsForm.jsp(96,22) name = list type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = list type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setList("logisticsTimeList");
-      // /northwest/logisticsForm.jsp(96,22) name = listKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = listKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setListKey("id");
-      // /northwest/logisticsForm.jsp(96,22) name = listValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = listValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setListValue("valueTw");
-      // /northwest/logisticsForm.jsp(96,22) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(101,22) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fselect_005f1.setCssClass("cInputListField");
       int _jspx_eval_ww_005fselect_005f1 = _jspx_th_ww_005fselect_005f1.doStartTag();
       if (_jspx_th_ww_005fselect_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -733,9 +745,9 @@ if (false) {
     try {
       _jspx_th_fmt_005fformatDate_005f0.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fformatDate_005f0.setParent(null);
-      // /northwest/logisticsForm.jsp(131,29) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(136,29) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatDate_005f0.setPattern("yyyy-MM-dd HH:mm");
-      // /northwest/logisticsForm.jsp(131,29) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(136,29) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatDate_005f0.setValue((java.util.Date) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.lastModifiedDate}", java.util.Date.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_fmt_005fformatDate_005f0 = _jspx_th_fmt_005fformatDate_005f0.doStartTag();
       if (_jspx_th_fmt_005fformatDate_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -756,9 +768,9 @@ if (false) {
     try {
       _jspx_th_fmt_005fformatDate_005f1.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fformatDate_005f1.setParent(null);
-      // /northwest/logisticsForm.jsp(132,24) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(137,24) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatDate_005f1.setPattern("yyyy-MM-dd HH:mm");
-      // /northwest/logisticsForm.jsp(132,24) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(137,24) name = value type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatDate_005f1.setValue((java.util.Date) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.createdDate}", java.util.Date.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_fmt_005fformatDate_005f1 = _jspx_th_fmt_005fformatDate_005f1.doStartTag();
       if (_jspx_th_fmt_005fformatDate_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -779,7 +791,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f0.setParent(null);
-      // /northwest/logisticsForm.jsp(159,0) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/logisticsForm.jsp(165,0) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f0.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${logistics.code == null}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f0 = _jspx_th_ww_005fif_005f0.doStartTag();
       if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
