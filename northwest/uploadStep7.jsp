@@ -155,7 +155,7 @@
     <display:column titleKey="common.action" >
 
 					 <fmt:message key='billSchedule.step7'/>:${fn:substring(schedule.check7,0,16)}/
-           <fmt:message key='member.name'/>:${schedule.checker7}/
+           <fmt:message key='member.name'/>:${schedule.checker7.name}/
            <fmt:message key='outputEquipment.name'/>:${schedule.outputEquipment.name}/
            <fmt:message key='billSchedule.outputDevice'/>:${schedule.outputDevice}
       

@@ -317,6 +317,13 @@ if (false) {
       if (_jspx_meth_fmt_005fmessage_005f10(_jspx_page_context))
         return;
       out.write("\" class=\"cButton\" onclick=\"javascript:exportExcel2()\"/>\r\n");
+      out.write("          \t\r\n");
+      out.write("          \t &nbsp;&nbsp;&nbsp;&nbsp;\r\n");
+      out.write("           \r\n");
+      out.write("          <input type=\"button\" value=\"");
+      if (_jspx_meth_fmt_005fmessage_005f11(_jspx_page_context))
+        return;
+      out.write("\" class=\"cButton\" onclick=\"javascript:showreport3()\"/>\r\n");
       out.write("           \r\n");
       out.write("        </form> \r\n");
       out.write("\r\n");
@@ -340,25 +347,25 @@ if (false) {
       try {
         _jspx_th_display_005ftable_005f0.setPageContext(_jspx_page_context);
         _jspx_th_display_005ftable_005f0.setParent(null);
-        // /northwest/billList.jsp(90,0) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setName(new String("bills"));
-        // /northwest/billList.jsp(90,0) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setClass("list");
-        // /northwest/billList.jsp(90,0) name = cellspacing type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = cellspacing type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setCellspacing("1");
-        // /northwest/billList.jsp(90,0) name = requestURI type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = requestURI type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setRequestURI("billList.html");
-        // /northwest/billList.jsp(90,0) name = id type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = id type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setUid("row");
-        // /northwest/billList.jsp(90,0) name = export type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = export type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setExport(false);
-        // /northwest/billList.jsp(90,0) name = pagesize type = int reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = pagesize type = int reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setPagesize(((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${GLOBAL_pagesize}", java.lang.Integer.class, (PageContext)_jspx_page_context, null, false)).intValue());
-        // /northwest/billList.jsp(90,0) name = sort type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = sort type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setSort("list");
-        // /northwest/billList.jsp(90,0) name = partialList type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = partialList type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setPartialList(true);
-        // /northwest/billList.jsp(90,0) name = size type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/billList.jsp(94,0) name = size type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setSize((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${RESULT_SIZE}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
         int _jspx_eval_display_005ftable_005f0 = _jspx_th_display_005ftable_005f0.doStartTag();
         if (_jspx_eval_display_005ftable_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -497,7 +504,7 @@ if (false) {
       out.write("      </tr>\r\n");
       out.write("</table>\r\n");
       out.write("<span class=\"cLabel\">\r\n");
-      if (_jspx_meth_fmt_005fmessage_005f11(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f12(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("</span>\r\n");
@@ -542,6 +549,17 @@ if (false) {
       out.write(" { \t  \r\n");
       out.write(" \t  window.open('exportReport2.html?billNo='+qform.billNo.value); \r\n");
       out.write(" }\r\n");
+      out.write(" \r\n");
+      out.write(" function showreport3()\r\n");
+      out.write(" { \t  \r\n");
+      out.write(" \t  var startDate=$('#startDate').val();\r\n");
+      out.write(" \t  var endDate=$('#endDate').val();\r\n");
+      out.write(" \t  //alert(startDate+'-'+endDate);\r\n");
+      out.write(" \t  if(startDate!='' && endDate!=''){\r\n");
+      out.write(" \t  \twindow.open('http://192.168.1.222/?rpt=19&start='+startDate+'&end='+endDate); \r\n");
+      out.write(" \t  }\r\n");
+      out.write(" }\r\n");
+      out.write("\r\n");
       out.write(" \r\n");
       out.write("</script>\r\n");
       out.write("\r\n");
@@ -943,6 +961,27 @@ if (false) {
     return false;
   }
 
+  private boolean _jspx_meth_fmt_005fmessage_005f11(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f11 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f11.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f11.setParent(null);
+      // /northwest/billList.jsp(81,38) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f11.setKey("report3");
+      int _jspx_eval_fmt_005fmessage_005f11 = _jspx_th_fmt_005fmessage_005f11.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f11);
+    }
+    return false;
+  }
+
   private boolean _jspx_meth_c_005fset_005f2(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -952,9 +991,9 @@ if (false) {
     try {
       _jspx_th_c_005fset_005f2.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f2.setParent(null);
-      // /northwest/billList.jsp(88,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(92,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f2.setVar("count");
-      // /northwest/billList.jsp(88,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(92,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f2.setValue(new String("1"));
       int _jspx_eval_c_005fset_005f2 = _jspx_th_c_005fset_005f2.doStartTag();
       if (_jspx_th_c_005fset_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -975,9 +1014,9 @@ if (false) {
     try {
       _jspx_th_ww_005fset_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fset_005f0.setParent(null);
-      // /northwest/billList.jsp(89,0) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(93,0) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f0.setName("bills");
-      // /northwest/billList.jsp(89,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(93,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f0.setValue("%{getBillList()}");
       int _jspx_eval_ww_005fset_005f0 = _jspx_th_ww_005fset_005f0.doStartTag();
       if (_jspx_th_ww_005fset_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -998,9 +1037,9 @@ if (false) {
     try {
       _jspx_th_ww_005fset_005f1.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fset_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(92,4) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(96,4) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f1.setName("qas");
-      // /northwest/billList.jsp(92,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(96,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f1.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getBillQAList('${row.id}')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fset_005f1 = _jspx_th_ww_005fset_005f1.doStartTag();
       if (_jspx_th_ww_005fset_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1021,9 +1060,9 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f0.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(94,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(98,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f0.setTitleKey("common.id");
-      // /northwest/billList.jsp(94,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(98,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f0.setStyle("width:5px");
       int _jspx_eval_display_005fcolumn_005f0 = _jspx_th_display_005fcolumn_005f0.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1064,7 +1103,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f1.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(99,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(103,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f1.setTitle("photo");
       int _jspx_eval_display_005fcolumn_005f1 = _jspx_th_display_005fcolumn_005f1.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1107,7 +1146,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f2.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(105,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(109,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f2.setTitle("photo");
       int _jspx_eval_display_005fcolumn_005f2 = _jspx_th_display_005fcolumn_005f2.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1150,7 +1189,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f3.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(112,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(116,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f3.setTitle("photo");
       int _jspx_eval_display_005fcolumn_005f3 = _jspx_th_display_005fcolumn_005f3.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1193,7 +1232,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f4.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(119,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(123,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f4.setTitle("Barcode");
       int _jspx_eval_display_005fcolumn_005f4 = _jspx_th_display_005fcolumn_005f4.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1236,7 +1275,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f5.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(125,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(129,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f5.setTitle("Sticker");
       int _jspx_eval_display_005fcolumn_005f5 = _jspx_th_display_005fcolumn_005f5.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1279,7 +1318,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f6.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(131,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(135,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f6.setTitle("工作單");
       int _jspx_eval_display_005fcolumn_005f6 = _jspx_th_display_005fcolumn_005f6.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1322,7 +1361,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f7.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(137,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(141,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f7.setTitle("sum");
       int _jspx_eval_display_005fcolumn_005f7 = _jspx_th_display_005fcolumn_005f7.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f7 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1365,11 +1404,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f8.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(144,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(148,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setTitleKey("bill.id");
-      // /northwest/billList.jsp(144,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(148,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setSortable(true);
-      // /northwest/billList.jsp(144,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(148,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setStyle("width:5px");
       int _jspx_eval_display_005fcolumn_005f8 = _jspx_th_display_005fcolumn_005f8.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f8 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1412,13 +1451,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f9.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(147,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(151,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setProperty("customer.name");
-      // /northwest/billList.jsp(147,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(151,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setSortable(true);
-      // /northwest/billList.jsp(147,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(151,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setTitleKey("customer.name");
-      // /northwest/billList.jsp(147,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(151,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setStyle("width:15%");
       int _jspx_eval_display_005fcolumn_005f9 = _jspx_th_display_005fcolumn_005f9.doStartTag();
       if (_jspx_th_display_005fcolumn_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1439,13 +1478,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f10.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(148,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(152,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setProperty("customer.id");
-      // /northwest/billList.jsp(148,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(152,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setSortable(true);
-      // /northwest/billList.jsp(148,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(152,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setTitleKey("customer.id");
-      // /northwest/billList.jsp(148,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(152,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setStyle("width:5px");
       int _jspx_eval_display_005fcolumn_005f10 = _jspx_th_display_005fcolumn_005f10.doStartTag();
       if (_jspx_th_display_005fcolumn_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1466,13 +1505,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f11.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(149,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(153,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setProperty("projectName");
-      // /northwest/billList.jsp(149,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(153,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setSortable(true);
-      // /northwest/billList.jsp(149,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(153,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setTitleKey("bill.projectName");
-      // /northwest/billList.jsp(149,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(153,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setStyle("width:50%");
       int _jspx_eval_display_005fcolumn_005f11 = _jspx_th_display_005fcolumn_005f11.doStartTag();
       if (_jspx_th_display_005fcolumn_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1493,13 +1532,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f12.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(150,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(154,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setProperty("userDef2");
-      // /northwest/billList.jsp(150,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(154,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setSortable(true);
-      // /northwest/billList.jsp(150,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(154,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setTitleKey("bill.completeDate");
-      // /northwest/billList.jsp(150,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(154,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setStyle("width:5%");
       int _jspx_eval_display_005fcolumn_005f12 = _jspx_th_display_005fcolumn_005f12.doStartTag();
       if (_jspx_th_display_005fcolumn_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1520,9 +1559,9 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f13.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f13.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(151,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(155,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setTitleKey("bill.flow");
-      // /northwest/billList.jsp(151,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(155,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setStyle("width:3px");
       int _jspx_eval_display_005fcolumn_005f13 = _jspx_th_display_005fcolumn_005f13.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f13 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1574,13 +1613,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f14.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f14.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(156,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(160,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setProperty("remark");
-      // /northwest/billList.jsp(156,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(160,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setSortable(true);
-      // /northwest/billList.jsp(156,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(160,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setTitleKey("bill.remark");
-      // /northwest/billList.jsp(156,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(160,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setStyle("width:10%");
       int _jspx_eval_display_005fcolumn_005f14 = _jspx_th_display_005fcolumn_005f14.doStartTag();
       if (_jspx_th_display_005fcolumn_005f14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1601,7 +1640,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f15.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f15.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(159,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(163,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f15.setTitleKey("bill.finish");
       int _jspx_eval_display_005fcolumn_005f15 = _jspx_th_display_005fcolumn_005f15.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f15 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1651,9 +1690,9 @@ if (false) {
     try {
       _jspx_th_ww_005fset_005f2.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fset_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f15);
-      // /northwest/billList.jsp(160,5) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(164,5) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f2.setName("finish");
-      // /northwest/billList.jsp(160,5) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(164,5) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fset_005f2.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{isBillFinish('${row.id}')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fset_005f2 = _jspx_th_ww_005fset_005f2.doStartTag();
       if (_jspx_th_ww_005fset_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1674,7 +1713,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f15);
-      // /northwest/billList.jsp(161,7) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(165,7) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f0.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${finish} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f0 = _jspx_th_ww_005fif_005f0.doStartTag();
       if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1750,11 +1789,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f16.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(169,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(173,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f16.setTitle("QA");
-      // /northwest/billList.jsp(169,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(173,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f16.setSortable(true);
-      // /northwest/billList.jsp(169,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(173,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f16.setStyle("width:5px");
       int _jspx_eval_display_005fcolumn_005f16 = _jspx_th_display_005fcolumn_005f16.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f16 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1801,9 +1840,9 @@ if (false) {
     try {
       _jspx_th_c_005fset_005f3.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billList.jsp(177,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(181,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f3.setVar("count");
-      // /northwest/billList.jsp(177,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billList.jsp(181,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_c_005fset_005f3 = _jspx_th_c_005fset_005f3.doStartTag();
       if (_jspx_th_c_005fset_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1815,23 +1854,23 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_005fmessage_005f11(PageContext _jspx_page_context)
+  private boolean _jspx_meth_fmt_005fmessage_005f12(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f11 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f12 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
     try {
-      _jspx_th_fmt_005fmessage_005f11.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f11.setParent(null);
-      // /northwest/billList.jsp(190,0) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f11.setKey("bill.memo1");
-      int _jspx_eval_fmt_005fmessage_005f11 = _jspx_th_fmt_005fmessage_005f11.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_fmt_005fmessage_005f12.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f12.setParent(null);
+      // /northwest/billList.jsp(194,0) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f12.setKey("bill.memo1");
+      int _jspx_eval_fmt_005fmessage_005f12 = _jspx_th_fmt_005fmessage_005f12.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f11);
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f12);
     }
     return false;
   }

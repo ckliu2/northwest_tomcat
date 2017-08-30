@@ -6,7 +6,7 @@
 
 <ww:form name="Form1" action="saveCheck6" method="POST"  enctype="multipart/form-data">
   <ww:hidden name="bill.id" value="${bill.id}"/>
-   <table border="0" cellspacing="1" class="cContentTable1">
+   <table border="0" cellspacing="1" class="cContentTable1" width="100%">
     <tr><td class="cContentTitle" colspan="2" ><fmt:message key="bill.form"/></td></tr>
     <tr class="cActionButtonLine">
       <td colspan="2">
@@ -56,8 +56,8 @@
                    listValue="detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
                    multiple="true"
                    size="8"
-                   cssClass="cQueryFieldList3"
-                />
+                   cssClass="cQueryFieldList"
+                  />
                 </ww:if>
                 <ww:else>
                    <ww:select id="allBillDetail"
@@ -66,7 +66,7 @@
                    listValue="detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
                    multiple="true"
                    size="8"
-                   cssClass="cQueryFieldList3"
+                   cssClass="cQueryFieldList"
                   />
                 </ww:else>          
                 </td><td>
@@ -148,7 +148,7 @@
     <display:column titleKey="common.action" >
 
            <fmt:message key='billSchedule.step6'/>:${fn:substring(schedule.check6,0,16)}/
-           <fmt:message key='member.name'/>:${schedule.checker6}/
+           <fmt:message key='member.name'/>:${schedule.checker6.name}/
             <ww:if test="${schedule.checkDiagram.id} != null">           
               <fmt:message key='billSchedule.checkDiagram'/>:<a href="${ctx}/<fmt:message key='billSchedule.uploadCheckDiagram.relativeUrl'/>/${bill.id}_CheckDiagram/${schedule.checkDiagram.fileName}" target="_blank">
                 <img src="images/photo.gif" border=0>

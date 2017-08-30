@@ -5,24 +5,19 @@
   <table border="0" cellspacing="1" class="cContentTable">
     <tr class="cActionButtonLine">
       <td colspan="2">
-      <textarea name=input  onPropertyChange="queryKeyWord(this.value, 'allProduct', 'findProduct.html', 'key');"  cols=20  rows=1></textarea> 
+      <input type="text" name="productStr" id="productStr"/>
       &nbsp;&nbsp;&nbsp;
-      
+      <input type="button" value="<fmt:message key="common.search"/>" class="cButton" onClick="javascript:search();">      
+      &nbsp;&nbsp;&nbsp;      
       <fmt:message key="billDetail.quantity"/>:<input type="text" name="quantity" class="cInputTextFieldShort2" />
       &nbsp;&nbsp;&nbsp;
-      <fmt:message key="common.remark"/>:<input type="text" name="remark" class="cInputTextFieldLong" />
-      
-      
+      <fmt:message key="common.remark"/>:<input type="text" name="remark" class="cInputTextFieldLong" />     
       &nbsp;&nbsp;&nbsp;
       <input type="button" value="<fmt:message key="common.print"/>" class="cButton" onClick="javascript:wprint();">
       &nbsp;&nbsp;&nbsp;
       <input type="button" value="<fmt:message key="common.clear"/>" class="cButton" onClick="javascript:wclear();">
       </td>
-    </tr>
-    
-   
-
-    
+    </tr>    
     
      <tr>
 
@@ -33,7 +28,7 @@
                 <th>&nbsp;</th>
                 <th align="center"><span style="font-size:10pt"><fmt:message key="common.selected"/><fmt:message key="product.name"/></style></th>
             </tr><tr>
-            <td>
+            <td >
                
                 <ww:select id="allProduct" 
                 list="productList"
@@ -92,6 +87,26 @@
 
 
 <script>
+	
+ function search(){
+ 	var productStr=$('#productStr').val(); 	 
+  $('#allProduct').empty(); 
+  $.ajax({
+    url: 'findProductJSON.html',
+    dataType: "json",
+    type: "POST",
+    data: {
+        "key": productStr
+    },
+    success: function(rows) {    	    	
+    	rows.forEach(function (item, index) {
+    		 console.log(index,item.id,item.name);
+    		 $("#allProduct").append(new Option(item.name, item.id)); 
+    	});    	
+    }
+   });   
+ }	
+	
  function wprint(){
  	mySelectAll(document.form1.productIds);
  	form1.submit();

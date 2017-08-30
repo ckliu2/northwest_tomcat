@@ -615,7 +615,15 @@ td.cHello {
 }
 
 
-
+.cQueryFieldList3 {
+    border-width:1px;
+    border-style: solid;
+    font-size:12px;
+    width:500px;
+    font-weight:normal;
+    font-style:'Times New Roman';
+    border-color:#CCCCCC;
+}
 
 
 .cQuerySectionHead {

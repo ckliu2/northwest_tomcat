@@ -352,7 +352,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			  <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step1'/>:${fn:substring(schedule.check1,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker1}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker1.name}<BR>
            <fmt:message key='billschedule.fileName'/>:${schedule.fileName}<BR>
            <fmt:message key='billSchedule.worker'/>:${schedule.worker}<BR>
            <fmt:message key='billSchedule.costs'/>:${schedule.costs}<BR> 
@@ -400,7 +400,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			  <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step2'/>:${fn:substring(schedule.check2,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker2}<BR>          
+           <fmt:message key='member.name'/>:${schedule.checker2.name}<BR>          
 					</div>
 					</div>
         </ww:if>  
@@ -432,7 +432,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			  <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step3'/>:${fn:substring(schedule.check3,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker3}<BR>          
+           <fmt:message key='member.name'/>:${schedule.checker3.name}<BR>          
 					</div>
 					</div>      
 				</ww:if> 
@@ -464,7 +464,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			  <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step4'/>:${fn:substring(schedule.check4,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker4}<BR>          
+           <fmt:message key='member.name'/>:${schedule.checker4.name}<BR>          
 					</div>
 					</div>        
 				</ww:if> 
@@ -503,7 +503,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			    <div id="jttip-${i}" class="jttip" style="display:none;">
 				   <div class="jttipcontent" >
 					   <fmt:message key='billSchedule.step5'/>:${fn:substring(schedule.check5,0,16)}<BR>
-             <fmt:message key='member.name'/>:${schedule.checker5}<BR>          
+             <fmt:message key='member.name'/>:${schedule.checker5.name}<BR>          
 					 </div>
 					</div>  
         </ww:if>  
@@ -546,7 +546,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				  <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step6'/>:${fn:substring(schedule.check6,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker6}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker6.name}<BR>
             <ww:if test="${schedule.checkDiagram.id} != null">           
               <fmt:message key='billSchedule.checkDiagram'/>:<a href="${ctx}/<fmt:message key='billSchedule.uploadCheckDiagram.relativeUrl'/>/${bill.id}_CheckDiagram/${schedule.checkDiagram.fileName}" target="_blank">
                 <img src="images/photo.gif" border=0>
@@ -599,7 +599,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				  <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step7'/>:${fn:substring(schedule.check7,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker7}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker7.name}<BR>
            <fmt:message key='outputEquipment.name'/>:${schedule.outputEquipment.name}<BR>
            <fmt:message key='billSchedule.outputDevice'/>:${schedule.outputDevice}<BR>
            </div>
@@ -662,7 +662,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				  <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step8'/>:${fn:substring(schedule.check8,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker8}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker8.name}<BR>
            </div>  
          </ww:if>  
          
@@ -698,7 +698,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step9'/>:${fn:substring(schedule.check9,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker9}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker9.name}<BR>
          </div>                
          </ww:if>
          
@@ -731,7 +731,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step10'/>:${fn:substring(schedule.check10,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker10}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker10.name}<BR>
          </div>
          </ww:if>
            
@@ -771,7 +771,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step11'/>:${fn:substring(schedule.check11,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker11}<BR>
+           <fmt:message key='member.name'/>:${schedule.checker11.name}<BR>
            <fmt:message key='billSchedule.sendMethod'/>:${schedule.isSend}<BR>
            <fmt:message key='freight.name'/>:${schedule.freight.name}<BR>
            <fmt:message key='freight.no'/>:${schedule.freightNo}<BR>
@@ -815,7 +815,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
 					 <fmt:message key='billSchedule.step12'/>:${fn:substring(schedule.check12,0,16)}<BR>
-           <fmt:message key='member.name'/>:${schedule.checker12}<BR>   
+           <fmt:message key='member.name'/>:${schedule.checker12.name}<BR>   
            <fmt:message key='billSchedule.drawingsmemo'/>:${schedule.drawingsMemo}<BR> 
            <fmt:message key='billSchedule.drawings'/>:<a href="${ctx}/showDrawings.html?bill.id=${bill.id}&billSchedule.billDetailId=${schedule.billDetail.id}" target="_blank"  ><img src="images/photo.gif" border=0></a> <BR>
           </div> 
