@@ -302,9 +302,11 @@ if (false) {
       out.write("          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
       out.write("          <a href=\"#\" class=\"easyui-linkbutton\" data-options=\"iconCls:'icon-print'\" onclick=\"javascript:prints()\">列印營業額報表</a>\r\n");
       out.write("          \r\n");
-      out.write("                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
+      out.write("          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
       out.write("          <a href=\"#\" class=\"easyui-linkbutton\" data-options=\"iconCls:'icon-print'\" onclick=\"javascript:prints1()\">列印標準成本統計報表</a>\r\n");
       out.write("        \t\r\n");
+      out.write("        \t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n");
+      out.write("        \t<a href=\"#\" class=\"easyui-linkbutton\" data-options=\"iconCls:'icon-print'\" onclick=\"javascript:prints2()\">列印應收帳款明細表(請選擇起訖日、客戶)</a>\r\n");
       out.write("<br>\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -326,21 +328,21 @@ if (false) {
       try {
         _jspx_th_display_005ftable_005f0.setPageContext(_jspx_page_context);
         _jspx_th_display_005ftable_005f0.setParent(null);
-        // /northwest/profitList.jsp(91,0) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setName(new String("myprofit"));
-        // /northwest/profitList.jsp(91,0) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setClass("list");
-        // /northwest/profitList.jsp(91,0) name = cellspacing type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = cellspacing type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setCellspacing("1");
-        // /northwest/profitList.jsp(91,0) name = requestURI type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = requestURI type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setRequestURI("profitList.html");
-        // /northwest/profitList.jsp(91,0) name = id type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = id type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setUid("row");
-        // /northwest/profitList.jsp(91,0) name = export type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = export type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setExport(true);
-        // /northwest/profitList.jsp(91,0) name = pagesize type = int reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = pagesize type = int reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setPagesize(((java.lang.Integer) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${GLOBAL_pagesize}", java.lang.Integer.class, (PageContext)_jspx_page_context, null, false)).intValue());
-        // /northwest/profitList.jsp(91,0) name = sort type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+        // /northwest/profitList.jsp(93,0) name = sort type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
         _jspx_th_display_005ftable_005f0.setSort("list");
         int _jspx_eval_display_005ftable_005f0 = _jspx_th_display_005ftable_005f0.doStartTag();
         if (_jspx_eval_display_005ftable_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -497,6 +499,31 @@ if (false) {
       out.write("\t \tvar urls='http://192.168.1.222/?rpt=12&saleNo='+projectNo+'&startDate='+startDate+'&endDate='+endDate;\r\n");
       out.write("\t \t//alert('prints startDate='+startDate);\r\n");
       out.write("\t \twindow.open(urls);\r\n");
+      out.write("\t }\r\n");
+      out.write("\t \r\n");
+      out.write("\t function prints2(){\r\n");
+      out.write("\t  var start=$('#startDate').val();\r\n");
+      out.write("\t \tvar end=$('#endDate').val();\r\n");
+      out.write("\t \tvar customerId=$('#allCustomer').val();\r\n");
+      out.write("\t \t//alert(start+'--'+end+'--'+customerId);\r\n");
+      out.write("\t \r\n");
+      out.write("\t                if (start == '' || end == '' || customerId == '') {\r\n");
+      out.write("                     $.messager.alert('系統訊息', '請選擇起訖日、客戶為必填欄位!', 'error');\r\n");
+      out.write("                     return false;\r\n");
+      out.write("                   }    \r\n");
+      out.write("           \r\n");
+      out.write("\t                 $.ajax({\r\n");
+      out.write("                      url: 'CIPReport001JSON.html',\r\n");
+      out.write("                      type: \"POST\",        \r\n");
+      out.write("                      data: {'start':start,'end':end,'customerId':customerId}, \r\n");
+      out.write("                      dataType:'text',\r\n");
+      out.write("                      success: function(data) {          \t            \r\n");
+      out.write("        \t             //alert('print');\r\n");
+      out.write("        \t             window.open('http://192.168.1.222/?rpt=20');\r\n");
+      out.write("                      }\r\n");
+      out.write("                    }); \r\n");
+      out.write("                   \r\n");
+      out.write("                    \r\n");
       out.write("\t }\r\n");
       out.write("</script>\t\r\n");
       out.write("\r\n");
@@ -932,7 +959,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f0.setParent(null);
-      // /northwest/profitList.jsp(77,0) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(79,0) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f0.setTest("profitSum != null");
       int _jspx_eval_ww_005fif_005f0 = _jspx_th_ww_005fif_005f0.doStartTag();
       if (_jspx_eval_ww_005fif_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1004,7 +1031,7 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f7.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f0);
-      // /northwest/profitList.jsp(80,0) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(82,0) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f7.setKey("profit.salesCost");
       int _jspx_eval_fmt_005fmessage_005f7 = _jspx_th_fmt_005fmessage_005f7.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1025,7 +1052,7 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f8.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f0);
-      // /northwest/profitList.jsp(80,70) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(82,70) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f8.setKey("profit.purchase");
       int _jspx_eval_fmt_005fmessage_005f8 = _jspx_th_fmt_005fmessage_005f8.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1046,7 +1073,7 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f9.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f0);
-      // /northwest/profitList.jsp(80,172) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(82,172) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f9.setKey("profit.salesPrice");
       int _jspx_eval_fmt_005fmessage_005f9 = _jspx_th_fmt_005fmessage_005f9.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1067,7 +1094,7 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f10.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f0);
-      // /northwest/profitList.jsp(80,245) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(82,245) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f10.setKey("profit.profit");
       int _jspx_eval_fmt_005fmessage_005f10 = _jspx_th_fmt_005fmessage_005f10.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1088,7 +1115,7 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f11.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f0);
-      // /northwest/profitList.jsp(80,308) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(82,308) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f11.setKey("profit.profitPerc");
       int _jspx_eval_fmt_005fmessage_005f11 = _jspx_th_fmt_005fmessage_005f11.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1109,9 +1136,9 @@ if (false) {
     try {
       _jspx_th_c_005fset_005f2.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f2.setParent(null);
-      // /northwest/profitList.jsp(90,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(92,0) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f2.setVar("count");
-      // /northwest/profitList.jsp(90,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(92,0) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f2.setValue(new String("0"));
       int _jspx_eval_c_005fset_005f2 = _jspx_th_c_005fset_005f2.doStartTag();
       if (_jspx_th_c_005fset_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1132,9 +1159,9 @@ if (false) {
     try {
       _jspx_th_display_005fsetProperty_005f0.setPageContext(_jspx_page_context);
       _jspx_th_display_005fsetProperty_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(92,4) name = name type = java.lang.String reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(94,4) name = name type = java.lang.String reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fsetProperty_005f0.setName("paging.banner.placement");
-      // /northwest/profitList.jsp(92,4) name = value type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(94,4) name = value type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fsetProperty_005f0.setValue("bottom");
       int _jspx_eval_display_005fsetProperty_005f0 = _jspx_th_display_005fsetProperty_005f0.doStartTag();
       if (_jspx_th_display_005fsetProperty_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1155,9 +1182,9 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f0.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(94,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(96,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f0.setTitle("");
-      // /northwest/profitList.jsp(94,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(96,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f0.setMedia("html");
       int _jspx_eval_display_005fcolumn_005f0 = _jspx_th_display_005fcolumn_005f0.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1199,7 +1226,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f1.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f0);
-      // /northwest/profitList.jsp(95,5) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(97,5) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f1.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${row.standcost} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f1 = _jspx_th_ww_005fif_005f1.doStartTag();
       if (_jspx_eval_ww_005fif_005f1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1240,13 +1267,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f1.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(101,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(103,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f1.setProperty("projectNo");
-      // /northwest/profitList.jsp(101,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(103,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f1.setSortable(true);
-      // /northwest/profitList.jsp(101,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(103,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f1.setTitleKey("profit.id");
-      // /northwest/profitList.jsp(101,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(103,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f1.setStyle("text-align:left");
       int _jspx_eval_display_005fcolumn_005f1 = _jspx_th_display_005fcolumn_005f1.doStartTag();
       if (_jspx_th_display_005fcolumn_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1267,13 +1294,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f2.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(103,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(105,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f2.setProperty("billNo");
-      // /northwest/profitList.jsp(103,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(105,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f2.setSortable(true);
-      // /northwest/profitList.jsp(103,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(105,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f2.setTitle("訂單編號");
-      // /northwest/profitList.jsp(103,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(105,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f2.setStyle("text-align:left");
       int _jspx_eval_display_005fcolumn_005f2 = _jspx_th_display_005fcolumn_005f2.doStartTag();
       if (_jspx_th_display_005fcolumn_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1294,13 +1321,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f3.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(106,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(108,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f3.setProperty("salesNo");
-      // /northwest/profitList.jsp(106,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(108,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f3.setSortable(true);
-      // /northwest/profitList.jsp(106,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(108,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f3.setTitleKey("profit.salesNo");
-      // /northwest/profitList.jsp(106,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(108,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f3.setStyle("text-align:left");
       int _jspx_eval_display_005fcolumn_005f3 = _jspx_th_display_005fcolumn_005f3.doStartTag();
       if (_jspx_th_display_005fcolumn_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1321,13 +1348,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f4.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(108,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(110,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f4.setProperty("billDate");
-      // /northwest/profitList.jsp(108,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(110,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f4.setSortable(true);
-      // /northwest/profitList.jsp(108,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(110,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f4.setTitleKey("profit.Intervaly");
-      // /northwest/profitList.jsp(108,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(110,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f4.setStyle("text-align:left");
       int _jspx_eval_display_005fcolumn_005f4 = _jspx_th_display_005fcolumn_005f4.doStartTag();
       if (_jspx_th_display_005fcolumn_005f4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1348,13 +1375,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f5.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(110,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(112,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f5.setProperty("projectName");
-      // /northwest/profitList.jsp(110,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(112,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f5.setSortable(true);
-      // /northwest/profitList.jsp(110,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(112,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f5.setTitleKey("bill.projectName");
-      // /northwest/profitList.jsp(110,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(112,4) name = style type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f5.setStyle("text-align:left");
       int _jspx_eval_display_005fcolumn_005f5 = _jspx_th_display_005fcolumn_005f5.doStartTag();
       if (_jspx_th_display_005fcolumn_005f5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1375,11 +1402,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f6.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(111,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(113,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f6.setProperty("customer.id");
-      // /northwest/profitList.jsp(111,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(113,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f6.setSortable(true);
-      // /northwest/profitList.jsp(111,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(113,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f6.setTitleKey("customer.id");
       int _jspx_eval_display_005fcolumn_005f6 = _jspx_th_display_005fcolumn_005f6.doStartTag();
       if (_jspx_th_display_005fcolumn_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1400,11 +1427,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f7.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(112,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(114,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f7.setProperty("customer.name");
-      // /northwest/profitList.jsp(112,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(114,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f7.setSortable(true);
-      // /northwest/profitList.jsp(112,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(114,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f7.setTitleKey("profit.customer");
       int _jspx_eval_display_005fcolumn_005f7 = _jspx_th_display_005fcolumn_005f7.doStartTag();
       if (_jspx_th_display_005fcolumn_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1425,11 +1452,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f8.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f8.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(113,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(115,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setProperty("salesmen.name");
-      // /northwest/profitList.jsp(113,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(115,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setSortable(true);
-      // /northwest/profitList.jsp(113,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(115,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f8.setTitleKey("profit.salesmen");
       int _jspx_eval_display_005fcolumn_005f8 = _jspx_th_display_005fcolumn_005f8.doStartTag();
       if (_jspx_th_display_005fcolumn_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1450,11 +1477,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f9.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(114,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(116,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setProperty("billDate");
-      // /northwest/profitList.jsp(114,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(116,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setSortable(true);
-      // /northwest/profitList.jsp(114,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(116,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f9.setTitleKey("common.date");
       int _jspx_eval_display_005fcolumn_005f9 = _jspx_th_display_005fcolumn_005f9.doStartTag();
       if (_jspx_th_display_005fcolumn_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1475,13 +1502,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f10.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(115,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(117,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setProperty("salesCost");
-      // /northwest/profitList.jsp(115,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(117,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setSortable(true);
-      // /northwest/profitList.jsp(115,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(117,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setTitleKey("profit.salesCost");
-      // /northwest/profitList.jsp(115,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(117,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f10.setDecorator("com.base.web.displaytag.ThousandsDecorator");
       int _jspx_eval_display_005fcolumn_005f10 = _jspx_th_display_005fcolumn_005f10.doStartTag();
       if (_jspx_th_display_005fcolumn_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1502,13 +1529,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f11.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(116,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(118,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setProperty("purchase");
-      // /northwest/profitList.jsp(116,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(118,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setSortable(true);
-      // /northwest/profitList.jsp(116,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(118,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setTitleKey("profit.purchase");
-      // /northwest/profitList.jsp(116,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(118,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f11.setDecorator("com.base.web.displaytag.ThousandsDecorator");
       int _jspx_eval_display_005fcolumn_005f11 = _jspx_th_display_005fcolumn_005f11.doStartTag();
       if (_jspx_th_display_005fcolumn_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1529,13 +1556,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f12.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(117,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(119,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setProperty("salesPrice");
-      // /northwest/profitList.jsp(117,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(119,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setSortable(true);
-      // /northwest/profitList.jsp(117,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(119,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setTitleKey("profit.salesPrice");
-      // /northwest/profitList.jsp(117,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(119,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f12.setDecorator("com.base.web.displaytag.ThousandsDecorator");
       int _jspx_eval_display_005fcolumn_005f12 = _jspx_th_display_005fcolumn_005f12.doStartTag();
       if (_jspx_th_display_005fcolumn_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1556,13 +1583,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f13.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f13.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(119,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(121,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setProperty("discount");
-      // /northwest/profitList.jsp(119,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(121,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setSortable(true);
-      // /northwest/profitList.jsp(119,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(121,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setTitleKey("profit.discount");
-      // /northwest/profitList.jsp(119,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(121,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f13.setDecorator("com.base.web.displaytag.ThousandsDecorator");
       int _jspx_eval_display_005fcolumn_005f13 = _jspx_th_display_005fcolumn_005f13.doStartTag();
       if (_jspx_th_display_005fcolumn_005f13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1583,13 +1610,13 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f14.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f14.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(121,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(123,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setProperty("profit");
-      // /northwest/profitList.jsp(121,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(123,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setSortable(true);
-      // /northwest/profitList.jsp(121,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(123,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setTitleKey("profit.profit");
-      // /northwest/profitList.jsp(121,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(123,4) name = decorator type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f14.setDecorator("com.base.web.displaytag.ThousandsDecorator");
       int _jspx_eval_display_005fcolumn_005f14 = _jspx_th_display_005fcolumn_005f14.doStartTag();
       if (_jspx_th_display_005fcolumn_005f14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1610,11 +1637,11 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f15.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f15.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(122,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(124,4) name = property type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f15.setProperty("profitPerc");
-      // /northwest/profitList.jsp(122,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(124,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f15.setSortable(true);
-      // /northwest/profitList.jsp(122,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(124,4) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f15.setTitleKey("profit.profitPerc");
       int _jspx_eval_display_005fcolumn_005f15 = _jspx_th_display_005fcolumn_005f15.doStartTag();
       if (_jspx_th_display_005fcolumn_005f15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1635,9 +1662,9 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f16.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(123,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(125,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f16.setTitle("");
-      // /northwest/profitList.jsp(123,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(125,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f16.setMedia("html");
       int _jspx_eval_display_005fcolumn_005f16 = _jspx_th_display_005fcolumn_005f16.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f16 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1682,7 +1709,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f2.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(130,3) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(132,3) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f2.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${admin} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f2 = _jspx_th_ww_005fif_005f2.doStartTag();
       if (_jspx_eval_ww_005fif_005f2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1724,9 +1751,9 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f17.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f2);
-      // /northwest/profitList.jsp(131,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(133,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f17.setTitle("設定標準成本");
-      // /northwest/profitList.jsp(131,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(133,4) name = media type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f17.setMedia("html");
       int _jspx_eval_display_005fcolumn_005f17 = _jspx_th_display_005fcolumn_005f17.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f17 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1771,7 +1798,7 @@ if (false) {
     try {
       _jspx_th_display_005fcolumn_005f18.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(139,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(141,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f18.setTitle("備註");
       int _jspx_eval_display_005fcolumn_005f18 = _jspx_th_display_005fcolumn_005f18.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f18 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1812,9 +1839,9 @@ if (false) {
     try {
       _jspx_th_c_005fset_005f3.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/profitList.jsp(142,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(144,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f3.setVar("count");
-      // /northwest/profitList.jsp(142,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/profitList.jsp(144,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_c_005fset_005f3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_c_005fset_005f3 = _jspx_th_c_005fset_005f3.doStartTag();
       if (_jspx_th_c_005fset_005f3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {

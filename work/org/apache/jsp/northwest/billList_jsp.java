@@ -556,7 +556,8 @@ if (false) {
       out.write(" \t  var endDate=$('#endDate').val();\r\n");
       out.write(" \t  //alert(startDate+'-'+endDate);\r\n");
       out.write(" \t  if(startDate!='' && endDate!=''){\r\n");
-      out.write(" \t  \twindow.open('http://192.168.1.222/?rpt=19&start='+startDate+'&end='+endDate); \r\n");
+      out.write(" \t  \twindow.location='http://192.168.1.222/?rpt=19&start='+startDate+'&end='+endDate; \r\n");
+      out.write(" \t  \t//window.open('http://192.168.1.222/?rpt=19&start='+startDate+'&end='+endDate);\r\n");
       out.write(" \t  }\r\n");
       out.write(" }\r\n");
       out.write("\r\n");
@@ -1329,7 +1330,7 @@ if (false) {
         }
         do {
           out.write("\r\n");
-          out.write("      <a href=\"http://127.0.0.1:8888/?rpt=13&id=");
+          out.write("      <a href=\"http://192.168.1.222/?rpt=13&id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${row.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" target=\"_blank\">\r\n");
           out.write("          <img src=\"images/page_icon.png\" border=0>\r\n");

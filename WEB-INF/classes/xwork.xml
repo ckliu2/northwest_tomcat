@@ -552,7 +552,9 @@
             <result name="success">/common/backback.jsp</result>
         </action>
 
-        
+        <action name="outputEquipmentIdBySJON" class="outputEquipmentAction" method="list">          
+            <result name="success" >/northwest/outputEquipmentIdBySJON.jsp</result>
+        </action>
 
         
         
@@ -846,7 +848,28 @@
             <result name="success" >/northwest/logisticExcelExportJSON.jsp</result>           
         </action>
          
+        <!-- Weight -->
+        <action name="editWeights" class="weightsAction" method="edit">
+            <result name="success" >/northwest/weightsForm.jsp</result>           
+        </action>
+        
+        <action name="saveWeights" class="weightsAction">            
+            <result name="input" >/northwest/weightsForm.jsp</result>
+            <result name="success" type="chain">saveWeightsWithValidation</result>
+        </action>
+
+        <action name="saveWeightsWithValidation" class="weightsAction" method="save">
+            <result name="input" >/northwest/weightsForm.jsp</result>
+            <result name="success" type="redirect">editWeights.html${xworkParam}</result>
+        </action>
        
+        <action name="weightsByOutputEquipmentJSON" class="weightsAction" method="list">
+            <result name="success" >/northwest/weightsByOutputEquipmentJSON.jsp</result>           
+        </action>
+        
+        <action name="removeWeightsByIDJSON" class="weightsAction" method="list">
+            <result name="success" >/northwest/removeWeightsByIDJSON.jsp</result>           
+        </action>
         
             
     </package>

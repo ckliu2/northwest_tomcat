@@ -272,7 +272,30 @@
             <generator class="identity"/>
         </id> 
         <property name="name" type="string"  column="name"/>
-        <property name="memo" type="string"  column="memo"/>
+        <property name="memo" type="string"  column="memo"/>          
+        <property name="maxChi" type="integer">
+         <column name="maxChi"  default="0" />
+        </property>   
+    </class> 
+    
+    <!-- 
+    ************************ 
+    * 設備權重
+    ************************
+    -->   	
+  	<class name="northwest.common.value.Weights" table="Northwest_Weights"> 
+        <id name="id" column="id"  type="long"  unsaved-value="null">
+            <generator class="identity"/>
+        </id> 
+        <many-to-one name="outputEquipment" class="northwest.common.value.OutputEquipment" cascade="none" />
+        <property name="productClassWeight"   type="float" not-null="true" />
+        <property name="inkWeight"   type="float"  not-null="true" />
+        <list name="productClasses" cascade="none" table="Northwest_ProductClassWeights" >
+        	<meta attribute="widget">none</meta>
+        	<key column="weightId" /> 
+        	<index column="IDX" /> 
+        	<many-to-many class="northwest.common.value.ProductClass" column="productClassId" />         	
+ 		</list> 
     </class> 
   	 
   	
