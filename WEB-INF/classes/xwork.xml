@@ -301,6 +301,16 @@
             <result name="input" type="tiles">freightForm</result>
             <result name="success">/common/backback.jsp</result>
         </action>
+        
+        <action name="freightIdByJSON" class="freightAction" method="list">          
+            <result name="success" >/northwest/freightIdByJSON.jsp</result>
+        </action>
+        
+        <action name="saveFreightNoJSON" class="freightAction" method="list">          
+            <result name="success" >/northwest/saveFreightNoJSON.jsp</result>
+        </action>
+        
+        
   
       <!-- Bill -->
         <action name="billList" class="billAction" method="list">
@@ -661,6 +671,10 @@
             <result name="success" >/northwest/CIPReport001JSON.jsp</result>           
         </action> 
         
+        <action name="report10" class="profitAction" method="list">
+            <result name="success" type="tiles">report10</result>
+        </action>
+        
         <!--產能分析-->
         <action name="workEfficiency" class="workEfficiencyAction" method="list">
             <result name="success" type="tiles">workEfficiency</result>           
@@ -691,6 +705,10 @@
         
         <action name="barcodeUserStep" class="barcodeAction" method="list">
             <result name="success" >/northwest/barcodeUserStepByJSON.jsp</result>           
+        </action>
+        
+        <action name="saveFreightJSON" class="barcodeAction" method="list">
+            <result name="success" >/northwest/saveFreightJSON.jsp</result>           
         </action>
         
   

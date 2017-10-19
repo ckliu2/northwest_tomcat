@@ -697,8 +697,11 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
          <a id="jttrigger-${i}" href="#"><img src="images/GridView.gif" border="0"></a>
 			   <div id="jttip-${i}" class="jttip" style="display:none;">
 				 <div class="jttipcontent" >
+				 	 <!--
 					 <fmt:message key='billSchedule.step9'/>:${fn:substring(schedule.check9,0,16)}<BR>
            <fmt:message key='member.name'/>:${schedule.checker9.name}<BR>
+           -->
+           	${schedule.billDetail.productionmembers}
          </div>                
          </ww:if>
          

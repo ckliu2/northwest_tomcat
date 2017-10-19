@@ -185,11 +185,34 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <tr id=\"deviceNameRow\">\r\n");
       out.write("        <td>\r\n");
       out.write("         <div align=\"center\">         \r\n");
-      out.write("          <div align=\"left\" class=\"barcodeLabel\">設備名稱</div>\r\n");
+      out.write("          <div align=\"left\" class=\"barcodeLabel\">設備選擇</div>\r\n");
       out.write("         </div>        \r\n");
       out.write("        </td>\r\n");
       out.write("        <td>       \r\n");
       out.write("          <span align=\"left\" id=\"deviceName\" class=\"barcodeInfo\"></span>  \r\n");
+      out.write("        </td>\r\n");
+      out.write("      </tr>\r\n");
+      out.write("      \r\n");
+      out.write("      \r\n");
+      out.write("      <tr id=\"freightRow\">\r\n");
+      out.write("        <td>\r\n");
+      out.write("         <div align=\"center\">         \r\n");
+      out.write("          <div align=\"left\" class=\"barcodeLabel\">貨運公司</div>\r\n");
+      out.write("         </div>        \r\n");
+      out.write("        </td>\r\n");
+      out.write("        <td>       \r\n");
+      out.write("          <span align=\"left\" id=\"freightName\" class=\"barcodeInfo\"></span>  \r\n");
+      out.write("        </td>\r\n");
+      out.write("      </tr>\r\n");
+      out.write("      \r\n");
+      out.write("      <tr id=\"freightNoRow\">\r\n");
+      out.write("        <td>\r\n");
+      out.write("         <div align=\"center\">         \r\n");
+      out.write("          <div align=\"left\" class=\"barcodeLabel\">貨運單號</div>\r\n");
+      out.write("         </div>        \r\n");
+      out.write("        </td>\r\n");
+      out.write("        <td>       \r\n");
+      out.write("          <span align=\"left\" id=\"freightNo\" class=\"barcodeInfo\"></span>  \r\n");
       out.write("        </td>\r\n");
       out.write("      </tr>\r\n");
       out.write("      \r\n");
@@ -226,6 +249,30 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</form>\r\n");
       out.write("\r\n");
       out.write("<script>\r\n");
+      out.write("\t\r\n");
+      out.write("function saveFreight(code){\r\n");
+      out.write("\t$.ajax({\r\n");
+      out.write("        url: 'freightIdByJSON.html?freight.id='+code,\r\n");
+      out.write("        type: \"GET\",\r\n");
+      out.write("        dataType: \"json\",\r\n");
+      out.write("        success: function(data) {   \r\n");
+      out.write("        \t$('#freightName').html(data.name);\r\n");
+      out.write("        }\t\r\n");
+      out.write("   });\r\n");
+      out.write("}\r\n");
+      out.write("\r\n");
+      out.write("function saveFreightNo(code){\r\n");
+      out.write("\talert('saveFreight code='+code);\r\n");
+      out.write("\t$.ajax({\r\n");
+      out.write("        url: 'saveFreightNoJSON.html?no='+code,\r\n");
+      out.write("        type: \"GET\",\r\n");
+      out.write("        //dataType: \"json\",\r\n");
+      out.write("        success: function(data) {   \r\n");
+      out.write("        \t$('#freightNo').html(code);\r\n");
+      out.write("        }\t\r\n");
+      out.write("   });\r\n");
+      out.write("}\r\n");
+      out.write("    \t\r\n");
       out.write("\r\n");
       out.write("function userstep(){\r\n");
       out.write("\t$(\"#usersteps\").html('');\r\n");
@@ -297,6 +344,23 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("}\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("function myFreight(id){\r\n");
+      out.write("\t $.ajax({\r\n");
+      out.write("            url: 'freightIdByJSON.html',\r\n");
+      out.write("            type: \"GET\",\r\n");
+      out.write("            dataType: \"json\",\r\n");
+      out.write("            data: {\r\n");
+      out.write("               'freight.id': id,\r\n");
+      out.write("            },\r\n");
+      out.write("            success: function(data) {\r\n");
+      out.write("            \tvar freightName=data.name;\r\n");
+      out.write("            \t//alert('deviceName='+deviceName);\r\n");
+      out.write("              $('#freightName').html(freightName);            \t\r\n");
+      out.write("            }\t\r\n");
+      out.write("         });\r\n");
+      out.write("}\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("   function mybarcode(){     \t   \t\r\n");
       out.write("   \tvar step = $(\"input[name='step']:checked\").val();\r\n");
       out.write("   \tvar stepurl='';\r\n");
@@ -311,6 +375,23 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("   \t\tvar outputEquipmentId=code.substring(0,code.indexOf('-EQT'));\r\n");
       out.write("    \t //alert('outputEquipmentId='+outputEquipmentId);\r\n");
       out.write("    \t mydevice(outputEquipmentId);\r\n");
+      out.write("    \t $(\"#barcode\").val(\"\");\t\t\r\n");
+      out.write("       $('#barcode').focus();\r\n");
+      out.write("    \t return false;\r\n");
+      out.write("    }\r\n");
+      out.write("    \r\n");
+      out.write("    if(code.indexOf('-FRE')!==-1){   \t\t\r\n");
+      out.write("   \t\tvar freightId=code.substring(0,code.indexOf('-FRE'));    \t\r\n");
+      out.write("    \t myFreight(freightId);\r\n");
+      out.write("    \t saveFreight(code);\r\n");
+      out.write("    \t $(\"#barcode\").val(\"\");\t\t\r\n");
+      out.write("       $('#barcode').focus();\r\n");
+      out.write("    \t return false;\r\n");
+      out.write("    }\r\n");
+      out.write("    \r\n");
+      out.write("    //貨運單號\r\n");
+      out.write("    if( isNaN(parseInt(code)) ===false){    \r\n");
+      out.write("    \t saveFreightNo(code);\r\n");
       out.write("    \t $(\"#barcode\").val(\"\");\t\t\r\n");
       out.write("       $('#barcode').focus();\r\n");
       out.write("    \t return false;\r\n");
@@ -408,8 +489,8 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            \t   }            \t\r\n");
       out.write("            \t\r\n");
       out.write("            \t   if(returnValue=='barcode-success')\r\n");
-      out.write("            \t   {            \t   \t \r\n");
-      out.write("            \t\t   var infotxt='';              \t\t   \r\n");
+      out.write("            \t   {          \r\n");
+      out.write("            \t\t   var infotxt='';             \t\t   \r\n");
       out.write("            \t\t   \r\n");
       out.write("            \t\t   var groupname=data[data.length-1].groups;   \r\n");
       out.write("            \t\t   var billno=data[data.length-1].billno;   \r\n");
@@ -458,7 +539,9 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_fmt_005fmessage_005f25(_jspx_page_context))
         return;
       out.write("</th> ';\r\n");
-      out.write("                   infotxt+='   <th>設備名稱</th> ';\r\n");
+      out.write("                   infotxt+='   <th>輸出設備</th> ';\r\n");
+      out.write("                   infotxt+='   <th>後製設備</th> ';\r\n");
+      out.write("                   infotxt+='   <th>貨運公司</th> ';\r\n");
       out.write("                   infotxt+='  </tr> ';                \r\n");
       out.write("                   infotxt+='</thead>';\r\n");
       out.write("                  \r\n");
@@ -475,6 +558,9 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            \t\t       var description=data[i].memo;    \r\n");
       out.write("            \t\t       var optionCode=data[i].optionCode;\r\n");
       out.write("            \t\t       var outputEquipment=data[i].outputEquipment;\r\n");
+      out.write("            \t\t       var postProductionsEqt=data[i].postProductionsEqt;\r\n");
+      out.write("            \t\t       var freight=data[i].freight;\r\n");
+      out.write("            \t\t       \r\n");
       out.write("            \t\t       var code=data[i].code;\r\n");
       out.write("            \t\t                  \t\t      \r\n");
       out.write("            \t\t                  \t\t        \r\n");
@@ -510,17 +596,20 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                       infotxt+='   <td nowrap align=\"left\">'+itemRemark+'</td> ';\r\n");
       out.write("                       infotxt+='   <td nowrap align=\"left\"><span id=complete'+code+'/></td> ';\r\n");
       out.write("                       infotxt+='   <td nowrap align=\"left\"><span id=uncomplete'+code+'/></td> ';          \r\n");
-      out.write("                       infotxt+='   <td nowrap align=\"left\">'+outputEquipment+'</td> ';                                         \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+outputEquipment+'</td> ';            \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+postProductionsEqt+'</td> ';                \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+freight+'</td> ';                                       \r\n");
       out.write("                       infotxt+='  </tr> ';\r\n");
       out.write("                     }                 \r\n");
-      out.write("                    infotxt+='</table>';                 \r\n");
+      out.write("                    infotxt+='</table>';       \r\n");
+      out.write("                    \r\n");
       out.write("                    $(\"#info\").html(infotxt);   \r\n");
       out.write("                    \r\n");
       out.write("                    for (var j = 0; j < data.length-1; j++) {\r\n");
-      out.write("            \t  \t    var code=data[j].code;\r\n");
-      out.write("            \t  \t    //alert(\"code j=\"+j+\"--\"+code);\r\n");
+      out.write("            \t  \t    var code=data[j].code;            \t  \t \r\n");
       out.write("            \t        completeStatus(code);\r\n");
-      out.write("            \t     }              \r\n");
+      out.write("            \t     }  \r\n");
+      out.write("            \t         \r\n");
       out.write("            \t  }\r\n");
       out.write("            \t  \r\n");
       out.write("            \t  \r\n");
@@ -551,6 +640,128 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("  $('#barcode').focus();\r\n");
       out.write("  $(\"#loading\").hide();\r\n");
+      out.write("  \r\n");
+      out.write("  function showResult(data){\r\n");
+      out.write("  \tvar infotxt='';              \t\t   \r\n");
+      out.write("            \t\t   \r\n");
+      out.write("            \t\t   var groupname=data[data.length-1].groups;   \r\n");
+      out.write("            \t\t   var billno=data[data.length-1].billno;   \r\n");
+      out.write("            \t\t   infotxt+= '");
+      if (_jspx_meth_fmt_005fmessage_005f28(_jspx_page_context))
+        return;
+      out.write(":'+billno+'<br>';\r\n");
+      out.write("            \t\t   //infotxt+= '");
+      if (_jspx_meth_fmt_005fmessage_005f29(_jspx_page_context))
+        return;
+      out.write(":'+groupname+'<hr>';\r\n");
+      out.write("            \t\t            \t\t\r\n");
+      out.write("            \t\t   infotxt+=' <table cellspacing=\"1\" class=\"list\"> ';            \t\t\r\n");
+      out.write("            \t\t   infotxt+='<thead>';\r\n");
+      out.write("                   infotxt+='  <tr> ';\r\n");
+      out.write("                   infotxt+='   <th>No.</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f30(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f31(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f32(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f33(_jspx_page_context))
+        return;
+      out.write("</td> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f34(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f35(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f36(_jspx_page_context))
+        return;
+      out.write("</th> ';   \r\n");
+      out.write("                   infotxt+='   <th>");
+      if (_jspx_meth_fmt_005fmessage_005f37(_jspx_page_context))
+        return;
+      out.write("</th> ';\r\n");
+      out.write("                   infotxt+='   <th>輸出設備</th> ';\r\n");
+      out.write("                   infotxt+='   <th>後製設備</th> ';\r\n");
+      out.write("                   infotxt+='   <th>貨運公司</th> ';\r\n");
+      out.write("                   infotxt+='  </tr> ';                \r\n");
+      out.write("                   infotxt+='</thead>';\r\n");
+      out.write("                  \r\n");
+      out.write("            \t\t     for (var i = 0; i < data.length-1; i++) {            \t\t      \r\n");
+      out.write("                       var productId=data[i].productId;\r\n");
+      out.write("            \t\t       var productName=data[i].productName;\r\n");
+      out.write("            \t\t       var fromRow=data[i].fromRow;\r\n");
+      out.write("            \t\t       var width=data[i].width;\r\n");
+      out.write("            \t\t       var heigh=data[i].heigh;\r\n");
+      out.write("            \t\t       var visibleWidth=data[i].visibleWidth;\r\n");
+      out.write("            \t\t       var visibleHeigh=data[i].visibleHeigh;\r\n");
+      out.write("            \t\t       var quantity=data[i].quantity;\r\n");
+      out.write("            \t\t       var itemRemark=data[i].itemRemark;               \t\t       \r\n");
+      out.write("            \t\t       var description=data[i].memo;    \r\n");
+      out.write("            \t\t       var optionCode=data[i].optionCode;\r\n");
+      out.write("            \t\t       var outputEquipment=data[i].outputEquipment;\r\n");
+      out.write("            \t\t       var postProductionsEqt=data[i].postProductionsEqt;\r\n");
+      out.write("            \t\t       var freight=data[i].freight;\r\n");
+      out.write("            \t\t       \r\n");
+      out.write("            \t\t       var code=data[i].code;\r\n");
+      out.write("            \t\t                  \t\t      \r\n");
+      out.write("            \t\t                  \t\t        \r\n");
+      out.write("            \t\t       var bgcolor=\"\";        \r\n");
+      out.write("            \t\t       if(optionCode=='delete')\r\n");
+      out.write("            \t\t       {\r\n");
+      out.write("            \t\t       \t bgcolor=\"#FF6600\";            \t\t       \t\r\n");
+      out.write("            \t\t       }\r\n");
+      out.write("            \t\t       if(optionCode=='delete-fail')\r\n");
+      out.write("            \t\t       {\r\n");
+      out.write("            \t\t       \t bgcolor=\"#FF8080\";            \t\t       \t\r\n");
+      out.write("            \t\t       }\r\n");
+      out.write("            \t\t       if(optionCode=='overwrite-fail')\r\n");
+      out.write("            \t\t       {\r\n");
+      out.write("            \t\t       \t bgcolor=\"#FF8080\";            \t\t       \t\r\n");
+      out.write("            \t\t       }\r\n");
+      out.write("            \t\t       if(optionCode=='barcode-ok')\r\n");
+      out.write("            \t\t       {\r\n");
+      out.write("            \t\t       \t bgcolor=\"#0066FF\";            \t\t       \t\r\n");
+      out.write("            \t\t       } \r\n");
+      out.write("            \t\t       if(optionCode=='workflow-error')\r\n");
+      out.write("            \t\t       {\r\n");
+      out.write("            \t\t       \t bgcolor=\"#FF8080\";            \t\t       \t\r\n");
+      out.write("            \t\t       }\r\n");
+      out.write("            \t\t                    \t\t               \t\t    \r\n");
+      out.write("            \t         infotxt+='  <tr bgcolor=\"'+bgcolor+'\"> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+(i+1)+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+productId+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+productName+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+fromRow+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+quantity+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+width+'*'+heigh+'('+visibleWidth+'*'+visibleHeigh+')</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+itemRemark+'</td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\"><span id=complete'+code+'/></td> ';\r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\"><span id=uncomplete'+code+'/></td> ';          \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+outputEquipment+'</td> ';            \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+postProductionsEqt+'</td> ';                \r\n");
+      out.write("                       infotxt+='   <td nowrap align=\"left\">'+freight+'</td> ';                                       \r\n");
+      out.write("                       infotxt+='  </tr> ';\r\n");
+      out.write("                     }                 \r\n");
+      out.write("                    infotxt+='</table>';                 \r\n");
+      out.write("                    \r\n");
+      out.write("                    $(\"#info\").html(infotxt);   \r\n");
+      out.write("                    \r\n");
+      out.write("                    for (var j = 0; j < data.length-1; j++) {\r\n");
+      out.write("            \t  \t    var code=data[j].code;            \t  \t   \r\n");
+      out.write("            \t        completeStatus(code);\r\n");
+      out.write("            \t     }              \r\n");
+      out.write("  }\r\n");
       out.write(" \r\n");
       out.write("</script>\r\n");
       out.write("\r\n");
@@ -786,7 +997,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f7.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f7.setParent(null);
-      // /barcode.jsp(90,49) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(113,49) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f7.setKey("barcode.input");
       int _jspx_eval_fmt_005fmessage_005f7 = _jspx_th_fmt_005fmessage_005f7.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -807,7 +1018,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f8.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f8.setParent(null);
-      // /barcode.jsp(128,43) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(175,43) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f8.setKey("barcode.user.allsteps");
       int _jspx_eval_fmt_005fmessage_005f8 = _jspx_th_fmt_005fmessage_005f8.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -828,7 +1039,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f9.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f9.setParent(null);
-      // /barcode.jsp(222,32) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(303,32) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f9.setKey("barcode.unlogin");
       int _jspx_eval_fmt_005fmessage_005f9 = _jspx_th_fmt_005fmessage_005f9.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -849,7 +1060,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f10.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f10.setParent(null);
-      // /barcode.jsp(232,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(313,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f10.setKey("barcode.select1");
       int _jspx_eval_fmt_005fmessage_005f10 = _jspx_th_fmt_005fmessage_005f10.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -870,7 +1081,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f11.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f11.setParent(null);
-      // /barcode.jsp(236,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(317,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f11.setKey("barcode.select2");
       int _jspx_eval_fmt_005fmessage_005f11 = _jspx_th_fmt_005fmessage_005f11.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -891,7 +1102,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f12.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f12.setParent(null);
-      // /barcode.jsp(240,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(321,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f12.setKey("barcode.select3");
       int _jspx_eval_fmt_005fmessage_005f12 = _jspx_th_fmt_005fmessage_005f12.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -912,7 +1123,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f13.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f13.setParent(null);
-      // /barcode.jsp(244,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(325,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f13.setKey("barcode.delete");
       int _jspx_eval_fmt_005fmessage_005f13 = _jspx_th_fmt_005fmessage_005f13.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -933,7 +1144,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f14.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f14.setParent(null);
-      // /barcode.jsp(252,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(333,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f14.setKey("barcode-error-selectmode");
       int _jspx_eval_fmt_005fmessage_005f14 = _jspx_th_fmt_005fmessage_005f14.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -954,7 +1165,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f15.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f15.setParent(null);
-      // /barcode.jsp(270,35) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(351,35) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f15.setKey("barcode.steperror");
       int _jspx_eval_fmt_005fmessage_005f15 = _jspx_th_fmt_005fmessage_005f15.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -975,7 +1186,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f16.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f16.setParent(null);
-      // /barcode.jsp(279,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(360,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f16.setKey("profit.id");
       int _jspx_eval_fmt_005fmessage_005f16 = _jspx_th_fmt_005fmessage_005f16.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f16.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -996,7 +1207,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f17.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f17.setParent(null);
-      // /barcode.jsp(280,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(361,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f17.setKey("barcode.completesteps");
       int _jspx_eval_fmt_005fmessage_005f17 = _jspx_th_fmt_005fmessage_005f17.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1017,7 +1228,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f18.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f18.setParent(null);
-      // /barcode.jsp(286,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(367,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f18.setKey("product.id");
       int _jspx_eval_fmt_005fmessage_005f18 = _jspx_th_fmt_005fmessage_005f18.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1038,7 +1249,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f19.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f19.setParent(null);
-      // /barcode.jsp(287,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(368,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f19.setKey("product.name2");
       int _jspx_eval_fmt_005fmessage_005f19 = _jspx_th_fmt_005fmessage_005f19.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1059,7 +1270,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f20.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f20.setParent(null);
-      // /barcode.jsp(288,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(369,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f20.setKey("billdetail.fromRow");
       int _jspx_eval_fmt_005fmessage_005f20 = _jspx_th_fmt_005fmessage_005f20.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1080,7 +1291,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f21.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f21.setParent(null);
-      // /barcode.jsp(289,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(370,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f21.setKey("billDetail.quantity");
       int _jspx_eval_fmt_005fmessage_005f21 = _jspx_th_fmt_005fmessage_005f21.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1101,7 +1312,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f22.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f22.setParent(null);
-      // /barcode.jsp(290,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(371,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f22.setKey("billDetail.detail");
       int _jspx_eval_fmt_005fmessage_005f22 = _jspx_th_fmt_005fmessage_005f22.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1122,7 +1333,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f23.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f23.setParent(null);
-      // /barcode.jsp(291,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(372,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f23.setKey("bill.remark");
       int _jspx_eval_fmt_005fmessage_005f23 = _jspx_th_fmt_005fmessage_005f23.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f23.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1143,7 +1354,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f24.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f24.setParent(null);
-      // /barcode.jsp(292,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(373,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f24.setKey("barcode.complete");
       int _jspx_eval_fmt_005fmessage_005f24 = _jspx_th_fmt_005fmessage_005f24.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f24.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1164,7 +1375,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f25.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f25.setParent(null);
-      // /barcode.jsp(293,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(374,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f25.setKey("barcode.uncomplete");
       int _jspx_eval_fmt_005fmessage_005f25 = _jspx_th_fmt_005fmessage_005f25.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f25.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1185,7 +1396,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f26.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f26.setParent(null);
-      // /barcode.jsp(362,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(451,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f26.setKey("barcode.nocode");
       int _jspx_eval_fmt_005fmessage_005f26 = _jspx_th_fmt_005fmessage_005f26.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1206,7 +1417,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f27.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f27.setParent(null);
-      // /barcode.jsp(367,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(456,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f27.setKey("barcode.formaterror");
       int _jspx_eval_fmt_005fmessage_005f27 = _jspx_th_fmt_005fmessage_005f27.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f27.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1214,6 +1425,216 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f27);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f28(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f28 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f28.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f28.setParent(null);
+      // /barcode.jsp(476,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f28.setKey("profit.id");
+      int _jspx_eval_fmt_005fmessage_005f28 = _jspx_th_fmt_005fmessage_005f28.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f28.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f28);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f29(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f29 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f29.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f29.setParent(null);
+      // /barcode.jsp(477,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f29.setKey("barcode.completesteps");
+      int _jspx_eval_fmt_005fmessage_005f29 = _jspx_th_fmt_005fmessage_005f29.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f29.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f29);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f30(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f30 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f30.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f30.setParent(null);
+      // /barcode.jsp(483,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f30.setKey("product.id");
+      int _jspx_eval_fmt_005fmessage_005f30 = _jspx_th_fmt_005fmessage_005f30.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f30.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f30);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f31(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f31 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f31.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f31.setParent(null);
+      // /barcode.jsp(484,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f31.setKey("product.name2");
+      int _jspx_eval_fmt_005fmessage_005f31 = _jspx_th_fmt_005fmessage_005f31.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f31.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f31);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f32(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f32 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f32.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f32.setParent(null);
+      // /barcode.jsp(485,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f32.setKey("billdetail.fromRow");
+      int _jspx_eval_fmt_005fmessage_005f32 = _jspx_th_fmt_005fmessage_005f32.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f32.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f32);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f33(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f33 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f33.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f33.setParent(null);
+      // /barcode.jsp(486,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f33.setKey("billDetail.quantity");
+      int _jspx_eval_fmt_005fmessage_005f33 = _jspx_th_fmt_005fmessage_005f33.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f33.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f33);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f34(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f34 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f34.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f34.setParent(null);
+      // /barcode.jsp(487,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f34.setKey("billDetail.detail");
+      int _jspx_eval_fmt_005fmessage_005f34 = _jspx_th_fmt_005fmessage_005f34.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f34.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f34);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f35(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f35 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f35.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f35.setParent(null);
+      // /barcode.jsp(488,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f35.setKey("bill.remark");
+      int _jspx_eval_fmt_005fmessage_005f35 = _jspx_th_fmt_005fmessage_005f35.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f35.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f35);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f36(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f36 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f36.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f36.setParent(null);
+      // /barcode.jsp(489,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f36.setKey("barcode.complete");
+      int _jspx_eval_fmt_005fmessage_005f36 = _jspx_th_fmt_005fmessage_005f36.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f36.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f36);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f37(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f37 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f37.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f37.setParent(null);
+      // /barcode.jsp(490,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f37.setKey("barcode.uncomplete");
+      int _jspx_eval_fmt_005fmessage_005f37 = _jspx_th_fmt_005fmessage_005f37.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f37.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f37);
     }
     return false;
   }

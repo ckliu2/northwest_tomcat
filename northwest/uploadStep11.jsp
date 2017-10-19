@@ -18,7 +18,7 @@
     
     
     <tr><td class="cInputCaption"><fmt:message key="billSchedule.sendMethod"/></td>
-        <td class="cInputColumn">
+        <td class="cInputColumn" nowrap="nowrap">
             <ww:select name="billSchedule.isSendId"  id="sendMethod" onchange="isSendId()"
                headerKey=""
                headerValue="%{getText('common.pleaseSelect')}..."
@@ -31,7 +31,7 @@
     </tr>
     
    <tr><td class="cInputCaption"><fmt:message key="freight.name"/></td>
-        <td class="cInputColumn">
+        <td class="cInputColumn" nowrap="nowrap">
             <ww:select name="billSchedule.freightId"  id="freight"
                headerKey=""
                headerValue="%{getText('common.pleaseSelect')}..."
@@ -44,7 +44,7 @@
     </tr>
     
     <tr><td class="cInputCaption"><fmt:message key="freight.no"/></td>
-        <td class="cInputColumn">
+        <td class="cInputColumn" nowrap="nowrap">
             <ww:textfield id="freightNo" name="billSchedule.freightNo" value="%{billSchedule.freightNo}"  cssClass="cInputTextField" />
         </td>
     </tr>
@@ -52,7 +52,7 @@
 
 
     <tr><td class="cInputCaption"><fmt:message key="billSchedule.arrival"/></td>
-        <td class="cInputColumn">
+        <td class="cInputColumn" nowrap="nowrap">
             <ww:textfield  name="arrival" id="arrival"  readonly="true" value="%{billSchedule.arrival}"/>
             <img src="images/cal.gif" onclick="javascript:NewCssCal ('arrival','yyyyMMdd','dropdown',true,'24')"  style="cursor:pointer"/>
         </td>
@@ -63,7 +63,7 @@
     
         
        <tr><td class="cInputCaption"><fmt:message key="common.completely"/><fmt:message key="bill.form"/></td>
-        <td class="cInputColumn">
+        <td class="cInputColumn" nowrap="nowrap">
             <table>
             <tr>
                 <th align="center"><span style="font-size:10pt"><fmt:message key="common.available"/><fmt:message key="bill.form"/></style></th>

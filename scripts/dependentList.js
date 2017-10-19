@@ -4,6 +4,8 @@ var thirdBoxId;
 
 function queryKeyWord2(keyword, box2Id, action, paramName)
 { 		  	
+	 alert('queryKeyWord2..');
+	 
     var secondBoxId = box2Id;
     var urls=action + "?" + paramName + "=" + encodeURIComponent(keyword); 
     //var urls=action + "?" + paramName + "=" + keyword; 
@@ -13,7 +15,9 @@ function queryKeyWord2(keyword, box2Id, action, paramName)
     	
     $.each( data, function( key, val ) {
       //alert(val.id+"--"+val.name+"--"+val.email); 
-		  var option = '<option value='+val.id+'>'+val.name+'('+val.email+')</option>';   
+      console.log(val.id,val.name);
+      
+		  var option = '<option value='+val.id+'>'+val.name+'</option>';   
 		  $('#'+secondBoxId).append(option);	
     });  
   });
