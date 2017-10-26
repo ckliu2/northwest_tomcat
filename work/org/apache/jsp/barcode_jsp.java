@@ -251,6 +251,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script>\r\n");
       out.write("\t\r\n");
       out.write("function saveFreight(code){\r\n");
+      out.write("\t//alert('saveFreight code='+code);\r\n");
       out.write("\t$.ajax({\r\n");
       out.write("        url: 'freightIdByJSON.html?freight.id='+code,\r\n");
       out.write("        type: \"GET\",\r\n");
@@ -262,7 +263,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("}\r\n");
       out.write("\r\n");
       out.write("function saveFreightNo(code){\r\n");
-      out.write("\talert('saveFreight code='+code);\r\n");
+      out.write("\t//alert('saveFreight code===='+code);\r\n");
       out.write("\t$.ajax({\r\n");
       out.write("        url: 'saveFreightNoJSON.html?no='+code,\r\n");
       out.write("        type: \"GET\",\r\n");
@@ -389,13 +390,16 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    \t return false;\r\n");
       out.write("    }\r\n");
       out.write("    \r\n");
-      out.write("    //貨運單號\r\n");
-      out.write("    if( isNaN(parseInt(code)) ===false){    \r\n");
+      out.write("    //貨運單號   \r\n");
+      out.write("    \r\n");
+      out.write("    if( isNaN(parseInt(code)) === false && code.length>=6  && code.length<=10){        \t\r\n");
+      out.write("    \t //alert('saveFreightNo');    \t\r\n");
       out.write("    \t saveFreightNo(code);\r\n");
       out.write("    \t $(\"#barcode\").val(\"\");\t\t\r\n");
       out.write("       $('#barcode').focus();\r\n");
       out.write("    \t return false;\r\n");
       out.write("    }\r\n");
+      out.write("    \r\n");
       out.write("   \t\r\n");
       out.write("   \r\n");
       out.write("   \t$(\"#info\").html('');\r\n");
@@ -629,7 +633,10 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("');\r\n");
       out.write("            \t}              \t\t     \r\n");
       out.write("            }           \r\n");
-      out.write("            $(\"#barcode\").val(\"\");\t\t\r\n");
+      out.write("            $(\"#barcode\").val(\"\");\t\r\n");
+      out.write("            $('#deviceName').html('');\r\n");
+      out.write("            $('#freightName').html('');\r\n");
+      out.write("            $('#freightNo').html('');\t\r\n");
       out.write("         }\r\n");
       out.write("      });      \r\n");
       out.write("  \r\n");
@@ -1018,7 +1025,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f8.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f8.setParent(null);
-      // /barcode.jsp(175,43) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(176,43) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f8.setKey("barcode.user.allsteps");
       int _jspx_eval_fmt_005fmessage_005f8 = _jspx_th_fmt_005fmessage_005f8.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1039,7 +1046,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f9.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f9.setParent(null);
-      // /barcode.jsp(303,32) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(307,32) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f9.setKey("barcode.unlogin");
       int _jspx_eval_fmt_005fmessage_005f9 = _jspx_th_fmt_005fmessage_005f9.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1060,7 +1067,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f10.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f10.setParent(null);
-      // /barcode.jsp(313,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(317,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f10.setKey("barcode.select1");
       int _jspx_eval_fmt_005fmessage_005f10 = _jspx_th_fmt_005fmessage_005f10.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1081,7 +1088,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f11.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f11.setParent(null);
-      // /barcode.jsp(317,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(321,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f11.setKey("barcode.select2");
       int _jspx_eval_fmt_005fmessage_005f11 = _jspx_th_fmt_005fmessage_005f11.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1102,7 +1109,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f12.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f12.setParent(null);
-      // /barcode.jsp(321,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(325,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f12.setKey("barcode.select3");
       int _jspx_eval_fmt_005fmessage_005f12 = _jspx_th_fmt_005fmessage_005f12.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1123,7 +1130,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f13.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f13.setParent(null);
-      // /barcode.jsp(325,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(329,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f13.setKey("barcode.delete");
       int _jspx_eval_fmt_005fmessage_005f13 = _jspx_th_fmt_005fmessage_005f13.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1144,7 +1151,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f14.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f14.setParent(null);
-      // /barcode.jsp(333,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(337,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f14.setKey("barcode-error-selectmode");
       int _jspx_eval_fmt_005fmessage_005f14 = _jspx_th_fmt_005fmessage_005f14.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1165,7 +1172,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f15.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f15.setParent(null);
-      // /barcode.jsp(351,35) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(355,35) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f15.setKey("barcode.steperror");
       int _jspx_eval_fmt_005fmessage_005f15 = _jspx_th_fmt_005fmessage_005f15.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1186,7 +1193,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f16.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f16.setParent(null);
-      // /barcode.jsp(360,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(364,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f16.setKey("profit.id");
       int _jspx_eval_fmt_005fmessage_005f16 = _jspx_th_fmt_005fmessage_005f16.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f16.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1207,7 +1214,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f17.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f17.setParent(null);
-      // /barcode.jsp(361,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(365,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f17.setKey("barcode.completesteps");
       int _jspx_eval_fmt_005fmessage_005f17 = _jspx_th_fmt_005fmessage_005f17.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1228,7 +1235,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f18.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f18.setParent(null);
-      // /barcode.jsp(367,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(371,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f18.setKey("product.id");
       int _jspx_eval_fmt_005fmessage_005f18 = _jspx_th_fmt_005fmessage_005f18.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1249,7 +1256,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f19.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f19.setParent(null);
-      // /barcode.jsp(368,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(372,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f19.setKey("product.name2");
       int _jspx_eval_fmt_005fmessage_005f19 = _jspx_th_fmt_005fmessage_005f19.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1270,7 +1277,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f20.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f20.setParent(null);
-      // /barcode.jsp(369,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(373,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f20.setKey("billdetail.fromRow");
       int _jspx_eval_fmt_005fmessage_005f20 = _jspx_th_fmt_005fmessage_005f20.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1291,7 +1298,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f21.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f21.setParent(null);
-      // /barcode.jsp(370,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(374,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f21.setKey("billDetail.quantity");
       int _jspx_eval_fmt_005fmessage_005f21 = _jspx_th_fmt_005fmessage_005f21.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1312,7 +1319,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f22.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f22.setParent(null);
-      // /barcode.jsp(371,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(375,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f22.setKey("billDetail.detail");
       int _jspx_eval_fmt_005fmessage_005f22 = _jspx_th_fmt_005fmessage_005f22.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1333,7 +1340,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f23.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f23.setParent(null);
-      // /barcode.jsp(372,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(376,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f23.setKey("bill.remark");
       int _jspx_eval_fmt_005fmessage_005f23 = _jspx_th_fmt_005fmessage_005f23.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f23.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1354,7 +1361,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f24.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f24.setParent(null);
-      // /barcode.jsp(373,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(377,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f24.setKey("barcode.complete");
       int _jspx_eval_fmt_005fmessage_005f24 = _jspx_th_fmt_005fmessage_005f24.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f24.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1375,7 +1382,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f25.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f25.setParent(null);
-      // /barcode.jsp(374,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(378,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f25.setKey("barcode.uncomplete");
       int _jspx_eval_fmt_005fmessage_005f25 = _jspx_th_fmt_005fmessage_005f25.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f25.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1396,7 +1403,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f26.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f26.setParent(null);
-      // /barcode.jsp(451,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(455,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f26.setKey("barcode.nocode");
       int _jspx_eval_fmt_005fmessage_005f26 = _jspx_th_fmt_005fmessage_005f26.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1417,7 +1424,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f27.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f27.setParent(null);
-      // /barcode.jsp(456,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(460,31) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f27.setKey("barcode.formaterror");
       int _jspx_eval_fmt_005fmessage_005f27 = _jspx_th_fmt_005fmessage_005f27.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f27.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1438,7 +1445,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f28.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f28.setParent(null);
-      // /barcode.jsp(476,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(483,28) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f28.setKey("profit.id");
       int _jspx_eval_fmt_005fmessage_005f28 = _jspx_th_fmt_005fmessage_005f28.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f28.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1459,7 +1466,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f29.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f29.setParent(null);
-      // /barcode.jsp(477,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(484,30) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f29.setKey("barcode.completesteps");
       int _jspx_eval_fmt_005fmessage_005f29 = _jspx_th_fmt_005fmessage_005f29.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f29.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1480,7 +1487,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f30.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f30.setParent(null);
-      // /barcode.jsp(483,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(490,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f30.setKey("product.id");
       int _jspx_eval_fmt_005fmessage_005f30 = _jspx_th_fmt_005fmessage_005f30.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f30.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1501,7 +1508,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f31.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f31.setParent(null);
-      // /barcode.jsp(484,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(491,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f31.setKey("product.name2");
       int _jspx_eval_fmt_005fmessage_005f31 = _jspx_th_fmt_005fmessage_005f31.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f31.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1522,7 +1529,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f32.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f32.setParent(null);
-      // /barcode.jsp(485,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(492,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f32.setKey("billdetail.fromRow");
       int _jspx_eval_fmt_005fmessage_005f32 = _jspx_th_fmt_005fmessage_005f32.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f32.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1543,7 +1550,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f33.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f33.setParent(null);
-      // /barcode.jsp(486,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(493,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f33.setKey("billDetail.quantity");
       int _jspx_eval_fmt_005fmessage_005f33 = _jspx_th_fmt_005fmessage_005f33.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f33.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1564,7 +1571,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f34.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f34.setParent(null);
-      // /barcode.jsp(487,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(494,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f34.setKey("billDetail.detail");
       int _jspx_eval_fmt_005fmessage_005f34 = _jspx_th_fmt_005fmessage_005f34.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f34.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1585,7 +1592,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f35.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f35.setParent(null);
-      // /barcode.jsp(488,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(495,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f35.setKey("bill.remark");
       int _jspx_eval_fmt_005fmessage_005f35 = _jspx_th_fmt_005fmessage_005f35.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f35.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1606,7 +1613,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f36.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f36.setParent(null);
-      // /barcode.jsp(489,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(496,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f36.setKey("barcode.complete");
       int _jspx_eval_fmt_005fmessage_005f36 = _jspx_th_fmt_005fmessage_005f36.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f36.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -1627,7 +1634,7 @@ public final class barcode_jsp extends org.apache.jasper.runtime.HttpJspBase
     try {
       _jspx_th_fmt_005fmessage_005f37.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f37.setParent(null);
-      // /barcode.jsp(490,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /barcode.jsp(497,36) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fmessage_005f37.setKey("barcode.uncomplete");
       int _jspx_eval_fmt_005fmessage_005f37 = _jspx_th_fmt_005fmessage_005f37.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f37.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
