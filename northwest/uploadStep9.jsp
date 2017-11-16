@@ -6,7 +6,7 @@
 <script type="text/javascript" src="${ctx}/scripts/datetimepicker_css.js"></script>
 
 
-<ww:form name="Form1" action="saveCheck7" method="POST"  >
+<ww:form name="Form1" action="saveCheck9" method="POST"  >
   <ww:hidden name="bill.id" value="${bill.id}"/>
    <table border="0" cellspacing="1" class="cContentTable1">
     <tr><td class="cContentTitle" colspan="2" ><fmt:message key="bill.form"/></td></tr>
@@ -18,19 +18,9 @@
     </tr>
     
     
-   <%--
-    <tr><td class="cInputCaption"><fmt:message key="billSchedule.outputEquipmentTime"/></td>
-        <td class="cInputColumn">
-            <ww:textfield  name="outputTime" id="outputTime"  readonly="true" value="%{billSchedule.check7}"/>
-            <img src="images/cal.gif" onclick="javascript:NewCssCal ('outputTime','yyyyMMdd','dropdown',true,'24')"  style="cursor:pointer"/>
-        </td>
-    </tr>
-   --%>
-   
-    
    <tr><td class="cInputCaption"><fmt:message key="billSchedule.outputEquipment"/></td>
         <td class="cInputColumn">
-             <ww:select name="billSchedule.outputEquipmentId"  id="outputEquipmentId"
+             <ww:select name="billSchedule.postProductionsEqtId"  id="postProductionsEqtId"
                headerKey=""
                headerValue="%{getText('common.pleaseSelect')}..."
                list="%{outputEquipmentList}"
@@ -41,12 +31,7 @@
         </td>
     </tr>
     
-   <tr><td class="cInputCaption"><fmt:message key="billSchedule.outputDevice"/></td>
-        <td class="cInputColumn">
-           <ww:textarea name="billSchedule.outputDevice" value="%{billSchedule.outputDevice}" cssClass="cInputTextArea" cols="45" rows="4" />
-        </td>
-    </tr>
-        
+ 
        <tr><td class="cInputCaption"><fmt:message key="common.completely"/><fmt:message key="bill.form"/></td>
         <td class="cInputColumn">
             <table>
@@ -58,23 +43,25 @@
                 <td>           
                 <ww:if test="bill.id != null">
                    <ww:select id="allBillDetail"
-                   list="%{getBillDetailListByBillNo('${bill.id}','12')}"
+                   list="%{getBillDetailListByBillNo('${bill.id}','14')}"
                    listKey="id"
-                   listValue="detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
+                   listValue="fromRow+'-'+detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
                    multiple="true"
                    size="8"
                    cssClass="cQueryFieldList3"
                 />
                 </ww:if>
                 <ww:else>
+                <%--
                    <ww:select id="allBillDetail"
-                   list="%{getBillDetailListByProducts('12')}"
+                   list="%{getBillDetailListByProducts('14')}"
                    listKey="id"
-                   listValue="detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
+                   listValue="fromRow+'-'+detail+'-'+product.productName+'-'+width+'X'+heigh+'('+visibleWidth+'X'+visibleHeigh+')-'+quantity+'-'+itemRemark"               
                    multiple="true"
                    size="8"
                    cssClass="cQueryFieldList3"
                   />
+                  --%>
                 </ww:else>           
                 </td><td>
                 <input type="button" value=">>" class="cSelectButton" onclick="moveAll(allBillDetail, selectedBillDetailIds);"  <c:out value="${modifyEditable}" />><br>
@@ -115,10 +102,10 @@
 
 <input type="button" value="<fmt:message key='billSchedule.selected'/>" onClick="javascript:gox();">
 
-<ww:set name="billdetail" value="%{getSelectedBillDetailIds('${bill.id}','12')}"/> 
+<ww:set name="billdetail" value="%{getSelectedBillDetailIds('${bill.id}','14')}"/> 
 <c:set var="count" value="1" />
 <c:set var="i" value="0" />
-<display:table name="billdetail" class="list"  id="row" export="false" pagesize="${GLOBAL_pagesize}"  sort="list"  requestURI="uploadStep7.html"  >
+<display:table name="billdetail" class="list"  id="row" export="false" pagesize="${GLOBAL_pagesize}"  sort="list"  requestURI="uploadStep9.html"  >
     <ww:set name="schedule" value="%{getBillScheduleById('${row.id}')}"/>
     <display:setProperty name="paging.banner.placement" value="bottom" />
     <display:column  title="${column} <input type='checkbox' name='selectAlls' onClick='javascript:selectAll();'/>" >
@@ -154,10 +141,10 @@
     
     <display:column titleKey="common.action" >
 
-					 <fmt:message key='billSchedule.step7'/>:${fn:substring(schedule.check7,0,16)}/
-           <fmt:message key='member.name'/>:${schedule.checker7.name}/
-           <fmt:message key='outputEquipment.name'/>:${schedule.outputEquipment.name}/
-           <fmt:message key='billSchedule.outputDevice'/>:${schedule.outputDevice}
+					 <fmt:message key='billSchedule.step9'/>:${fn:substring(schedule.check9,0,16)}/
+           <fmt:message key='member.name'/>:${schedule.checker9.name}/
+           <fmt:message key='outputEquipment.name'/>:${schedule.postProductionsEqt.name}/
+         
       
     </display:column> 
     
@@ -174,12 +161,8 @@
 
 <script>
 
- //moveAll(document.Form1.allBillDetail, document.Form1.selectedBillDetailIds);
- 
- 
  function reflash(){
-   window.opener.parent.location.reload();
-   //window.close();
+   window.opener.parent.location.reload(); 
  }
 
  function onSubmit(){
@@ -199,17 +182,13 @@
  
  
 function ChkUpload()
-{	
+{		
 	/*
-  if (document.Form1.outputTime.value == ""){
-	  alert('<fmt:message key="billSchedule.outputEquipmentTime"/><fmt:message key="common.required"/>');	       
-	  return False;
-	}		
-	*/
-	if (document.Form1.outputEquipmentId.value == ""){
+	if (document.Form1.postProductionsEqtId.value == ""){
 	  alert('<fmt:message key="billSchedule.outputEquipment"/><fmt:message key="common.required"/>');	       
 	  return False;
 	}
+	*/
 	if (document.Form1.billDetailIds.options.length==0){		
 		alert("<fmt:message key='billdetail'/><fmt:message key='common.required'/>");
 		return False;	  	
@@ -219,15 +198,14 @@ function ChkUpload()
 }
 
 
- <ww:set name="test" value="%{getBillDetailListByBillNo('${bill.id}','12')}"/>
+ <ww:set name="test" value="%{getBillDetailListByBillNo('${bill.id}','14')}"/>
  <ww:iterator value="test"> 
    <ww:set name="s" value="%{getBillScheduleById(id)}"/>
-    <ww:if test="${s.step7} == true">     
+    <ww:if test="${s.step9} == true">     
        removeItem(document.Form1.selectedBillDetailIds,document.Form1.allBillDetail,'${s.id}');
     </ww:if>   
  </ww:iterator>
- 
- 
+
  function selectAll(){ 
 	var c=${count};
   var result;   

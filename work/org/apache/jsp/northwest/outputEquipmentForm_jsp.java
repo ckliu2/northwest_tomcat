@@ -440,6 +440,22 @@ if (false) {
           out.write("        </td>\r\n");
           out.write("    </tr>\r\n");
           out.write("    \r\n");
+          out.write("    <tr><td class=\"cInputCaption\">");
+          if (_jspx_meth_fmt_005fmessage_005f13(_jspx_th_ww_005fform_005f0, _jspx_page_context))
+            return true;
+          out.write("</td>\r\n");
+          out.write("        <td class=\"cInputColumn\">\r\n");
+          out.write("            ");
+          if (_jspx_meth_ww_005ftextfield_005f2(_jspx_th_ww_005fform_005f0, _jspx_page_context))
+            return true;
+          out.write("<span class=\"cInputValidationError\">");
+          if (_jspx_meth_ww_005fproperty_005f1(_jspx_th_ww_005fform_005f0, _jspx_page_context))
+            return true;
+          out.write("</span>\r\n");
+          out.write("        </td>\r\n");
+          out.write("    </tr>\r\n");
+          out.write("    \r\n");
+          out.write("    \r\n");
           out.write("    <tr><td class=\"cInputCaption\">權重設定</td>\r\n");
           out.write("        <td class=\"cInputColumn\">\r\n");
           out.write("        \t\r\n");
@@ -456,7 +472,7 @@ if (false) {
           out.write("    \r\n");
           out.write("\r\n");
           out.write("    <tr><td class=\"cInputCaption\">");
-          if (_jspx_meth_fmt_005fmessage_005f13(_jspx_th_ww_005fform_005f0, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f14(_jspx_th_ww_005fform_005f0, _jspx_page_context))
             return true;
           out.write("</td>\r\n");
           out.write("        <td class=\"cInputColumn\">\r\n");
@@ -470,7 +486,7 @@ if (false) {
           out.write("    <tr class=\"cActionButtonLine\">\r\n");
           out.write("      <td colspan=\"2\">\r\n");
           out.write("        <input type=button onclick=\"javascript:history.back()\" class=\"cButton\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f14(_jspx_th_ww_005fform_005f0, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f15(_jspx_th_ww_005fform_005f0, _jspx_page_context))
             return true;
           out.write("\" >\r\n");
           out.write("        ");
@@ -1046,8 +1062,8 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f13.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f13.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
-      // /northwest/outputEquipmentForm.jsp(54,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f13.setKey("outputEquipment.memo");
+      // /northwest/outputEquipmentForm.jsp(39,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f13.setKey("outputEquipment.hourChi");
       int _jspx_eval_fmt_005fmessage_005f13 = _jspx_th_fmt_005fmessage_005f13.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
@@ -1058,31 +1074,48 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_ww_005ftextarea_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fform_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005ftextfield_005f2(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fform_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  ww:textarea
-    com.opensymphony.webwork.views.jsp.ui.TextareaTag _jspx_th_ww_005ftextarea_005f0 = (com.opensymphony.webwork.views.jsp.ui.TextareaTag) _005fjspx_005ftagPool_005fww_005ftextarea_0026_005fvalue_005frows_005fname_005fcssClass_005fcols_005fnobody.get(com.opensymphony.webwork.views.jsp.ui.TextareaTag.class);
+    //  ww:textfield
+    com.opensymphony.webwork.views.jsp.ui.TextFieldTag _jspx_th_ww_005ftextfield_005f2 = (com.opensymphony.webwork.views.jsp.ui.TextFieldTag) _005fjspx_005ftagPool_005fww_005ftextfield_0026_005fvalue_005fname_005fcssClass_005fnobody.get(com.opensymphony.webwork.views.jsp.ui.TextFieldTag.class);
     try {
-      _jspx_th_ww_005ftextarea_005f0.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005ftextarea_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
-      // /northwest/outputEquipmentForm.jsp(56,12) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005ftextarea_005f0.setName("outputEquipment.memo");
-      // /northwest/outputEquipmentForm.jsp(56,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005ftextarea_005f0.setValue("%{outputEquipment.memo}");
-      // /northwest/outputEquipmentForm.jsp(56,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005ftextarea_005f0.setCssClass("cInputTextArea");
-      // /northwest/outputEquipmentForm.jsp(56,12) name = cols type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005ftextarea_005f0.setCols("60");
-      // /northwest/outputEquipmentForm.jsp(56,12) name = rows type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005ftextarea_005f0.setRows("6");
-      int _jspx_eval_ww_005ftextarea_005f0 = _jspx_th_ww_005ftextarea_005f0.doStartTag();
-      if (_jspx_th_ww_005ftextarea_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_ww_005ftextfield_005f2.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005ftextfield_005f2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
+      // /northwest/outputEquipmentForm.jsp(41,12) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextfield_005f2.setName("outputEquipment.hourChi");
+      // /northwest/outputEquipmentForm.jsp(41,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextfield_005f2.setValue("%{outputEquipment.hourChi}");
+      // /northwest/outputEquipmentForm.jsp(41,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextfield_005f2.setCssClass("cInputTextFieldTiny");
+      int _jspx_eval_ww_005ftextfield_005f2 = _jspx_th_ww_005ftextfield_005f2.doStartTag();
+      if (_jspx_th_ww_005ftextfield_005f2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fww_005ftextarea_0026_005fvalue_005frows_005fname_005fcssClass_005fcols_005fnobody.reuse(_jspx_th_ww_005ftextarea_005f0);
+      _005fjspx_005ftagPool_005fww_005ftextfield_0026_005fvalue_005fname_005fcssClass_005fnobody.reuse(_jspx_th_ww_005ftextfield_005f2);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fproperty_005f1(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fform_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:property
+    com.opensymphony.webwork.views.jsp.PropertyTag _jspx_th_ww_005fproperty_005f1 = (com.opensymphony.webwork.views.jsp.PropertyTag) _005fjspx_005ftagPool_005fww_005fproperty_0026_005fvalue_005fnobody.get(com.opensymphony.webwork.views.jsp.PropertyTag.class);
+    try {
+      _jspx_th_ww_005fproperty_005f1.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fproperty_005f1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
+      // /northwest/outputEquipmentForm.jsp(41,161) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fproperty_005f1.setValue("showHtmlErrorMessage('outputEquipment.hourChi')");
+      int _jspx_eval_ww_005fproperty_005f1 = _jspx_th_ww_005fproperty_005f1.doStartTag();
+      if (_jspx_th_ww_005fproperty_005f1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fproperty_0026_005fvalue_005fnobody.reuse(_jspx_th_ww_005fproperty_005f1);
     }
     return false;
   }
@@ -1096,14 +1129,64 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f14.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f14.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
-      // /northwest/outputEquipmentForm.jsp(62,86) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f14.setKey("common.back");
+      // /northwest/outputEquipmentForm.jsp(61,34) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f14.setKey("outputEquipment.memo");
       int _jspx_eval_fmt_005fmessage_005f14 = _jspx_th_fmt_005fmessage_005f14.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f14);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005ftextarea_005f0(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fform_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:textarea
+    com.opensymphony.webwork.views.jsp.ui.TextareaTag _jspx_th_ww_005ftextarea_005f0 = (com.opensymphony.webwork.views.jsp.ui.TextareaTag) _005fjspx_005ftagPool_005fww_005ftextarea_0026_005fvalue_005frows_005fname_005fcssClass_005fcols_005fnobody.get(com.opensymphony.webwork.views.jsp.ui.TextareaTag.class);
+    try {
+      _jspx_th_ww_005ftextarea_005f0.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005ftextarea_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
+      // /northwest/outputEquipmentForm.jsp(63,12) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextarea_005f0.setName("outputEquipment.memo");
+      // /northwest/outputEquipmentForm.jsp(63,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextarea_005f0.setValue("%{outputEquipment.memo}");
+      // /northwest/outputEquipmentForm.jsp(63,12) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextarea_005f0.setCssClass("cInputTextArea");
+      // /northwest/outputEquipmentForm.jsp(63,12) name = cols type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextarea_005f0.setCols("60");
+      // /northwest/outputEquipmentForm.jsp(63,12) name = rows type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005ftextarea_005f0.setRows("6");
+      int _jspx_eval_ww_005ftextarea_005f0 = _jspx_th_ww_005ftextarea_005f0.doStartTag();
+      if (_jspx_th_ww_005ftextarea_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005ftextarea_0026_005fvalue_005frows_005fname_005fcssClass_005fcols_005fnobody.reuse(_jspx_th_ww_005ftextarea_005f0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f15(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fform_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f15 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f15.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f15.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
+      // /northwest/outputEquipmentForm.jsp(69,86) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f15.setKey("common.back");
+      int _jspx_eval_fmt_005fmessage_005f15 = _jspx_th_fmt_005fmessage_005f15.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f15);
     }
     return false;
   }
@@ -1117,7 +1200,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f3.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fform_005f0);
-      // /northwest/outputEquipmentForm.jsp(63,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/outputEquipmentForm.jsp(70,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f3.setTest("recordEditable == true");
       int _jspx_eval_ww_005fif_005f3 = _jspx_th_ww_005fif_005f3.doStartTag();
       if (_jspx_eval_ww_005fif_005f3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1129,11 +1212,11 @@ if (false) {
         do {
           out.write("\r\n");
           out.write("            <input type=\"submit\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f15(_jspx_th_ww_005fif_005f3, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f16(_jspx_th_ww_005fif_005f3, _jspx_page_context))
             return true;
           out.write("\" class=\"cButton\">&nbsp;\r\n");
           out.write("            <input type=\"reset\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f16(_jspx_th_ww_005fif_005f3, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f17(_jspx_th_ww_005fif_005f3, _jspx_page_context))
             return true;
           out.write("\" class=\"cButton\">&nbsp;\r\n");
           out.write("            ");
@@ -1158,27 +1241,6 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_005fmessage_005f15(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f3, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f15 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f15.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f15.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f3);
-      // /northwest/outputEquipmentForm.jsp(64,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f15.setKey("common.save");
-      int _jspx_eval_fmt_005fmessage_005f15 = _jspx_th_fmt_005fmessage_005f15.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f15);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_fmt_005fmessage_005f16(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f3, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1188,14 +1250,35 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f16.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f3);
-      // /northwest/outputEquipmentForm.jsp(65,39) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f16.setKey("common.reset");
+      // /northwest/outputEquipmentForm.jsp(71,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f16.setKey("common.save");
       int _jspx_eval_fmt_005fmessage_005f16 = _jspx_th_fmt_005fmessage_005f16.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f16.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f16);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f17(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f3, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f17 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f17.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f3);
+      // /northwest/outputEquipmentForm.jsp(72,39) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f17.setKey("common.reset");
+      int _jspx_eval_fmt_005fmessage_005f17 = _jspx_th_fmt_005fmessage_005f17.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f17);
     }
     return false;
   }
@@ -1209,7 +1292,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f4.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f3);
-      // /northwest/outputEquipmentForm.jsp(66,12) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/outputEquipmentForm.jsp(73,12) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f4.setTest("outputEquipment.id != null");
       int _jspx_eval_ww_005fif_005f4 = _jspx_th_ww_005fif_005f4.doStartTag();
       if (_jspx_eval_ww_005fif_005f4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1221,10 +1304,10 @@ if (false) {
         do {
           out.write("\r\n");
           out.write("              <input type=\"submit\" name=\"delete\" onClick=\"javascript:return confirm('");
-          if (_jspx_meth_fmt_005fmessage_005f17(_jspx_th_ww_005fif_005f4, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f18(_jspx_th_ww_005fif_005f4, _jspx_page_context))
             return true;
           out.write("')\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f18(_jspx_th_ww_005fif_005f4, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f19(_jspx_th_ww_005fif_005f4, _jspx_page_context))
             return true;
           out.write("\" class=\"cButton\">\r\n");
           out.write("            ");
@@ -1245,27 +1328,6 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_005fmessage_005f17(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f4, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f17 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f17.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f4);
-      // /northwest/outputEquipmentForm.jsp(67,85) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f17.setKey("common.confirmDelete");
-      int _jspx_eval_fmt_005fmessage_005f17 = _jspx_th_fmt_005fmessage_005f17.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f17);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_fmt_005fmessage_005f18(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f4, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1275,14 +1337,35 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f18.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f4);
-      // /northwest/outputEquipmentForm.jsp(67,137) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f18.setKey("common.delete");
+      // /northwest/outputEquipmentForm.jsp(74,85) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f18.setKey("common.confirmDelete");
       int _jspx_eval_fmt_005fmessage_005f18 = _jspx_th_fmt_005fmessage_005f18.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f18);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f19(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f4, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f19 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f19.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f4);
+      // /northwest/outputEquipmentForm.jsp(74,137) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f19.setKey("common.delete");
+      int _jspx_eval_fmt_005fmessage_005f19 = _jspx_th_fmt_005fmessage_005f19.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f19);
     }
     return false;
   }
@@ -1306,11 +1389,11 @@ if (false) {
         do {
           out.write("\r\n");
           out.write("            <input type=\"submit\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f19(_jspx_th_ww_005felse_005f1, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f20(_jspx_th_ww_005felse_005f1, _jspx_page_context))
             return true;
           out.write("\" class=\"cButton\" DISABLED>&nbsp;\r\n");
           out.write("            <input type=\"reset\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f20(_jspx_th_ww_005felse_005f1, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f21(_jspx_th_ww_005felse_005f1, _jspx_page_context))
             return true;
           out.write("\" class=\"cButton\" DISABLED>&nbsp;\r\n");
           out.write("            ");
@@ -1335,27 +1418,6 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_005fmessage_005f19(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f1, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f19 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f19.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f1);
-      // /northwest/outputEquipmentForm.jsp(71,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f19.setKey("common.save");
-      int _jspx_eval_fmt_005fmessage_005f19 = _jspx_th_fmt_005fmessage_005f19.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f19);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_fmt_005fmessage_005f20(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f1, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1365,14 +1427,35 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f20.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f1);
-      // /northwest/outputEquipmentForm.jsp(72,39) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f20.setKey("common.reset");
+      // /northwest/outputEquipmentForm.jsp(78,40) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f20.setKey("common.save");
       int _jspx_eval_fmt_005fmessage_005f20 = _jspx_th_fmt_005fmessage_005f20.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f20);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f21(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f1, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f21 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f21.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f1);
+      // /northwest/outputEquipmentForm.jsp(79,39) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f21.setKey("common.reset");
+      int _jspx_eval_fmt_005fmessage_005f21 = _jspx_th_fmt_005fmessage_005f21.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f21);
     }
     return false;
   }
@@ -1386,7 +1469,7 @@ if (false) {
     try {
       _jspx_th_ww_005fif_005f5.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f1);
-      // /northwest/outputEquipmentForm.jsp(73,12) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/outputEquipmentForm.jsp(80,12) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fif_005f5.setTest("outputEquipment.id != null");
       int _jspx_eval_ww_005fif_005f5 = _jspx_th_ww_005fif_005f5.doStartTag();
       if (_jspx_eval_ww_005fif_005f5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -1398,10 +1481,10 @@ if (false) {
         do {
           out.write("\r\n");
           out.write("              <input type=\"submit\" name=\"delete\" onClick=\"javascript:return confirm('");
-          if (_jspx_meth_fmt_005fmessage_005f21(_jspx_th_ww_005fif_005f5, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f22(_jspx_th_ww_005fif_005f5, _jspx_page_context))
             return true;
           out.write("')\" value=\"");
-          if (_jspx_meth_fmt_005fmessage_005f22(_jspx_th_ww_005fif_005f5, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f23(_jspx_th_ww_005fif_005f5, _jspx_page_context))
             return true;
           out.write("\"  class=\"cButton\" DISABLED>\r\n");
           out.write("            ");
@@ -1422,27 +1505,6 @@ if (false) {
     return false;
   }
 
-  private boolean _jspx_meth_fmt_005fmessage_005f21(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f5, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f21 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f21.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f5);
-      // /northwest/outputEquipmentForm.jsp(74,85) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f21.setKey("common.confirmDelete");
-      int _jspx_eval_fmt_005fmessage_005f21 = _jspx_th_fmt_005fmessage_005f21.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f21);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_fmt_005fmessage_005f22(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -1452,14 +1514,35 @@ if (false) {
     try {
       _jspx_th_fmt_005fmessage_005f22.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f22.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f5);
-      // /northwest/outputEquipmentForm.jsp(74,137) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f22.setKey("common.delete");
+      // /northwest/outputEquipmentForm.jsp(81,85) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f22.setKey("common.confirmDelete");
       int _jspx_eval_fmt_005fmessage_005f22 = _jspx_th_fmt_005fmessage_005f22.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f22);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f23(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f5, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f23 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f23.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f23.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f5);
+      // /northwest/outputEquipmentForm.jsp(81,137) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f23.setKey("common.delete");
+      int _jspx_eval_fmt_005fmessage_005f23 = _jspx_th_fmt_005fmessage_005f23.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f23.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f23);
     }
     return false;
   }

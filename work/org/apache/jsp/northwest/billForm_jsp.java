@@ -1004,7 +1004,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
                   out.write("    ");
                   out.write("\r\n");
                   out.write("    ");
-                  if (_jspx_meth_ww_005fif_005f43(_jspx_th_display_005ftable_005f0, _jspx_page_context))
+                  if (_jspx_meth_ww_005fif_005f44(_jspx_th_display_005ftable_005f0, _jspx_page_context))
                     return;
                   out.write("\r\n");
                   out.write("    ");
@@ -1014,7 +1014,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
                   out.write("    ");
                   out.write("\r\n");
                   out.write("    ");
-                  if (_jspx_meth_ww_005fif_005f46(_jspx_th_display_005ftable_005f0, _jspx_page_context))
+                  if (_jspx_meth_ww_005fif_005f47(_jspx_th_display_005ftable_005f0, _jspx_page_context))
                     return;
                   out.write("\r\n");
                   out.write("    ");
@@ -1024,7 +1024,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
                   out.write("    ");
                   out.write(" \r\n");
                   out.write("    ");
-                  if (_jspx_meth_ww_005fif_005f50(_jspx_th_display_005ftable_005f0, _jspx_page_context))
+                  if (_jspx_meth_ww_005fif_005f51(_jspx_th_display_005ftable_005f0, _jspx_page_context))
                     return;
                   out.write("    \r\n");
                   out.write("    ");
@@ -1041,7 +1041,7 @@ System.out.println("jsp 258:"+com.base.util.Tools.getCurrentTimestamp());
                   out.write("   \r\n");
                   out.write("    \r\n");
                   out.write("    ");
-                  if (_jspx_meth_c_005fset_005f34(_jspx_th_display_005ftable_005f0, _jspx_page_context))
+                  if (_jspx_meth_c_005fset_005f36(_jspx_th_display_005ftable_005f0, _jspx_page_context))
                     return;
                   out.write("\r\n");
                   out.write("    \r\n");
@@ -1100,14 +1100,14 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write(" \r\n");
       out.write(" function getCheckStatus(){ \t \t\r\n");
       out.write(" \t");
-      if (_jspx_meth_ww_005fset_005f80(_jspx_page_context))
+      if (_jspx_meth_ww_005fset_005f79(_jspx_page_context))
         return;
       out.write("  \r\n");
       out.write("  var colu = new Array(");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:length(groupsList)-1}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_1, false));
       out.write(")\r\n");
       out.write("  ");
-      if (_jspx_meth_c_005fset_005f35(_jspx_page_context))
+      if (_jspx_meth_c_005fset_005f37(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("  ");
@@ -1118,19 +1118,19 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("   \tvar c=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write(";\r\n");
-      out.write("   \tbillForm.stepIds.options.length =   0;  //²MªÅstepIds\r\n");
+      out.write("   \tbillForm.stepIds.options.length =   0;  //清空stepIds\r\n");
       out.write("\t\tfor(j=1;j<c;j++){\t\r\n");
       out.write("\t\t\t for(i=0;i<=colu.length-1;i++){   \r\n");
       out.write("   \t\t    var s = eval('billForm.step'+colu[i]+'Ids_'+j) ;  \r\n");
       out.write("   \t\t    //alert('billForm.step'+colu[i]+'Ids_'+j);   \t\t    \r\n");
       out.write("   \t\t      if(s.checked == true){\r\n");
       out.write("   \t\t          //alert('billForm.step'+colu[i]+'Ids_'+j+'.value = '+s.value);\r\n");
-      out.write("   \t\t          //·s¼WSelect Option\r\n");
+      out.write("   \t\t          //新增Select Option\r\n");
       out.write("   \t\t           var newOpt = document.createElement(\"option\");\r\n");
       out.write("                 newOpt.text =  s.value;\r\n");
       out.write("                 newOpt.value = s.value;\r\n");
       out.write("                 billForm.stepIds.options.add(newOpt);\r\n");
-      out.write("   \t\t          //·s¼WSelect Option\r\n");
+      out.write("   \t\t          //新增Select Option\r\n");
       out.write("   \t\t       }  \t\t     \r\n");
       out.write("   \t     }\r\n");
       out.write("\t\t}\r\n");
@@ -1141,10 +1141,10 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("function del(billid,id,productName,pageIndexName,pageIndex){\r\n");
       out.write("\t//alert(billid+'--'+id+'---'+productName+'---'+pageIndexName+'---'+pageIndex);\r\n");
       out.write("\tif(confirm(\"");
-      if (_jspx_meth_fmt_005fmessage_005f98(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f96(_jspx_page_context))
         return;
       out.write("\"+productName+\"");
-      if (_jspx_meth_fmt_005fmessage_005f99(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f97(_jspx_page_context))
         return;
       out.write("\")){\r\n");
       out.write("\t\t//alert(\"deleteStep.html?bill.id=\"+billid+\"&id=\"+id+\"&pageIndexName=\"+pageIndexName+\"&pageIndex=\"+pageIndex);\r\n");
@@ -1182,12 +1182,12 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("\r\n");
       out.write("\r\n");
       out.write(" ");
-      if (_jspx_meth_ww_005fif_005f54(_jspx_page_context))
+      if (_jspx_meth_ww_005fif_005f55(_jspx_page_context))
         return;
       out.write('\r');
       out.write('\n');
       out.write(' ');
-      if (_jspx_meth_ww_005felse_005f26(_jspx_page_context))
+      if (_jspx_meth_ww_005felse_005f27(_jspx_page_context))
         return;
       out.write(" \r\n");
       out.write(" \r\n");
@@ -1212,7 +1212,7 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("\tif(ck==true){\r\n");
       out.write("\tif(fromRow1==''){\r\n");
       out.write("   \t alert(\"");
-      if (_jspx_meth_fmt_005fmessage_005f100(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f98(_jspx_page_context))
         return;
       out.write(" must be required\"); \r\n");
       out.write("     document.all.fromRow1.value=\"\";\r\n");
@@ -1221,7 +1221,7 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("   }\r\n");
       out.write("   if(fromRow2==''){\r\n");
       out.write("   \t alert(\"");
-      if (_jspx_meth_fmt_005fmessage_005f101(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f99(_jspx_page_context))
         return;
       out.write(" must be required\"); \r\n");
       out.write("     document.all.fromRow2.value=\"\";\r\n");
@@ -1230,7 +1230,7 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("   }   \r\n");
       out.write("   if( eval(fromRow1) > eval(fromRow2) ){\r\n");
       out.write("   \t alert(\"");
-      if (_jspx_meth_fmt_005fmessage_005f102(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f100(_jspx_page_context))
         return;
       out.write("\"); \r\n");
       out.write("     return false;   \t\r\n");
@@ -1248,7 +1248,7 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("\tvar fromRow2=document.all.fromRow2.value;\r\n");
       out.write("\tif(isNaN(fromRow1)){ \r\n");
       out.write("     alert(\"");
-      if (_jspx_meth_fmt_005fmessage_005f103(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f101(_jspx_page_context))
         return;
       out.write(" must be numeric\"); \r\n");
       out.write("     document.all.fromRow1.value=\"\";\r\n");
@@ -1257,7 +1257,7 @@ System.out.println("jsp 807:"+com.base.util.Tools.getCurrentTimestamp());
       out.write("   }\r\n");
       out.write("   if(isNaN(fromRow2)){ \r\n");
       out.write("     alert(\"");
-      if (_jspx_meth_fmt_005fmessage_005f104(_jspx_page_context))
+      if (_jspx_meth_fmt_005fmessage_005f102(_jspx_page_context))
         return;
       out.write(" must be numeric\");\r\n");
       out.write("     document.all.fromRow2.value=\"\";\r\n");
@@ -11279,7 +11279,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
       _jspx_th_display_005fcolumn_005f17.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f40);
       // /northwest/billForm.jsp(691,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_display_005fcolumn_005f17.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${step9column} <input type='checkbox' name='selectall9' onClick='javascript:selectAll(9);' ${selectPower9} />", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      _jspx_th_display_005fcolumn_005f17.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${step9column} <input type='checkbox' name='selectall9'", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       // /northwest/billForm.jsp(691,4) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f17.setClass("results");
       // /northwest/billForm.jsp(691,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
@@ -11293,22 +11293,39 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("        \r\n");
+          out.write("       ");
+          if (_jspx_meth_ww_005fif_005f41(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+            return true;
+          out.write("\r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005fset_005f72(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f20(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("        ");
           if (_jspx_meth_ww_005fcheckbox_005f9(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
-          out.write("              \r\n");
+          out.write("       \r\n");
+          out.write("        <a href=\"javascript:openChild('uploadStep9.html?bill.id=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bill.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write('&');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageIndexName}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write('=');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageIndex}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("&billSchedule.id=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("')\"  onclick=\"return ");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${isLinkEnable}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\"><img src=\"images/edit.gif\" border=\"0\" id=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-edit-9\" ></a>         \r\n");
+          out.write("       \t  \r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005fif_005f41(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f42(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("         \r\n");
           out.write("            ");
-          if (_jspx_meth_ww_005fset_005f73(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f72(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
           out.write("             \r\n");
           out.write("            <div id=\"");
@@ -11316,11 +11333,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write("-9\"><font color=\"blue\">Pass</font><div>\r\n");
           out.write("            <script>               \r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005fif_005f42(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f43(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005felse_005f20(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f21(_jspx_th_display_005fcolumn_005f17, _jspx_page_context))
             return true;
           out.write("                    \r\n");
           out.write("            </script> \r\n");
@@ -11343,60 +11360,6 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fset_005f72(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f72 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f72.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f72.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
-      // /northwest/billForm.jsp(693,8) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f72.setName("stepEditable");
-      // /northwest/billForm.jsp(693,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f72.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','14',${Permissions9})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f72 = _jspx_th_ww_005fset_005f72.doStartTag();
-      if (_jspx_th_ww_005fset_005f72.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f72);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fcheckbox_005f9(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:checkbox
-    com.opensymphony.webwork.views.jsp.ui.CheckboxTag _jspx_th_ww_005fcheckbox_005f9 = (com.opensymphony.webwork.views.jsp.ui.CheckboxTag) _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.get(com.opensymphony.webwork.views.jsp.ui.CheckboxTag.class);
-    try {
-      _jspx_th_ww_005fcheckbox_005f9.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fcheckbox_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
-      // /northwest/billForm.jsp(694,8) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step9Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(694,8) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setId((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step9Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(694,8) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setCssClass("cCheckboxField");
-      // /northwest/billForm.jsp(694,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step9}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(694,8) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setFieldValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}*9", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(694,8) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fcheckbox_005f9.setDisabled((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${stepEditable}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fcheckbox_005f9 = _jspx_th_ww_005fcheckbox_005f9.doStartTag();
-      if (_jspx_th_ww_005fcheckbox_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.reuse(_jspx_th_ww_005fcheckbox_005f9);
-    }
-    return false;
-  }
-
   private boolean _jspx_meth_ww_005fif_005f41(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -11406,8 +11369,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fif_005f41.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f41.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
-      // /northwest/billForm.jsp(695,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f41.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step9} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(692,7) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f41.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${Permissions9} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f41 = _jspx_th_ww_005fif_005f41.doStartTag();
       if (_jspx_eval_ww_005fif_005f41 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f41 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -11416,37 +11379,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           _jspx_th_ww_005fif_005f41.doInitBody();
         }
         do {
-          out.write("   \r\n");
-          out.write("         ");
+          out.write("\r\n");
+          out.write("            ");
           if (_jspx_meth_c_005fset_005f25(_jspx_th_ww_005fif_005f41, _jspx_page_context))
             return true;
-          out.write("         \r\n");
-          out.write("         <a id=\"jttrigger-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
-          out.write("\t\t\t   <div id=\"jttip-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
-          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
-          out.write("\t\t\t\t \t <!--\r\n");
-          out.write("\t\t\t\t\t ");
-          if (_jspx_meth_fmt_005fmessage_005f82(_jspx_th_ww_005fif_005f41, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check9,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f83(_jspx_th_ww_005fif_005f41, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker9.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("           -->\r\n");
-          out.write("           \t");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.billDetail.productionmembers}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\r\n");
-          out.write("         </div>                \r\n");
-          out.write("         ");
+          out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f41.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -11473,125 +11411,16 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_c_005fset_005f25.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f25.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f41);
-      // /northwest/billForm.jsp(696,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f25.setVar("i");
-      // /northwest/billForm.jsp(696,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f25.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(693,12) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f25.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(693,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f25.setValue(new String("false"));
       int _jspx_eval_c_005fset_005f25 = _jspx_th_c_005fset_005f25.doStartTag();
       if (_jspx_th_c_005fset_005f25.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f25);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f82(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f41, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f82 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f82.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f82.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f41);
-      // /northwest/billForm.jsp(701,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f82.setKey("billSchedule.step9");
-      int _jspx_eval_fmt_005fmessage_005f82 = _jspx_th_fmt_005fmessage_005f82.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f82.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f82);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f83(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f41, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f83 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f83.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f83.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f41);
-      // /northwest/billForm.jsp(702,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f83.setKey("member.name");
-      int _jspx_eval_fmt_005fmessage_005f83 = _jspx_th_fmt_005fmessage_005f83.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f83.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f83);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fset_005f73(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f73 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f73.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f73.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
-      // /northwest/billForm.jsp(708,12) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f73.setName("pass");
-      // /northwest/billForm.jsp(708,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f73.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','14')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f73 = _jspx_th_ww_005fset_005f73.doStartTag();
-      if (_jspx_th_ww_005fset_005f73.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f73);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f42(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f42 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f42.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f42.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
-      // /northwest/billForm.jsp(711,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f42.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f42 = _jspx_th_ww_005fif_005f42.doStartTag();
-      if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f42.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f42.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-9').style.display = 'inline';\r\n");
-          out.write("                     document.getElementById('step9Ids_");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("').style.display = 'none';  \r\n");
-          out.write("                  ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f42.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f42.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f42);
     }
     return false;
   }
@@ -11614,10 +11443,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-9').style.display = 'none';                  \r\n");
-          out.write("                  ");
+          out.write("          ");
+          if (_jspx_meth_c_005fset_005f26(_jspx_th_ww_005felse_005f20, _jspx_page_context))
+            return true;
+          out.write("\r\n");
+          out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005felse_005f20.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -11635,7 +11465,163 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fif_005f43(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f26(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f20, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f26 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f26.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f26.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f20);
+      // /northwest/billForm.jsp(696,10) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f26.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(696,10) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f26.setValue(new String("true"));
+      int _jspx_eval_c_005fset_005f26 = _jspx_th_c_005fset_005f26.doStartTag();
+      if (_jspx_th_c_005fset_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f26);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fcheckbox_005f9(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:checkbox
+    com.opensymphony.webwork.views.jsp.ui.CheckboxTag _jspx_th_ww_005fcheckbox_005f9 = (com.opensymphony.webwork.views.jsp.ui.CheckboxTag) _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.get(com.opensymphony.webwork.views.jsp.ui.CheckboxTag.class);
+    try {
+      _jspx_th_ww_005fcheckbox_005f9.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fcheckbox_005f9.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
+      // /northwest/billForm.jsp(698,8) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step9Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(698,8) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setId((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step9Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(698,8) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setCssClass("cCheckboxField");
+      // /northwest/billForm.jsp(698,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step9}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(698,8) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setFieldValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}*9", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(698,8) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fcheckbox_005f9.setDisabled("true");
+      int _jspx_eval_ww_005fcheckbox_005f9 = _jspx_th_ww_005fcheckbox_005f9.doStartTag();
+      if (_jspx_th_ww_005fcheckbox_005f9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.reuse(_jspx_th_ww_005fcheckbox_005f9);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f42(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f42 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f42.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f42.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
+      // /northwest/billForm.jsp(701,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f42.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step9} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f42 = _jspx_th_ww_005fif_005f42.doStartTag();
+      if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f42.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f42.doInitBody();
+        }
+        do {
+          out.write("   \r\n");
+          out.write("         ");
+          if (_jspx_meth_c_005fset_005f27(_jspx_th_ww_005fif_005f42, _jspx_page_context))
+            return true;
+          out.write("         \r\n");
+          out.write("         <a id=\"jttrigger-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
+          out.write("\t\t\t   <div id=\"jttip-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
+          out.write("\t\t\t\t <div class=\"jttipcontent\" >\t\t\t\t \r\n");
+          out.write("\t\t\t\t \t  設備: ");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.postProductionsEqt.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write(" <br>\r\n");
+          out.write("           \t");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.billDetail.productionmembers}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\r\n");
+          out.write("         </div>                \r\n");
+          out.write("         ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f42.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f42 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f42.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f42);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fset_005f27(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f42, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f27 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f27.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f27.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f42);
+      // /northwest/billForm.jsp(702,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f27.setVar("i");
+      // /northwest/billForm.jsp(702,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f27.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f27 = _jspx_th_c_005fset_005f27.doStartTag();
+      if (_jspx_th_c_005fset_005f27.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f27);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fset_005f72(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:set
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f72 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    try {
+      _jspx_th_ww_005fset_005f72.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f72.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
+      // /northwest/billForm.jsp(711,12) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f72.setName("pass");
+      // /northwest/billForm.jsp(711,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f72.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','14')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f72 = _jspx_th_ww_005fset_005f72.doStartTag();
+      if (_jspx_th_ww_005fset_005f72.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f72);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f43(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -11643,9 +11629,9 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f43 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
     try {
       _jspx_th_ww_005fif_005f43.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f43.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billForm.jsp(726,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f43.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck10} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      _jspx_th_ww_005fif_005f43.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
+      // /northwest/billForm.jsp(714,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f43.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f43 = _jspx_th_ww_005fif_005f43.doStartTag();
       if (_jspx_eval_ww_005fif_005f43 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f43 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -11655,12 +11641,13 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("      \r\n");
-          out.write("     ");
-          if (_jspx_meth_display_005fcolumn_005f18(_jspx_th_ww_005fif_005f43, _jspx_page_context))
-            return true;
-          out.write("    \r\n");
-          out.write("    ");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-9').style.display = 'inline';\r\n");
+          out.write("                     document.getElementById('step9Ids_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("').style.display = 'none';  \r\n");
+          out.write("                  ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f43.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -11678,7 +11665,89 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_display_005fcolumn_005f18(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f43, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005felse_005f21(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f17, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:else
+    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f21 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    try {
+      _jspx_th_ww_005felse_005f21.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005felse_005f21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f17);
+      int _jspx_eval_ww_005felse_005f21 = _jspx_th_ww_005felse_005f21.doStartTag();
+      if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005felse_005f21.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005felse_005f21.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-9').style.display = 'none';                  \r\n");
+          out.write("                  ");
+          int evalDoAfterBody = _jspx_th_ww_005felse_005f21.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005felse_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f21);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f44(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f44 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f44.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f44.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
+      // /northwest/billForm.jsp(729,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f44.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck10} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f44 = _jspx_th_ww_005fif_005f44.doStartTag();
+      if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f44.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f44.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("      \r\n");
+          out.write("     ");
+          if (_jspx_meth_display_005fcolumn_005f18(_jspx_th_ww_005fif_005f44, _jspx_page_context))
+            return true;
+          out.write("    \r\n");
+          out.write("    ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f44.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f44.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f44);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_display_005fcolumn_005f18(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f44, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -11686,12 +11755,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     org.displaytag.tags.ColumnTag _jspx_th_display_005fcolumn_005f18 = (org.displaytag.tags.ColumnTag) _005fjspx_005ftagPool_005fdisplay_005fcolumn_0026_005ftitle_005fsortable_005fclass.get(org.displaytag.tags.ColumnTag.class);
     try {
       _jspx_th_display_005fcolumn_005f18.setPageContext(_jspx_page_context);
-      _jspx_th_display_005fcolumn_005f18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f43);
-      // /northwest/billForm.jsp(728,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_display_005fcolumn_005f18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f44);
+      // /northwest/billForm.jsp(731,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f18.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${step10column} <input type='checkbox' name='selectall10' onClick='javascript:selectAll(10);' ${selectPower10} />", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(728,5) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(731,5) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f18.setClass("results");
-      // /northwest/billForm.jsp(728,5) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(731,5) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f18.setSortable(true);
       int _jspx_eval_display_005fcolumn_005f18 = _jspx_th_display_005fcolumn_005f18.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f18 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -11703,7 +11772,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         do {
           out.write("\r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005fset_005f74(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f73(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("        ");
@@ -11711,12 +11780,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
             return true;
           out.write("\r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005fif_005f44(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f45(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("           \r\n");
           out.write("           ");
-          if (_jspx_meth_ww_005fset_005f75(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f74(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
             return true;
           out.write("             \r\n");
           out.write("            <div id=\"");
@@ -11724,11 +11793,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write("-10\"><font color=\"blue\">Pass</font><div>\r\n");
           out.write("            <script>               \r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005fif_005f45(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f46(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005felse_005f21(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f22(_jspx_th_display_005fcolumn_005f18, _jspx_page_context))
             return true;
           out.write("                    \r\n");
           out.write("            </script>\r\n");
@@ -11751,25 +11820,25 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fset_005f74(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005fset_005f73(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f74 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f73 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
     try {
-      _jspx_th_ww_005fset_005f74.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f74.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      // /northwest/billForm.jsp(729,8) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f74.setName("stepEditable");
-      // /northwest/billForm.jsp(729,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f74.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','15',${Permissions10})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f74 = _jspx_th_ww_005fset_005f74.doStartTag();
-      if (_jspx_th_ww_005fset_005f74.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_ww_005fset_005f73.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f73.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
+      // /northwest/billForm.jsp(732,8) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f73.setName("stepEditable");
+      // /northwest/billForm.jsp(732,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f73.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','15',${Permissions10})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f73 = _jspx_th_ww_005fset_005f73.doStartTag();
+      if (_jspx_th_ww_005fset_005f73.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f74);
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f73);
     }
     return false;
   }
@@ -11783,17 +11852,17 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fcheckbox_005f10.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fcheckbox_005f10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      // /northwest/billForm.jsp(730,8) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step10Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(730,8) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setId((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step10Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(730,8) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setCssClass("cCheckboxField");
-      // /northwest/billForm.jsp(730,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step10}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(730,8) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setFieldValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}*10", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(730,8) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(733,8) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f10.setDisabled((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${stepEditable}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fcheckbox_005f10 = _jspx_th_ww_005fcheckbox_005f10.doStartTag();
       if (_jspx_th_ww_005fcheckbox_005f10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -11801,156 +11870,6 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
       }
     } finally {
       _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.reuse(_jspx_th_ww_005fcheckbox_005f10);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f44(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f44 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f44.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f44.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      // /northwest/billForm.jsp(731,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f44.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step10} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f44 = _jspx_th_ww_005fif_005f44.doStartTag();
-      if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f44.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f44.doInitBody();
-        }
-        do {
-          out.write("         \r\n");
-          out.write("         ");
-          if (_jspx_meth_c_005fset_005f26(_jspx_th_ww_005fif_005f44, _jspx_page_context))
-            return true;
-          out.write("         \r\n");
-          out.write("         <a id=\"jttrigger-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
-          out.write("\t\t\t   <div id=\"jttip-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
-          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
-          out.write("\t\t\t\t\t ");
-          if (_jspx_meth_fmt_005fmessage_005f84(_jspx_th_ww_005fif_005f44, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check10,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f85(_jspx_th_ww_005fif_005f44, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker10.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("         </div>\r\n");
-          out.write("         ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f44.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f44 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f44.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f44);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f26(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f44, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f26 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f26.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f26.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f44);
-      // /northwest/billForm.jsp(732,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f26.setVar("i");
-      // /northwest/billForm.jsp(732,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f26.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_c_005fset_005f26 = _jspx_th_c_005fset_005f26.doStartTag();
-      if (_jspx_th_c_005fset_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f26);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f84(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f44, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f84 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f84.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f84.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f44);
-      // /northwest/billForm.jsp(736,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f84.setKey("billSchedule.step10");
-      int _jspx_eval_fmt_005fmessage_005f84 = _jspx_th_fmt_005fmessage_005f84.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f84.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f84);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f85(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f44, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f85 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f85.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f85.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f44);
-      // /northwest/billForm.jsp(737,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f85.setKey("member.name");
-      int _jspx_eval_fmt_005fmessage_005f85 = _jspx_th_fmt_005fmessage_005f85.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f85.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f85);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fset_005f75(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f75 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f75.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f75.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      // /northwest/billForm.jsp(741,11) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f75.setName("pass");
-      // /northwest/billForm.jsp(741,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f75.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','15')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f75 = _jspx_th_ww_005fset_005f75.doStartTag();
-      if (_jspx_th_ww_005fset_005f75.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f75);
     }
     return false;
   }
@@ -11964,8 +11883,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fif_005f45.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f45.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      // /northwest/billForm.jsp(744,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f45.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(734,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f45.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step10} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f45 = _jspx_th_ww_005fif_005f45.doStartTag();
       if (_jspx_eval_ww_005fif_005f45 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f45 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -11974,14 +11893,32 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           _jspx_th_ww_005fif_005f45.doInitBody();
         }
         do {
-          out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-10').style.display = 'inline';\r\n");
-          out.write("                     document.getElementById('step10Ids_");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("').style.display = 'none';  \r\n");
-          out.write("                  ");
+          out.write("         \r\n");
+          out.write("         ");
+          if (_jspx_meth_c_005fset_005f28(_jspx_th_ww_005fif_005f45, _jspx_page_context))
+            return true;
+          out.write("         \r\n");
+          out.write("         <a id=\"jttrigger-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
+          out.write("\t\t\t   <div id=\"jttip-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
+          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
+          out.write("\t\t\t\t\t ");
+          if (_jspx_meth_fmt_005fmessage_005f82(_jspx_th_ww_005fif_005f45, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check10,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f83(_jspx_th_ww_005fif_005f45, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker10.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("         </div>\r\n");
+          out.write("         ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f45.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -11999,46 +11936,95 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005felse_005f21(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f28(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f45, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
-    //  ww:else
-    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f21 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f28 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     try {
-      _jspx_th_ww_005felse_005f21.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005felse_005f21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
-      int _jspx_eval_ww_005felse_005f21 = _jspx_th_ww_005felse_005f21.doStartTag();
-      if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005felse_005f21.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005felse_005f21.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-10').style.display = 'none';                  \r\n");
-          out.write("                  ");
-          int evalDoAfterBody = _jspx_th_ww_005felse_005f21.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005felse_005f21 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005felse_005f21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_c_005fset_005f28.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f28.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f45);
+      // /northwest/billForm.jsp(735,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f28.setVar("i");
+      // /northwest/billForm.jsp(735,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f28.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f28 = _jspx_th_c_005fset_005f28.doStartTag();
+      if (_jspx_th_c_005fset_005f28.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f21);
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f28);
     }
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fif_005f46(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_fmt_005fmessage_005f82(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f45, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f82 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f82.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f82.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f45);
+      // /northwest/billForm.jsp(739,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f82.setKey("billSchedule.step10");
+      int _jspx_eval_fmt_005fmessage_005f82 = _jspx_th_fmt_005fmessage_005f82.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f82.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f82);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f83(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f45, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f83 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f83.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f83.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f45);
+      // /northwest/billForm.jsp(740,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f83.setKey("member.name");
+      int _jspx_eval_fmt_005fmessage_005f83 = _jspx_th_fmt_005fmessage_005f83.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f83.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f83);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fset_005f74(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:set
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f74 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    try {
+      _jspx_th_ww_005fset_005f74.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f74.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
+      // /northwest/billForm.jsp(744,11) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f74.setName("pass");
+      // /northwest/billForm.jsp(744,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f74.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','15')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f74 = _jspx_th_ww_005fset_005f74.doStartTag();
+      if (_jspx_th_ww_005fset_005f74.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f74);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f46(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -12046,9 +12032,9 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f46 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
     try {
       _jspx_th_ww_005fif_005f46.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f46.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billForm.jsp(759,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f46.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      _jspx_th_ww_005fif_005f46.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
+      // /northwest/billForm.jsp(747,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f46.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f46 = _jspx_th_ww_005fif_005f46.doStartTag();
       if (_jspx_eval_ww_005fif_005f46 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f46 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -12058,12 +12044,13 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("       \r\n");
-          out.write("     ");
-          if (_jspx_meth_display_005fcolumn_005f19(_jspx_th_ww_005fif_005f46, _jspx_page_context))
-            return true;
-          out.write("     \r\n");
-          out.write("    ");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-10').style.display = 'inline';\r\n");
+          out.write("                     document.getElementById('step10Ids_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("').style.display = 'none';  \r\n");
+          out.write("                  ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f46.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -12081,7 +12068,89 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_display_005fcolumn_005f19(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f46, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005felse_005f22(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f18, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:else
+    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f22 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    try {
+      _jspx_th_ww_005felse_005f22.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005felse_005f22.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f18);
+      int _jspx_eval_ww_005felse_005f22 = _jspx_th_ww_005felse_005f22.doStartTag();
+      if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005felse_005f22.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005felse_005f22.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-10').style.display = 'none';                  \r\n");
+          out.write("                  ");
+          int evalDoAfterBody = _jspx_th_ww_005felse_005f22.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005felse_005f22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f22);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f47(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f47 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f47.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f47.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
+      // /northwest/billForm.jsp(762,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f47.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f47 = _jspx_th_ww_005fif_005f47.doStartTag();
+      if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f47.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f47.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("       \r\n");
+          out.write("     ");
+          if (_jspx_meth_display_005fcolumn_005f19(_jspx_th_ww_005fif_005f47, _jspx_page_context))
+            return true;
+          out.write("     \r\n");
+          out.write("    ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f47.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f47.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f47);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_display_005fcolumn_005f19(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f47, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -12089,12 +12158,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     org.displaytag.tags.ColumnTag _jspx_th_display_005fcolumn_005f19 = (org.displaytag.tags.ColumnTag) _005fjspx_005ftagPool_005fdisplay_005fcolumn_0026_005ftitle_005fsortable_005fclass.get(org.displaytag.tags.ColumnTag.class);
     try {
       _jspx_th_display_005fcolumn_005f19.setPageContext(_jspx_page_context);
-      _jspx_th_display_005fcolumn_005f19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f46);
-      // /northwest/billForm.jsp(761,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_display_005fcolumn_005f19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f47);
+      // /northwest/billForm.jsp(764,5) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f19.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${step11column}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(761,5) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(764,5) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f19.setClass("results");
-      // /northwest/billForm.jsp(761,5) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(764,5) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f19.setSortable(true);
       int _jspx_eval_display_005fcolumn_005f19 = _jspx_th_display_005fcolumn_005f19.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f19 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -12106,7 +12175,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         do {
           out.write("\r\n");
           out.write("       ");
-          if (_jspx_meth_ww_005fset_005f76(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f75(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("       ");
@@ -12114,11 +12183,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
             return true;
           out.write("              \r\n");
           out.write("       ");
-          if (_jspx_meth_ww_005fif_005f47(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f48(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005felse_005f22(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f23(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("      \r\n");
           out.write("        <a href=\"javascript:openChild('uploadStep11.html?bill.id=");
@@ -12135,12 +12204,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("-edit-11\" ></a>     \r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005fif_005f48(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f49(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write(" \r\n");
           out.write("        \r\n");
           out.write("            ");
-          if (_jspx_meth_ww_005fset_005f77(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f76(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("             \r\n");
           out.write("            <div id=\"");
@@ -12148,11 +12217,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write("-11\"><font color=\"blue\">Pass</font><div>\r\n");
           out.write("            <script>               \r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005fif_005f49(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f50(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005felse_005f23(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f24(_jspx_th_display_005fcolumn_005f19, _jspx_page_context))
             return true;
           out.write("                    \r\n");
           out.write("            </script>  \r\n");
@@ -12174,25 +12243,25 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fset_005f76(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005fset_005f75(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f76 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f75 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
     try {
-      _jspx_th_ww_005fset_005f76.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f76.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(762,7) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f76.setName("stepEditable");
-      // /northwest/billForm.jsp(762,7) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f76.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','17',${Permissions11})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f76 = _jspx_th_ww_005fset_005f76.doStartTag();
-      if (_jspx_th_ww_005fset_005f76.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_ww_005fset_005f75.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f75.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
+      // /northwest/billForm.jsp(765,7) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f75.setName("stepEditable");
+      // /northwest/billForm.jsp(765,7) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f75.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','17',${Permissions11})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f75 = _jspx_th_ww_005fset_005f75.doStartTag();
+      if (_jspx_th_ww_005fset_005f75.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f76);
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f75);
     }
     return false;
   }
@@ -12206,17 +12275,17 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fcheckbox_005f11.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fcheckbox_005f11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(763,7) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step11Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(763,7) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setId((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step11Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(763,7) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setCssClass("cCheckboxField");
-      // /northwest/billForm.jsp(763,7) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step11}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(763,7) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setFieldValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}*11", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(763,7) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(766,7) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f11.setDisabled("true");
       int _jspx_eval_ww_005fcheckbox_005f11 = _jspx_th_ww_005fcheckbox_005f11.doStartTag();
       if (_jspx_th_ww_005fcheckbox_005f11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -12224,134 +12293,6 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
       }
     } finally {
       _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.reuse(_jspx_th_ww_005fcheckbox_005f11);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f47(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f47 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f47.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f47.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(764,7) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f47.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${Permissions11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f47 = _jspx_th_ww_005fif_005f47.doStartTag();
-      if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f47.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f47.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("            ");
-          if (_jspx_meth_c_005fset_005f27(_jspx_th_ww_005fif_005f47, _jspx_page_context))
-            return true;
-          out.write("\r\n");
-          out.write("        ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f47.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f47 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f47.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f47);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f27(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f47, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f27 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f27.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f27.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f47);
-      // /northwest/billForm.jsp(765,12) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f27.setVar("isLinkEnable");
-      // /northwest/billForm.jsp(765,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f27.setValue(new String("false"));
-      int _jspx_eval_c_005fset_005f27 = _jspx_th_c_005fset_005f27.doStartTag();
-      if (_jspx_th_c_005fset_005f27.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f27);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005felse_005f22(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:else
-    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f22 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
-    try {
-      _jspx_th_ww_005felse_005f22.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005felse_005f22.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      int _jspx_eval_ww_005felse_005f22 = _jspx_th_ww_005felse_005f22.doStartTag();
-      if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005felse_005f22.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005felse_005f22.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("           ");
-          if (_jspx_meth_c_005fset_005f28(_jspx_th_ww_005felse_005f22, _jspx_page_context))
-            return true;
-          out.write("\r\n");
-          out.write("        ");
-          int evalDoAfterBody = _jspx_th_ww_005felse_005f22.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005felse_005f22 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005felse_005f22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f22);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f28(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f22, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f28 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f28.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f28.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f22);
-      // /northwest/billForm.jsp(768,11) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f28.setVar("isLinkEnable");
-      // /northwest/billForm.jsp(768,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f28.setValue(new String("true"));
-      int _jspx_eval_c_005fset_005f28 = _jspx_th_c_005fset_005f28.doStartTag();
-      if (_jspx_th_c_005fset_005f28.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f28);
     }
     return false;
   }
@@ -12365,8 +12306,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fif_005f48.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f48.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(771,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f48.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(767,7) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f48.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${Permissions11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f48 = _jspx_th_ww_005fif_005f48.doStartTag();
       if (_jspx_eval_ww_005fif_005f48 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f48 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -12375,55 +12316,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           _jspx_th_ww_005fif_005f48.doInitBody();
         }
         do {
-          out.write("         \r\n");
-          out.write("         ");
+          out.write("\r\n");
+          out.write("            ");
           if (_jspx_meth_c_005fset_005f29(_jspx_th_ww_005fif_005f48, _jspx_page_context))
             return true;
-          out.write("         \r\n");
-          out.write("         <a id=\"jttrigger-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
-          out.write("\t\t\t   <div id=\"jttip-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
-          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
-          out.write("\t\t\t\t\t ");
-          if (_jspx_meth_fmt_005fmessage_005f86(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check11,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f87(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker11.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f88(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.isSend}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f89(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.freight.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f90(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.freightNo}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f91(_jspx_th_ww_005fif_005f48, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.arrival}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>\r\n");
-          out.write("         </div> \r\n");
+          out.write("\r\n");
           out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f48.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -12451,212 +12348,16 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_c_005fset_005f29.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f29.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(772,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f29.setVar("i");
-      // /northwest/billForm.jsp(772,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f29.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(768,12) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f29.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(768,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f29.setValue(new String("false"));
       int _jspx_eval_c_005fset_005f29 = _jspx_th_c_005fset_005f29.doStartTag();
       if (_jspx_th_c_005fset_005f29.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f29);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f86(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f86 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f86.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f86.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(776,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f86.setKey("billSchedule.step11");
-      int _jspx_eval_fmt_005fmessage_005f86 = _jspx_th_fmt_005fmessage_005f86.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f86.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f86);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f87(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f87 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f87.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f87.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(777,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f87.setKey("member.name");
-      int _jspx_eval_fmt_005fmessage_005f87 = _jspx_th_fmt_005fmessage_005f87.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f87.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f87);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f88(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f88 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f88.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f88.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(778,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f88.setKey("billSchedule.sendMethod");
-      int _jspx_eval_fmt_005fmessage_005f88 = _jspx_th_fmt_005fmessage_005f88.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f88.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f88);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f89(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f89 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f89.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f89.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(779,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f89.setKey("freight.name");
-      int _jspx_eval_fmt_005fmessage_005f89 = _jspx_th_fmt_005fmessage_005f89.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f89.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f89);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f90(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f90 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f90.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f90.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(780,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f90.setKey("freight.no");
-      int _jspx_eval_fmt_005fmessage_005f90 = _jspx_th_fmt_005fmessage_005f90.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f90.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f90);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f91(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f48, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f91 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f91.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f91.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f48);
-      // /northwest/billForm.jsp(781,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f91.setKey("billSchedule.arrival");
-      int _jspx_eval_fmt_005fmessage_005f91 = _jspx_th_fmt_005fmessage_005f91.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f91.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f91);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fset_005f77(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f77 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f77.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f77.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(785,12) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f77.setName("pass");
-      // /northwest/billForm.jsp(785,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f77.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','17')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f77 = _jspx_th_ww_005fset_005f77.doStartTag();
-      if (_jspx_th_ww_005fset_005f77.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f77);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f49(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f49 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f49.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f49.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
-      // /northwest/billForm.jsp(788,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f49.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f49 = _jspx_th_ww_005fif_005f49.doStartTag();
-      if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f49.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f49.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-11').style.display = 'inline';\r\n");
-          out.write("                     document.getElementById('step11Ids_");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("').style.display = 'none';\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-edit-11').style.display = 'none';\r\n");
-          out.write("                  ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f49.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f49.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f49);
     }
     return false;
   }
@@ -12679,10 +12380,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-11').style.display = 'none';                  \r\n");
-          out.write("                  ");
+          out.write("           ");
+          if (_jspx_meth_c_005fset_005f30(_jspx_th_ww_005felse_005f23, _jspx_page_context))
+            return true;
+          out.write("\r\n");
+          out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005felse_005f23.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -12700,7 +12402,288 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fif_005f50(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f30(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f23, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f30 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f30.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f30.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f23);
+      // /northwest/billForm.jsp(771,11) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f30.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(771,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f30.setValue(new String("true"));
+      int _jspx_eval_c_005fset_005f30 = _jspx_th_c_005fset_005f30.doStartTag();
+      if (_jspx_th_c_005fset_005f30.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f30);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f49(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f49 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f49.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f49.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
+      // /northwest/billForm.jsp(774,8) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f49.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step11} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f49 = _jspx_th_ww_005fif_005f49.doStartTag();
+      if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f49.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f49.doInitBody();
+        }
+        do {
+          out.write("         \r\n");
+          out.write("         ");
+          if (_jspx_meth_c_005fset_005f31(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write("         \r\n");
+          out.write("         <a id=\"jttrigger-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
+          out.write("\t\t\t   <div id=\"jttip-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
+          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
+          out.write("\t\t\t\t\t ");
+          if (_jspx_meth_fmt_005fmessage_005f84(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check11,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f85(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker11.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f86(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.isSend}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f87(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.freight.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f88(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.freightNo}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f89(_jspx_th_ww_005fif_005f49, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.arrival}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>\r\n");
+          out.write("         </div> \r\n");
+          out.write("        ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f49.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f49 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f49.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f49);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fset_005f31(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f31 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f31.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f31.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(775,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f31.setVar("i");
+      // /northwest/billForm.jsp(775,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f31.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f31 = _jspx_th_c_005fset_005f31.doStartTag();
+      if (_jspx_th_c_005fset_005f31.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f31);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f84(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f84 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f84.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f84.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(779,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f84.setKey("billSchedule.step11");
+      int _jspx_eval_fmt_005fmessage_005f84 = _jspx_th_fmt_005fmessage_005f84.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f84.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f84);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f85(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f85 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f85.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f85.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(780,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f85.setKey("member.name");
+      int _jspx_eval_fmt_005fmessage_005f85 = _jspx_th_fmt_005fmessage_005f85.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f85.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f85);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f86(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f86 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f86.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f86.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(781,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f86.setKey("billSchedule.sendMethod");
+      int _jspx_eval_fmt_005fmessage_005f86 = _jspx_th_fmt_005fmessage_005f86.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f86.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f86);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f87(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f87 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f87.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f87.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(782,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f87.setKey("freight.name");
+      int _jspx_eval_fmt_005fmessage_005f87 = _jspx_th_fmt_005fmessage_005f87.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f87.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f87);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f88(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f88 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f88.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f88.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(783,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f88.setKey("freight.no");
+      int _jspx_eval_fmt_005fmessage_005f88 = _jspx_th_fmt_005fmessage_005f88.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f88.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f88);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f89(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f49, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f89 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f89.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f89.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f49);
+      // /northwest/billForm.jsp(784,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f89.setKey("billSchedule.arrival");
+      int _jspx_eval_fmt_005fmessage_005f89 = _jspx_th_fmt_005fmessage_005f89.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f89.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f89);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fset_005f76(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:set
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f76 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    try {
+      _jspx_th_ww_005fset_005f76.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f76.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
+      // /northwest/billForm.jsp(788,12) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f76.setName("pass");
+      // /northwest/billForm.jsp(788,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f76.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','17')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f76 = _jspx_th_ww_005fset_005f76.doStartTag();
+      if (_jspx_th_ww_005fset_005f76.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f76);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f50(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -12708,9 +12691,9 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f50 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
     try {
       _jspx_th_ww_005fif_005f50.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f50.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billForm.jsp(803,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f50.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      _jspx_th_ww_005fif_005f50.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
+      // /northwest/billForm.jsp(791,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f50.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f50 = _jspx_th_ww_005fif_005f50.doStartTag();
       if (_jspx_eval_ww_005fif_005f50 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f50 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -12719,14 +12702,17 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           _jspx_th_ww_005fif_005f50.doInitBody();
         }
         do {
-          out.write("    \r\n");
-          out.write("      \r\n");
-          out.write("    ");
-          if (_jspx_meth_display_005fcolumn_005f20(_jspx_th_ww_005fif_005f50, _jspx_page_context))
-            return true;
-          out.write("   \r\n");
-          out.write("    \r\n");
-          out.write("    ");
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-11').style.display = 'inline';\r\n");
+          out.write("                     document.getElementById('step11Ids_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("').style.display = 'none';\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-edit-11').style.display = 'none';\r\n");
+          out.write("                  ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f50.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -12744,7 +12730,90 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_display_005fcolumn_005f20(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f50, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005felse_005f24(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f19, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:else
+    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f24 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    try {
+      _jspx_th_ww_005felse_005f24.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005felse_005f24.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f19);
+      int _jspx_eval_ww_005felse_005f24 = _jspx_th_ww_005felse_005f24.doStartTag();
+      if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005felse_005f24.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005felse_005f24.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-11').style.display = 'none';                  \r\n");
+          out.write("                  ");
+          int evalDoAfterBody = _jspx_th_ww_005felse_005f24.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005felse_005f24.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f24);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f51(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f51 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f51.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f51.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
+      // /northwest/billForm.jsp(806,4) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f51.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ck12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f51 = _jspx_th_ww_005fif_005f51.doStartTag();
+      if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f51.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f51.doInitBody();
+        }
+        do {
+          out.write("    \r\n");
+          out.write("      \r\n");
+          out.write("    ");
+          if (_jspx_meth_display_005fcolumn_005f20(_jspx_th_ww_005fif_005f51, _jspx_page_context))
+            return true;
+          out.write("   \r\n");
+          out.write("    \r\n");
+          out.write("    ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f51.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f51.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f51);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_display_005fcolumn_005f20(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f51, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -12752,12 +12821,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     org.displaytag.tags.ColumnTag _jspx_th_display_005fcolumn_005f20 = (org.displaytag.tags.ColumnTag) _005fjspx_005ftagPool_005fdisplay_005fcolumn_0026_005ftitle_005fsortable_005fclass.get(org.displaytag.tags.ColumnTag.class);
     try {
       _jspx_th_display_005fcolumn_005f20.setPageContext(_jspx_page_context);
-      _jspx_th_display_005fcolumn_005f20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f50);
-      // /northwest/billForm.jsp(805,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_display_005fcolumn_005f20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f51);
+      // /northwest/billForm.jsp(808,4) name = title type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f20.setTitle((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${step12column}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(805,4) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(808,4) name = class type = java.lang.String reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f20.setClass("results");
-      // /northwest/billForm.jsp(805,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(808,4) name = sortable type = boolean reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f20.setSortable(true);
       int _jspx_eval_display_005fcolumn_005f20 = _jspx_th_display_005fcolumn_005f20.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f20 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -12769,7 +12838,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         do {
           out.write("\r\n");
           out.write("      ");
-          if (_jspx_meth_ww_005fset_005f78(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f77(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write("    \r\n");
           out.write("      ");
@@ -12777,11 +12846,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
             return true;
           out.write("      \r\n");
           out.write("      ");
-          if (_jspx_meth_ww_005fif_005f51(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f52(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("        ");
-          if (_jspx_meth_ww_005felse_005f24(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f25(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write(" \r\n");
           out.write("      <a href=\"javascript:openChild('uploadStep12.html?bill.id=");
@@ -12800,12 +12869,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("-edit-12\"></a>                 \r\n");
           out.write("      ");
-          if (_jspx_meth_ww_005fif_005f52(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f53(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write(" \r\n");
           out.write("      \r\n");
           out.write("           ");
-          if (_jspx_meth_ww_005fset_005f79(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005fset_005f78(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write("             \r\n");
           out.write("            <div id=\"");
@@ -12813,11 +12882,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write("-12\"><font color=\"blue\">Pass</font><div>\r\n");
           out.write("            <script>               \r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005fif_005f53(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005fif_005f54(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("                  ");
-          if (_jspx_meth_ww_005felse_005f25(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
+          if (_jspx_meth_ww_005felse_005f26(_jspx_th_display_005fcolumn_005f20, _jspx_page_context))
             return true;
           out.write("                    \r\n");
           out.write("            </script>   \r\n");
@@ -12839,25 +12908,25 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_ww_005fset_005f78(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
+  private boolean _jspx_meth_ww_005fset_005f77(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f78 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f77 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
     try {
-      _jspx_th_ww_005fset_005f78.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f78.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(806,6) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f78.setName("stepEditable");
-      // /northwest/billForm.jsp(806,6) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f78.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','19',${Permissions12})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f78 = _jspx_th_ww_005fset_005f78.doStartTag();
-      if (_jspx_th_ww_005fset_005f78.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_ww_005fset_005f77.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f77.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
+      // /northwest/billForm.jsp(809,6) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f77.setName("stepEditable");
+      // /northwest/billForm.jsp(809,6) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f77.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getRecordEditable('${schedule.id}','19',${Permissions12})}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f77 = _jspx_th_ww_005fset_005f77.doStartTag();
+      if (_jspx_th_ww_005fset_005f77.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f78);
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f77);
     }
     return false;
   }
@@ -12871,17 +12940,17 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fcheckbox_005f12.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fcheckbox_005f12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(807,6) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = name type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setName((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step12Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(807,6) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = id type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setId((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("step12Ids_${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(807,6) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = cssClass type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setCssClass("cCheckboxField");
-      // /northwest/billForm.jsp(807,6) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step12}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(807,6) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = fieldValue type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setFieldValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}*12", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(807,6) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(810,6) name = disabled type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fcheckbox_005f12.setDisabled("true");
       int _jspx_eval_ww_005fcheckbox_005f12 = _jspx_th_ww_005fcheckbox_005f12.doStartTag();
       if (_jspx_th_ww_005fcheckbox_005f12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -12889,134 +12958,6 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
       }
     } finally {
       _005fjspx_005ftagPool_005fww_005fcheckbox_0026_005fvalue_005fname_005fid_005ffieldValue_005fdisabled_005fcssClass_005fnobody.reuse(_jspx_th_ww_005fcheckbox_005f12);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f51(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f51 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f51.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f51.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(808,6) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f51.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${Permissions12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f51 = _jspx_th_ww_005fif_005f51.doStartTag();
-      if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f51.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f51.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("            ");
-          if (_jspx_meth_c_005fset_005f30(_jspx_th_ww_005fif_005f51, _jspx_page_context))
-            return true;
-          out.write("\r\n");
-          out.write("        ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f51.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f51 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f51.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f51);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f30(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f51, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f30 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f30.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f30.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f51);
-      // /northwest/billForm.jsp(809,12) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f30.setVar("isLinkEnable");
-      // /northwest/billForm.jsp(809,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f30.setValue(new String("false"));
-      int _jspx_eval_c_005fset_005f30 = _jspx_th_c_005fset_005f30.doStartTag();
-      if (_jspx_th_c_005fset_005f30.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f30);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005felse_005f24(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:else
-    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f24 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
-    try {
-      _jspx_th_ww_005felse_005f24.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005felse_005f24.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      int _jspx_eval_ww_005felse_005f24 = _jspx_th_ww_005felse_005f24.doStartTag();
-      if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005felse_005f24.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005felse_005f24.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("           ");
-          if (_jspx_meth_c_005fset_005f31(_jspx_th_ww_005felse_005f24, _jspx_page_context))
-            return true;
-          out.write("\r\n");
-          out.write("        ");
-          int evalDoAfterBody = _jspx_th_ww_005felse_005f24.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005felse_005f24 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005felse_005f24.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f24);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f31(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f24, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f31 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f31.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f31.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f24);
-      // /northwest/billForm.jsp(812,11) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f31.setVar("isLinkEnable");
-      // /northwest/billForm.jsp(812,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f31.setValue(new String("true"));
-      int _jspx_eval_c_005fset_005f31 = _jspx_th_c_005fset_005f31.doStartTag();
-      if (_jspx_th_c_005fset_005f31.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f31);
     }
     return false;
   }
@@ -13030,8 +12971,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fif_005f52.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fif_005f52.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(815,6) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f52.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(811,6) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f52.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${Permissions12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_ww_005fif_005f52 = _jspx_th_ww_005fif_005f52.doStartTag();
       if (_jspx_eval_ww_005fif_005f52 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         if (_jspx_eval_ww_005fif_005f52 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
@@ -13040,48 +12981,12 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           _jspx_th_ww_005fif_005f52.doInitBody();
         }
         do {
-          out.write("         \r\n");
-          out.write("        ");
+          out.write("\r\n");
+          out.write("            ");
           if (_jspx_meth_c_005fset_005f32(_jspx_th_ww_005fif_005f52, _jspx_page_context))
             return true;
-          out.write("         \r\n");
-          out.write("         <a id=\"jttrigger-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
-          out.write("\t\t\t   <div id=\"jttip-");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
-          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
-          out.write("\t\t\t\t\t ");
-          if (_jspx_meth_fmt_005fmessage_005f92(_jspx_th_ww_005fif_005f52, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check12,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
-          out.write("<BR>\r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f93(_jspx_th_ww_005fif_005f52, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker12.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR>   \r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f94(_jspx_th_ww_005fif_005f52, _jspx_page_context))
-            return true;
-          out.write(':');
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.drawingsMemo}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("<BR> \r\n");
-          out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f95(_jspx_th_ww_005fif_005f52, _jspx_page_context))
-            return true;
-          out.write(":<a href=\"");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("/showDrawings.html?bill.id=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bill.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("&billSchedule.billDetailId=");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.billDetail.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("\" target=\"_blank\"  ><img src=\"images/photo.gif\" border=0></a> <BR>\r\n");
-          out.write("          </div> \r\n");
-          out.write("      ");
+          out.write("\r\n");
+          out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005fif_005f52.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -13108,170 +13013,16 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_c_005fset_005f32.setPageContext(_jspx_page_context);
       _jspx_th_c_005fset_005f32.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f52);
-      // /northwest/billForm.jsp(816,8) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f32.setVar("i");
-      // /northwest/billForm.jsp(816,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f32.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      // /northwest/billForm.jsp(812,12) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f32.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(812,12) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f32.setValue(new String("false"));
       int _jspx_eval_c_005fset_005f32 = _jspx_th_c_005fset_005f32.doStartTag();
       if (_jspx_th_c_005fset_005f32.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f32);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f92(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f52, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f92 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f92.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f92.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f52);
-      // /northwest/billForm.jsp(820,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f92.setKey("billSchedule.step12");
-      int _jspx_eval_fmt_005fmessage_005f92 = _jspx_th_fmt_005fmessage_005f92.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f92.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f92);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f93(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f52, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f93 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f93.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f93.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f52);
-      // /northwest/billForm.jsp(821,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f93.setKey("member.name");
-      int _jspx_eval_fmt_005fmessage_005f93 = _jspx_th_fmt_005fmessage_005f93.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f93.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f93);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f94(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f52, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f94 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f94.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f94.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f52);
-      // /northwest/billForm.jsp(822,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f94.setKey("billSchedule.drawingsmemo");
-      int _jspx_eval_fmt_005fmessage_005f94 = _jspx_th_fmt_005fmessage_005f94.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f94.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f94);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f95(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f52, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f95 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f95.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f95.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f52);
-      // /northwest/billForm.jsp(823,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f95.setKey("billSchedule.drawings");
-      int _jspx_eval_fmt_005fmessage_005f95 = _jspx_th_fmt_005fmessage_005f95.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f95.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f95);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fset_005f79(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f79 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f79.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f79.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(827,11) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f79.setName("pass");
-      // /northwest/billForm.jsp(827,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f79.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','19')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fset_005f79 = _jspx_th_ww_005fset_005f79.doStartTag();
-      if (_jspx_th_ww_005fset_005f79.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f79);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f53(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f53 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f53.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f53.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
-      // /northwest/billForm.jsp(830,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f53.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f53 = _jspx_th_ww_005fif_005f53.doStartTag();
-      if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f53.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f53.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-12').style.display = 'inline';\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-edit-12').style.display = 'none';\r\n");
-          out.write("                     document.getElementById('step12Ids_");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("').style.display = 'none';  \r\n");
-          out.write("                  ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f53.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f53.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f53);
     }
     return false;
   }
@@ -13294,10 +13045,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         }
         do {
           out.write("\r\n");
-          out.write("                     document.getElementById('");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-          out.write("-12').style.display = 'none';                  \r\n");
-          out.write("                  ");
+          out.write("           ");
+          if (_jspx_meth_c_005fset_005f33(_jspx_th_ww_005felse_005f25, _jspx_page_context))
+            return true;
+          out.write("\r\n");
+          out.write("        ");
           int evalDoAfterBody = _jspx_th_ww_005felse_005f25.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -13315,6 +13067,323 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
+  private boolean _jspx_meth_c_005fset_005f33(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005felse_005f25, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f33 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f33.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f33.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005felse_005f25);
+      // /northwest/billForm.jsp(815,11) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f33.setVar("isLinkEnable");
+      // /northwest/billForm.jsp(815,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f33.setValue(new String("true"));
+      int _jspx_eval_c_005fset_005f33 = _jspx_th_c_005fset_005f33.doStartTag();
+      if (_jspx_th_c_005fset_005f33.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f33);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f53(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f53 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f53.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f53.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
+      // /northwest/billForm.jsp(818,6) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f53.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.step12} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f53 = _jspx_th_ww_005fif_005f53.doStartTag();
+      if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f53.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f53.doInitBody();
+        }
+        do {
+          out.write("         \r\n");
+          out.write("        ");
+          if (_jspx_meth_c_005fset_005f34(_jspx_th_ww_005fif_005f53, _jspx_page_context))
+            return true;
+          out.write("         \r\n");
+          out.write("         <a id=\"jttrigger-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" href=\"#\"><img src=\"images/GridView.gif\" border=\"0\"></a>\r\n");
+          out.write("\t\t\t   <div id=\"jttip-");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
+          out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
+          out.write("\t\t\t\t\t ");
+          if (_jspx_meth_fmt_005fmessage_005f90(_jspx_th_ww_005fif_005f53, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(schedule.check12,0,16)}", java.lang.String.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
+          out.write("<BR>\r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f91(_jspx_th_ww_005fif_005f53, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.checker12.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR>   \r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f92(_jspx_th_ww_005fif_005f53, _jspx_page_context))
+            return true;
+          out.write(':');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.drawingsMemo}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("<BR> \r\n");
+          out.write("           ");
+          if (_jspx_meth_fmt_005fmessage_005f93(_jspx_th_ww_005fif_005f53, _jspx_page_context))
+            return true;
+          out.write(":<a href=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("/showDrawings.html?bill.id=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bill.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("&billSchedule.billDetailId=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.billDetail.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("\" target=\"_blank\"  ><img src=\"images/photo.gif\" border=0></a> <BR>\r\n");
+          out.write("          </div> \r\n");
+          out.write("      ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f53.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f53 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f53.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f53);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fset_005f34(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f53, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f34 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f34.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f34.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f53);
+      // /northwest/billForm.jsp(819,8) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f34.setVar("i");
+      // /northwest/billForm.jsp(819,8) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f34.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f34 = _jspx_th_c_005fset_005f34.doStartTag();
+      if (_jspx_th_c_005fset_005f34.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f34);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f90(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f53, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f90 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f90.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f90.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f53);
+      // /northwest/billForm.jsp(823,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f90.setKey("billSchedule.step12");
+      int _jspx_eval_fmt_005fmessage_005f90 = _jspx_th_fmt_005fmessage_005f90.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f90.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f90);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f91(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f53, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f91 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f91.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f91.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f53);
+      // /northwest/billForm.jsp(824,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f91.setKey("member.name");
+      int _jspx_eval_fmt_005fmessage_005f91 = _jspx_th_fmt_005fmessage_005f91.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f91.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f91);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f92(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f53, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f92 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f92.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f92.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f53);
+      // /northwest/billForm.jsp(825,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f92.setKey("billSchedule.drawingsmemo");
+      int _jspx_eval_fmt_005fmessage_005f92 = _jspx_th_fmt_005fmessage_005f92.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f92.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f92);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f93(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fif_005f53, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f93 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f93.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f93.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fif_005f53);
+      // /northwest/billForm.jsp(826,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f93.setKey("billSchedule.drawings");
+      int _jspx_eval_fmt_005fmessage_005f93 = _jspx_th_fmt_005fmessage_005f93.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f93.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f93);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fset_005f78(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:set
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f78 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    try {
+      _jspx_th_ww_005fset_005f78.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f78.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
+      // /northwest/billForm.jsp(830,11) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f78.setName("pass");
+      // /northwest/billForm.jsp(830,11) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f78.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("%{getPass('${schedule.id}','19')}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fset_005f78 = _jspx_th_ww_005fset_005f78.doStartTag();
+      if (_jspx_th_ww_005fset_005f78.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f78);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f54(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f54 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f54.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f54.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
+      // /northwest/billForm.jsp(833,18) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f54.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pass} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f54 = _jspx_th_ww_005fif_005f54.doStartTag();
+      if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f54.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f54.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-12').style.display = 'inline';\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-edit-12').style.display = 'none';\r\n");
+          out.write("                     document.getElementById('step12Ids_");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("').style.display = 'none';  \r\n");
+          out.write("                  ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f54.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f54.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f54);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005felse_005f26(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f20, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:else
+    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f26 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    try {
+      _jspx_th_ww_005felse_005f26.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005felse_005f26.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f20);
+      int _jspx_eval_ww_005felse_005f26 = _jspx_th_ww_005felse_005f26.doStartTag();
+      if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005felse_005f26.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005felse_005f26.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("                     document.getElementById('");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+          out.write("-12').style.display = 'none';                  \r\n");
+          out.write("                  ");
+          int evalDoAfterBody = _jspx_th_ww_005felse_005f26.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005felse_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f26);
+    }
+    return false;
+  }
+
   private boolean _jspx_meth_display_005fcolumn_005f21(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -13324,7 +13393,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_display_005fcolumn_005f21.setPageContext(_jspx_page_context);
       _jspx_th_display_005fcolumn_005f21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billForm.jsp(845,3) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(848,3) name = titleKey type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_display_005fcolumn_005f21.setTitleKey("billSchedule.other");
       int _jspx_eval_display_005fcolumn_005f21 = _jspx_th_display_005fcolumn_005f21.doStartTag();
       if (_jspx_eval_display_005fcolumn_005f21 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -13336,7 +13405,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         do {
           out.write(" \r\n");
           out.write("         ");
-          if (_jspx_meth_c_005fset_005f33(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
+          if (_jspx_meth_c_005fset_005f35(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
             return true;
           out.write("         \r\n");
           out.write("         <a id=\"jttrigger-");
@@ -13347,7 +13416,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write("\" class=\"jttip\" style=\"display:none;\">\r\n");
           out.write("\t\t\t\t <div class=\"jttipcontent\" >\r\n");
           out.write("\t\t\t\t\t ");
-          if (_jspx_meth_fmt_005fmessage_005f96(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f94(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
             return true;
           out.write(" : <a href=\"reportCounter.html?bill.id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bill.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -13355,7 +13424,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${schedule.billDetail.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
           out.write("\" target=\"_blank\"><img src=\"images/report.jpg\" border=0></a> <BR>\r\n");
           out.write("           ");
-          if (_jspx_meth_fmt_005fmessage_005f97(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
+          if (_jspx_meth_fmt_005fmessage_005f95(_jspx_th_display_005fcolumn_005f21, _jspx_page_context))
             return true;
           out.write(" :  <a href=\"reportConstruction.html?bill.id=");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${bill.id}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -13381,118 +13450,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_c_005fset_005f33(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f33 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f33.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f33.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
-      // /northwest/billForm.jsp(846,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f33.setVar("i");
-      // /northwest/billForm.jsp(846,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f33.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_c_005fset_005f33 = _jspx_th_c_005fset_005f33.doStartTag();
-      if (_jspx_th_c_005fset_005f33.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f33);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f96(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f96 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f96.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f96.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
-      // /northwest/billForm.jsp(850,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f96.setKey("report.counter");
-      int _jspx_eval_fmt_005fmessage_005f96 = _jspx_th_fmt_005fmessage_005f96.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f96.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f96);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f97(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f97 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f97.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f97.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
-      // /northwest/billForm.jsp(851,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f97.setKey("report.construction");
-      int _jspx_eval_fmt_005fmessage_005f97 = _jspx_th_fmt_005fmessage_005f97.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f97.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f97);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f34(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f34 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    try {
-      _jspx_th_c_005fset_005f34.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f34.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
-      // /northwest/billForm.jsp(857,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f34.setVar("count");
-      // /northwest/billForm.jsp(857,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f34.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_c_005fset_005f34 = _jspx_th_c_005fset_005f34.doStartTag();
-      if (_jspx_th_c_005fset_005f34.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f34);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fset_005f80(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:set
-    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f80 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
-    try {
-      _jspx_th_ww_005fset_005f80.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fset_005f80.setParent(null);
-      // /northwest/billForm.jsp(882,2) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f80.setName("groupsList");
-      // /northwest/billForm.jsp(882,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fset_005f80.setValue("%{getObject_BillGroupAuthorityList()}");
-      int _jspx_eval_ww_005fset_005f80 = _jspx_th_ww_005fset_005f80.doStartTag();
-      if (_jspx_th_ww_005fset_005f80.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f80);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_005fset_005f35(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f35(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
@@ -13500,17 +13458,128 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f35 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     try {
       _jspx_th_c_005fset_005f35.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f35.setParent(null);
-      // /northwest/billForm.jsp(884,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f35.setVar("al");
-      // /northwest/billForm.jsp(884,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f35.setValue(new String("0"));
+      _jspx_th_c_005fset_005f35.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
+      // /northwest/billForm.jsp(849,9) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f35.setVar("i");
+      // /northwest/billForm.jsp(849,9) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f35.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${i+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
       int _jspx_eval_c_005fset_005f35 = _jspx_th_c_005fset_005f35.doStartTag();
       if (_jspx_th_c_005fset_005f35.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f35);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f94(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f94 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f94.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f94.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
+      // /northwest/billForm.jsp(853,6) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f94.setKey("report.counter");
+      int _jspx_eval_fmt_005fmessage_005f94 = _jspx_th_fmt_005fmessage_005f94.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f94.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f94);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f95(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005fcolumn_005f21, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f95 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f95.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f95.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005fcolumn_005f21);
+      // /northwest/billForm.jsp(854,11) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f95.setKey("report.construction");
+      int _jspx_eval_fmt_005fmessage_005f95 = _jspx_th_fmt_005fmessage_005f95.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f95.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f95);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fset_005f36(javax.servlet.jsp.tagext.JspTag _jspx_th_display_005ftable_005f0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f36 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f36.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f36.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_display_005ftable_005f0);
+      // /northwest/billForm.jsp(860,4) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f36.setVar("count");
+      // /northwest/billForm.jsp(860,4) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f36.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${count+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f36 = _jspx_th_c_005fset_005f36.doStartTag();
+      if (_jspx_th_c_005fset_005f36.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f36);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fset_005f79(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:set
+    com.opensymphony.webwork.views.jsp.SetTag _jspx_th_ww_005fset_005f79 = (com.opensymphony.webwork.views.jsp.SetTag) _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.get(com.opensymphony.webwork.views.jsp.SetTag.class);
+    try {
+      _jspx_th_ww_005fset_005f79.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fset_005f79.setParent(null);
+      // /northwest/billForm.jsp(885,2) name = name type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f79.setName("groupsList");
+      // /northwest/billForm.jsp(885,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fset_005f79.setValue("%{getObject_BillGroupAuthorityList()}");
+      int _jspx_eval_ww_005fset_005f79 = _jspx_th_ww_005fset_005f79.doStartTag();
+      if (_jspx_th_ww_005fset_005f79.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fset_0026_005fvalue_005fname_005fnobody.reuse(_jspx_th_ww_005fset_005f79);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_005fset_005f37(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f37 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    try {
+      _jspx_th_c_005fset_005f37.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f37.setParent(null);
+      // /northwest/billForm.jsp(887,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f37.setVar("al");
+      // /northwest/billForm.jsp(887,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f37.setValue(new String("0"));
+      int _jspx_eval_c_005fset_005f37 = _jspx_th_c_005fset_005f37.doStartTag();
+      if (_jspx_th_c_005fset_005f37.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f37);
     }
     return false;
   }
@@ -13524,7 +13593,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_ww_005fiterator_005f0.setPageContext(_jspx_page_context);
       _jspx_th_ww_005fiterator_005f0.setParent(null);
-      // /northwest/billForm.jsp(885,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(888,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_ww_005fiterator_005f0.setValue("groupsList");
       int _jspx_eval_ww_005fiterator_005f0 = _jspx_th_ww_005fiterator_005f0.doStartTag();
       if (_jspx_eval_ww_005fiterator_005f0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -13536,11 +13605,11 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
         do {
           out.write("\r\n");
           out.write("  ");
-          if (_jspx_meth_c_005fset_005f36(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
+          if (_jspx_meth_c_005fset_005f38(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("  ");
-          if (_jspx_meth_c_005fset_005f37(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
+          if (_jspx_meth_c_005fset_005f39(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("  colu [");
@@ -13550,7 +13619,7 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
             return true;
           out.write("\"   \r\n");
           out.write("  ");
-          if (_jspx_meth_c_005fset_005f38(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
+          if (_jspx_meth_c_005fset_005f40(_jspx_th_ww_005fiterator_005f0, _jspx_page_context))
             return true;
           out.write("\r\n");
           out.write("  ");
@@ -13571,48 +13640,48 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_c_005fset_005f36(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f38(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f36 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f38 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     try {
-      _jspx_th_c_005fset_005f36.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f36.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
-      // /northwest/billForm.jsp(886,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f36.setVar("key");
-      // /northwest/billForm.jsp(886,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f36.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${groupKey}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_c_005fset_005f36 = _jspx_th_c_005fset_005f36.doStartTag();
-      if (_jspx_th_c_005fset_005f36.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_c_005fset_005f38.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f38.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
+      // /northwest/billForm.jsp(889,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f38.setVar("key");
+      // /northwest/billForm.jsp(889,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f38.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${groupKey}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f38 = _jspx_th_c_005fset_005f38.doStartTag();
+      if (_jspx_th_c_005fset_005f38.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f36);
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f38);
     }
     return false;
   }
 
-  private boolean _jspx_meth_c_005fset_005f37(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f39(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f37 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f39 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     try {
-      _jspx_th_c_005fset_005f37.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f37.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
-      // /northwest/billForm.jsp(887,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f37.setVar("item");
-      // /northwest/billForm.jsp(887,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f37.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(key,2,4)}", java.lang.Object.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
-      int _jspx_eval_c_005fset_005f37 = _jspx_th_c_005fset_005f37.doStartTag();
-      if (_jspx_th_c_005fset_005f37.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_c_005fset_005f39.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f39.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
+      // /northwest/billForm.jsp(890,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f39.setVar("item");
+      // /northwest/billForm.jsp(890,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f39.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${fn:substring(key,2,4)}", java.lang.Object.class, (PageContext)_jspx_page_context, _jspx_fnmap_0, false));
+      int _jspx_eval_c_005fset_005f39 = _jspx_th_c_005fset_005f39.doStartTag();
+      if (_jspx_th_c_005fset_005f39.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f37);
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f39);
     }
     return false;
   }
@@ -13626,9 +13695,9 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fformatNumber_005f0.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fformatNumber_005f0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
-      // /northwest/billForm.jsp(888,18) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(891,18) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatNumber_005f0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${item}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      // /northwest/billForm.jsp(888,18) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      // /northwest/billForm.jsp(891,18) name = pattern type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
       _jspx_th_fmt_005fformatNumber_005f0.setPattern("#");
       int _jspx_eval_fmt_005fformatNumber_005f0 = _jspx_th_fmt_005fformatNumber_005f0.doStartTag();
       if (_jspx_th_fmt_005fformatNumber_005f0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -13640,25 +13709,143 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     return false;
   }
 
-  private boolean _jspx_meth_c_005fset_005f38(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_005fset_005f40(javax.servlet.jsp.tagext.JspTag _jspx_th_ww_005fiterator_005f0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f38 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_005fset_005f40 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
     try {
-      _jspx_th_c_005fset_005f38.setPageContext(_jspx_page_context);
-      _jspx_th_c_005fset_005f38.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
-      // /northwest/billForm.jsp(889,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f38.setVar("al");
-      // /northwest/billForm.jsp(889,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_c_005fset_005f38.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${al+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_c_005fset_005f38 = _jspx_th_c_005fset_005f38.doStartTag();
-      if (_jspx_th_c_005fset_005f38.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_th_c_005fset_005f40.setPageContext(_jspx_page_context);
+      _jspx_th_c_005fset_005f40.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_ww_005fiterator_005f0);
+      // /northwest/billForm.jsp(892,2) name = var type = java.lang.String reqTime = false required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f40.setVar("al");
+      // /northwest/billForm.jsp(892,2) name = value type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_c_005fset_005f40.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${al+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_c_005fset_005f40 = _jspx_th_c_005fset_005f40.doStartTag();
+      if (_jspx_th_c_005fset_005f40.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
-      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f38);
+      _005fjspx_005ftagPool_005fc_005fset_0026_005fvar_005fvalue_005fnobody.reuse(_jspx_th_c_005fset_005f40);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f96(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f96 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f96.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f96.setParent(null);
+      // /northwest/billForm.jsp(918,13) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f96.setKey("common.confirmDelete1");
+      int _jspx_eval_fmt_005fmessage_005f96 = _jspx_th_fmt_005fmessage_005f96.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f96.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f96);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_005fmessage_005f97(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f97 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    try {
+      _jspx_th_fmt_005fmessage_005f97.setPageContext(_jspx_page_context);
+      _jspx_th_fmt_005fmessage_005f97.setParent(null);
+      // /northwest/billForm.jsp(918,70) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f97.setKey("common.confirmDelete2");
+      int _jspx_eval_fmt_005fmessage_005f97 = _jspx_th_fmt_005fmessage_005f97.doStartTag();
+      if (_jspx_th_fmt_005fmessage_005f97.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f97);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005fif_005f55(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:if
+    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f55 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
+    try {
+      _jspx_th_ww_005fif_005f55.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005fif_005f55.setParent(null);
+      // /northwest/billForm.jsp(951,1) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_ww_005fif_005f55.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${StepFlowAdmin} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      int _jspx_eval_ww_005fif_005f55 = _jspx_th_ww_005fif_005f55.doStartTag();
+      if (_jspx_eval_ww_005fif_005f55 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005fif_005f55 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005fif_005f55.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005fif_005f55.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("     document.all.StepAuthority.style.display='none';\t\r\n");
+          out.write(" ");
+          int evalDoAfterBody = _jspx_th_ww_005fif_005f55.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005fif_005f55 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005fif_005f55.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f55);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_ww_005felse_005f27(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  ww:else
+    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f27 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
+    try {
+      _jspx_th_ww_005felse_005f27.setPageContext(_jspx_page_context);
+      _jspx_th_ww_005felse_005f27.setParent(null);
+      int _jspx_eval_ww_005felse_005f27 = _jspx_th_ww_005felse_005f27.doStartTag();
+      if (_jspx_eval_ww_005felse_005f27 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        if (_jspx_eval_ww_005felse_005f27 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.pushBody();
+          _jspx_th_ww_005felse_005f27.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
+          _jspx_th_ww_005felse_005f27.doInitBody();
+        }
+        do {
+          out.write("\r\n");
+          out.write("     document.all.StepAuthority.style.display='inline';\t\r\n");
+          out.write(" ");
+          int evalDoAfterBody = _jspx_th_ww_005felse_005f27.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+        if (_jspx_eval_ww_005felse_005f27 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
+          out = _jspx_page_context.popBody();
+        }
+      }
+      if (_jspx_th_ww_005felse_005f27.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } finally {
+      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f27);
     }
     return false;
   }
@@ -13672,8 +13859,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fmessage_005f98.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f98.setParent(null);
-      // /northwest/billForm.jsp(915,13) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f98.setKey("common.confirmDelete1");
+      // /northwest/billForm.jsp(976,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f98.setKey("billdetail.queryfromRow1");
       int _jspx_eval_fmt_005fmessage_005f98 = _jspx_th_fmt_005fmessage_005f98.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f98.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
@@ -13693,90 +13880,14 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fmessage_005f99.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f99.setParent(null);
-      // /northwest/billForm.jsp(915,70) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f99.setKey("common.confirmDelete2");
+      // /northwest/billForm.jsp(982,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f99.setKey("billdetail.queryfromRow2");
       int _jspx_eval_fmt_005fmessage_005f99 = _jspx_th_fmt_005fmessage_005f99.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f99.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f99);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005fif_005f54(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:if
-    com.opensymphony.webwork.views.jsp.IfTag _jspx_th_ww_005fif_005f54 = (com.opensymphony.webwork.views.jsp.IfTag) _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.get(com.opensymphony.webwork.views.jsp.IfTag.class);
-    try {
-      _jspx_th_ww_005fif_005f54.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005fif_005f54.setParent(null);
-      // /northwest/billForm.jsp(948,1) name = test type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_ww_005fif_005f54.setTest((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${StepFlowAdmin} == true", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      int _jspx_eval_ww_005fif_005f54 = _jspx_th_ww_005fif_005f54.doStartTag();
-      if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005fif_005f54.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005fif_005f54.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("     document.all.StepAuthority.style.display='none';\t\r\n");
-          out.write(" ");
-          int evalDoAfterBody = _jspx_th_ww_005fif_005f54.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005fif_005f54 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005fif_005f54.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005fif_0026_005ftest.reuse(_jspx_th_ww_005fif_005f54);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_ww_005felse_005f26(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  ww:else
-    com.opensymphony.webwork.views.jsp.ElseTag _jspx_th_ww_005felse_005f26 = (com.opensymphony.webwork.views.jsp.ElseTag) _005fjspx_005ftagPool_005fww_005felse.get(com.opensymphony.webwork.views.jsp.ElseTag.class);
-    try {
-      _jspx_th_ww_005felse_005f26.setPageContext(_jspx_page_context);
-      _jspx_th_ww_005felse_005f26.setParent(null);
-      int _jspx_eval_ww_005felse_005f26 = _jspx_th_ww_005felse_005f26.doStartTag();
-      if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_th_ww_005felse_005f26.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_ww_005felse_005f26.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("     document.all.StepAuthority.style.display='inline';\t\r\n");
-          out.write(" ");
-          int evalDoAfterBody = _jspx_th_ww_005felse_005f26.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_ww_005felse_005f26 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.popBody();
-        }
-      }
-      if (_jspx_th_ww_005felse_005f26.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005fww_005felse.reuse(_jspx_th_ww_005felse_005f26);
     }
     return false;
   }
@@ -13790,8 +13901,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fmessage_005f100.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f100.setParent(null);
-      // /northwest/billForm.jsp(973,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f100.setKey("billdetail.queryfromRow1");
+      // /northwest/billForm.jsp(988,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f100.setKey("billdetail.queryfromRow.msg2");
       int _jspx_eval_fmt_005fmessage_005f100 = _jspx_th_fmt_005fmessage_005f100.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f100.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
@@ -13811,8 +13922,8 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fmessage_005f101.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f101.setParent(null);
-      // /northwest/billForm.jsp(979,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f101.setKey("billdetail.queryfromRow2");
+      // /northwest/billForm.jsp(1001,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f101.setKey("billdetail.queryfromRow1");
       int _jspx_eval_fmt_005fmessage_005f101 = _jspx_th_fmt_005fmessage_005f101.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f101.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
@@ -13832,56 +13943,14 @@ System.out.println("jsp 901:"+com.base.util.Tools.getCurrentTimestamp());
     try {
       _jspx_th_fmt_005fmessage_005f102.setPageContext(_jspx_page_context);
       _jspx_th_fmt_005fmessage_005f102.setParent(null);
-      // /northwest/billForm.jsp(985,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f102.setKey("billdetail.queryfromRow.msg2");
+      // /northwest/billForm.jsp(1007,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+      _jspx_th_fmt_005fmessage_005f102.setKey("billdetail.queryfromRow2");
       int _jspx_eval_fmt_005fmessage_005f102 = _jspx_th_fmt_005fmessage_005f102.doStartTag();
       if (_jspx_th_fmt_005fmessage_005f102.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } finally {
       _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f102);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f103(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f103 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f103.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f103.setParent(null);
-      // /northwest/billForm.jsp(998,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f103.setKey("billdetail.queryfromRow1");
-      int _jspx_eval_fmt_005fmessage_005f103 = _jspx_th_fmt_005fmessage_005f103.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f103.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f103);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_fmt_005fmessage_005f104(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  fmt:message
-    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_005fmessage_005f104 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
-    try {
-      _jspx_th_fmt_005fmessage_005f104.setPageContext(_jspx_page_context);
-      _jspx_th_fmt_005fmessage_005f104.setParent(null);
-      // /northwest/billForm.jsp(1004,12) name = key type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-      _jspx_th_fmt_005fmessage_005f104.setKey("billdetail.queryfromRow2");
-      int _jspx_eval_fmt_005fmessage_005f104 = _jspx_th_fmt_005fmessage_005f104.doStartTag();
-      if (_jspx_th_fmt_005fmessage_005f104.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } finally {
-      _005fjspx_005ftagPool_005ffmt_005fmessage_0026_005fkey_005fnobody.reuse(_jspx_th_fmt_005fmessage_005f104);
     }
     return false;
   }
