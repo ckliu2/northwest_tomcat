@@ -2,9 +2,36 @@ var req;
 var secondBoxId;
 var thirdBoxId;
 
+function queryKeyWord3(keyword, box2Id, action, paramName, selectedIds)
+{ 		  	
+	 alert('queryKeyWord3..');
+	 
+	 $('#mselectedIds').each(function(i, sel){ 
+    alert( $(sel).val() ); 
+   });
+	 
+    var secondBoxId = box2Id;
+    var urls=action + "?" + paramName + "=" + encodeURIComponent(keyword); 
+    //var urls=action + "?" + paramName + "=" + keyword; 
+    $('#'+secondBoxId).find('option').remove().end();	  
+    
+    $.getJSON( urls, function(data) {
+    	
+    $.each( data, function( key, val ) {
+      //alert(val.id+"--"+val.name+"--"+val.email); 
+      console.log(val.id,val.name);
+      
+		  var option = '<option value='+val.id+'>'+val.name+'</option>';   
+		  $('#'+secondBoxId).append(option);	
+    });  
+  });
+
+
+}
+
 function queryKeyWord2(keyword, box2Id, action, paramName)
 { 		  	
-	 alert('queryKeyWord2..');
+	 //alert('queryKeyWord2..');
 	 
     var secondBoxId = box2Id;
     var urls=action + "?" + paramName + "=" + encodeURIComponent(keyword); 
